@@ -21,7 +21,10 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-noelia" action="https://spreadthesign.com/es.es/search/?"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-rosa" action="https://wordle.danielfrg.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-joseMaria" action="https://www.informatica.us.es/"/>
 		</acme:menu-option>
+		
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
