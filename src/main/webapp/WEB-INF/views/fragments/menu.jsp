@@ -23,6 +23,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-noelia" action="https://spreadthesign.com/es.es/search/?"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-rosa" action="https://wordle.danielfrg.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-joseMaria" action="https://www.informatica.us.es/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-ricardo" action="https://www.rolroyce.com/rol/DDP/index.php"/>
 		</acme:menu-option>
 		
 
