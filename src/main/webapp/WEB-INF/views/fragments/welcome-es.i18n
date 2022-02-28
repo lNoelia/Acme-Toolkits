@@ -8,8 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-master.welcome.title = ¡Bienvenidos!
+master.welcome.background = #E7E4E3
+master.welcome.title = ¡Bienvenidos a Acme Toolkits!
 master.welcome.text = \
-	¡Hola mundo!  Nunca antes ha sido tan sencillo desarrollar un \
-	proyecto y hacerlo funcionar.
+	Promociona tus componentes, herramientas o kits de herramientas \
+	u ofrece patrocinio a inventores. 
 ﻿
