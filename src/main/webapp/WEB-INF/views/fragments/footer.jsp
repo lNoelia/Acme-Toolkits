@@ -23,10 +23,8 @@
 	</acme:footer-subpanel>
 
 	<acme:footer-subpanel code="master.footer.title.social">
-		<acme:message var="linkedinUrl" code="master.footer.url.linkedin"/>
-		<acme:footer-option icon="fab fa-linkedin" code="master.footer.label.linked-in" action="${linkedinUrl}" newTab="true"/>
-		<acme:message var="twitterUrl" code="master.footer.url.twitter"/>
-		<acme:footer-option icon="fab fa-twitter" code="master.footer.label.twitter" action="${twitterUrl}" newTab="true"/>
+		<acme:message var="githubUrl" code="master.footer.url.github"/>
+		<acme:footer-option icon="fab fa-github" code="master.footer.label.github" action="${githubUrl}" newTab="true"/>
 	</acme:footer-subpanel>
 
 	<acme:footer-subpanel code="master.footer.title.languages">
