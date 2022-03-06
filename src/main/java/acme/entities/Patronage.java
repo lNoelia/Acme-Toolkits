@@ -84,7 +84,7 @@ public class Patronage extends AbstractEntity{
 		final long totalDurationDays = TimeUnit.MILLISECONDS.toDays(endDateEpoch - startDateEpoch);
 
 		if(startingDelayDays < 30l) {
-			throw new Exception("The start of the patronage must be at least 30 days after de patronage was created.");
+			throw new Exception("The start of the patronage must be at least 30 days after the patronage was created.");
 		}
 		
 		if(totalDurationDays < 30l) {
