@@ -8,8 +8,8 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
-import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.AbstractEntity;
@@ -29,18 +29,18 @@ public class Announcement extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
-	protected Date moment;
+	protected Date creationDate;
 	
-	@Size(max=100)
+	@Length(min=0, max=101)
 	@NotBlank
 	protected String title;
 	
-	@Size(max=255)
+	@Length(min=0, max=256)
 	@NotBlank
 	protected String body;
 	
-	@NotNull
-	protected AnnouncementFlag flag;
+	@NotBlank
+	protected Boolean critical;
 	
 	@URL
 	protected String link;
