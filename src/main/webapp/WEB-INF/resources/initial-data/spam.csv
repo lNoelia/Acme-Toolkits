@@ -1,0 +1,17 @@
+key,language,spam_type,term
+spam-01,EN,STRONG,sex
+spam-02,EN,STRONG,hard core
+spam-03,EN,STRONG,viagra
+spam-04,EN,STRONG,cialis
+spam-05,EN,WEAK,sexy
+spam-06,EN,WEAK,nigeria
+spam-07,EN,WEAK,you've won
+spam-08,EN,WEAK,one mil-lion
+spam-09,ES,STRONG,sexo
+spam-10,ES,STRONG,hard core
+spam-11,ES,STRONG,viagra
+spam-12,ES,STRONG,cialis
+spam-13,ES,WEAK,sexy
+spam-14,ES,WEAK,nigeria
+spam-15,ES,WEAK,has ganado
+spam-16,ES,WEAK,un millón
