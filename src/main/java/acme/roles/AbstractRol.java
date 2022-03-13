@@ -24,11 +24,11 @@ public abstract class AbstractRol extends UserRole {
 		// Attributes -------------------------------------------------------------
 
 			@NotBlank
-			@Length(max=101)
+			@Length(max=100)
 			protected String			company;
 
 			@NotBlank
-			@Length(max=256)
+			@Length(max=255)
 			protected String			statement;
 
 			@URL
