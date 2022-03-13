@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Patron extends AbstractRol {
+public class Patron extends AbstractRole {
 
 	// Serialisation identifier -----------------------------------------------
 
