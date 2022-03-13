@@ -16,7 +16,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class AbstractRol extends UserRole {
+public abstract class AbstractRole extends UserRole {
 	// Serialisation identifier -----------------------------------------------
 
 		protected static final long	serialVersionUID	= 1L;
