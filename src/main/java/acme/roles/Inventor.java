@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Inventor extends AbstractRol  {
+public class Inventor extends AbstractRole  {
 
 	// Serialisation identifier -----------------------------------------------
 
