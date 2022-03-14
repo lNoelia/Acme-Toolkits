@@ -32,7 +32,7 @@ public class Component extends AbstractEntity {
     
     // Attributes
     @NotBlank
-    @Length(min = 0, max = 100)
+    @Length(min = 1, max = 100)
     protected String         name;
     
     @Column(unique = true)
