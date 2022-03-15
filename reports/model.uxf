@@ -338,8 +338,8 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>427</x>
-      <y>350</y>
+      <x>497</x>
+      <y>378</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -560,7 +560,7 @@ writtenAbout &gt;</panel_attributes>
       <h>203</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-m1=0..*
+m1=1..*
 m2=1
 work &gt;</panel_attributes>
     <additional_attributes>150.0;10.0;150.0;260.0;10.0;260.0</additional_attributes>
@@ -574,23 +574,10 @@ work &gt;</panel_attributes>
       <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-m1=0..*
-m2=0..*
+m1=1
+m2=1..*
 work &gt;</panel_attributes>
     <additional_attributes>230.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>119</x>
-      <y>854</y>
-      <w>105</w>
-      <h>203</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-m2=1
-allowsWork &gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;260.0;130.0;260.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
