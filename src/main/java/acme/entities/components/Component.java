@@ -42,7 +42,7 @@ public class Component extends AbstractEntity {
     
     @NotBlank
     @Length(min = 1, max = 100)
-    protected String         tecnology;
+    protected String         technology;
     
     @NotBlank
     @Length(min = 1, max = 255)
