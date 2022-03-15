@@ -20,6 +20,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import acme.roles.Inventor;
 import acme.roles.Patron;
@@ -50,7 +51,8 @@ public class Patronage extends AbstractEntity{
 	protected String legal;
 	
 	@Min(0)
-	protected int budget;
+	@NotNull
+	protected Money budget;
 	
 	@URL
 	protected String link;
