@@ -11,7 +11,6 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -50,8 +49,6 @@ public class Patronage extends AbstractEntity{
 	@Length(max = 255)
 	protected String legal;
 	
-	@Min(0)
-	@NotNull
 	protected Money budget;
 	
 	@URL
