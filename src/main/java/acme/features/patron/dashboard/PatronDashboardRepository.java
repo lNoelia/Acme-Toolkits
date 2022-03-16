@@ -16,7 +16,7 @@ public interface PatronDashboardRepository extends AbstractRepository{
 	
 	Integer totalNumberOfDeniedPatronages();
 	
-	// average budget of proposed/accepted/denied patronages grouped by currency.
+	// average budget of proposed/accepted/denied patronages grouped by currency
 	
 	Money averageBudgetOfProposedPatronagesByCurrency();
 	
@@ -24,7 +24,7 @@ public interface PatronDashboardRepository extends AbstractRepository{
 	
 	Money averageBudgetOfDeniedPatronagesByCurrency();
 	
-	// deviation budget of proposed/accepted/denied patronages grouped by currency.
+	// deviation budget of proposed/accepted/denied patronages grouped by currency
 	
 	Money deviationBudgetOfProposedPatronagesByCurrency();
 	
@@ -32,7 +32,7 @@ public interface PatronDashboardRepository extends AbstractRepository{
 	
 	Money deviationBudgetOfDeniedPatronagesByCurrency();
 	
-	// minimum budget of proposed/accepted/denied patronages grouped by currency.
+	// minimum budget of proposed/accepted/denied patronages grouped by currency
 
 	Money minimumBudgetOfProposedPatronagesByCurrency();
 	
@@ -40,7 +40,7 @@ public interface PatronDashboardRepository extends AbstractRepository{
 	
 	Money minimumBudgetOfDeniedPatronagesByCurrency();
 	
-	// maximum budget of proposed/accepted/denied patronages grouped by currency.
+	// maximum budget of proposed/accepted/denied patronages grouped by currency
 
 	Money maximumBudgetOfProposedPatronagesByCurrency();
 	
