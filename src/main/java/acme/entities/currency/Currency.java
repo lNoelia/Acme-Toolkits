@@ -1,7 +1,7 @@
 package acme.entities.currency;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
@@ -16,8 +16,6 @@ public class Currency extends AbstractEntity {
 	
 	// Attributes
 	
+	@NotNull
 	protected CurrencyType currencyType;
-	
-	@Digits(integer = 10, fraction = 2)	
-	protected Double amount;
 }
