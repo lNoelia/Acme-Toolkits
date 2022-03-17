@@ -1,4 +1,4 @@
-package acme.entities.components;
+package acme.entities.artefact;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,7 +22,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Component extends AbstractEntity {
+public class Artefact extends AbstractEntity {
     
 	//A component is an invention that is not expected to work standalone, but in conjunction with other components.
     
