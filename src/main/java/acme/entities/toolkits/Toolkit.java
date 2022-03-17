@@ -42,4 +42,5 @@ public class Toolkit extends AbstractEntity {
 	@URL
 	protected String link;
 
+	
 }
