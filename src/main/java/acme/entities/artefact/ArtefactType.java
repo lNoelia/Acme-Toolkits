@@ -1,4 +1,4 @@
-package acme.entities.worksIn;
+package acme.entities.artefact;
 
 
 public enum ArtefactType {

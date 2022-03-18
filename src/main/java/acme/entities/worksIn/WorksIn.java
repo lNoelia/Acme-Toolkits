@@ -6,6 +6,8 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.entities.artefact.Artefact;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.entities.AbstractEntity;
@@ -25,13 +27,8 @@ public class WorksIn extends AbstractEntity{
 		// Attributes -------------------------------------------------------------
 
 		@NotBlank
-		protected Integer idToolkit;
-		
-		@NotBlank
-		protected Integer idArtefact;
-		
-		@NotNull
-		protected ArtefactType type;
+		@Length(min = 1)
+		protected Integer amount;
 		
 		// Relationships ----------------------------------------------------------
 		
