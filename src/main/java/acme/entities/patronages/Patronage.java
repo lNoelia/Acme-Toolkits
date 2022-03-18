@@ -1,13 +1,10 @@
 package acme.entities.patronages;
 
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -47,23 +44,24 @@ public class Patronage extends AbstractEntity{
 	
 	@NotBlank
 	@Length(max = 255)
-	protected String legal;
+	protected String legalStuff;
 	
+
 	protected Money budget;
 	
 	@URL
 	protected String link;
 	
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
 	protected Date creationDate;
 	
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date startDate;
 	
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date endDate;
 	
@@ -73,41 +71,16 @@ public class Patronage extends AbstractEntity{
 	
 	@NotNull
 	@Valid
-	@ManyToOne(optional = true)
+	@ManyToOne(optional = false)
 	protected Inventor inventor;
 	
 	@NotNull
 	@Valid
-	@ManyToOne(optional = true)
+	@ManyToOne(optional = false)
 	protected Patron patron;
 	
 	// Methods ----------------------------------------------------------------
 	
-	@PrePersist
-	protected void prePersist() throws Exception {
-		if(this.creationDate instanceof Date) {
-			this.creationDate = new Date();
-			this.preUpdate();
-		}
-	}
-	
-	@PreUpdate
-	protected void preUpdate() throws Exception {
-		final long creationDateEpoch = this.creationDate.toInstant().toEpochMilli();
-		final long startDateEpoch = this.startDate.toInstant().toEpochMilli();
-		final long endDateEpoch = this.endDate.toInstant().toEpochMilli();
 
-		final long startingDelayDays = TimeUnit.MILLISECONDS.toDays(startDateEpoch - creationDateEpoch);
-		final long totalDurationDays = TimeUnit.MILLISECONDS.toDays(endDateEpoch - startDateEpoch);
-
-		if(startingDelayDays < 30l) {
-			throw new Exception("The start of the patronage must be at least 30 days after the patronage was created.");
-		}
-		
-		if(totalDurationDays < 30l) {
-			throw new Exception("The duration of the patronage must be at least 30 days long.");
-		}
-		
-	}
 	
 }

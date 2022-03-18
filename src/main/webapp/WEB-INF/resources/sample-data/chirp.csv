@@ -1,0 +1,5 @@
+key,creationDate,title,author,body,email
+chirp-01,"2020/03/12 10:00","Example of a Chirp",User1,"This is an example of a chirp",email@example.com
+chirp-02,"2020/04/12 12:40","Example of a Chirp",User2,"This is an example of a chirp",null
+chirp-03,"2021/04/12 12:40","Another example of a Chirp",User2,"This is an example of a chirp for the third time",email2@example.com
+chirp-04,"2019/04/12 13:40","Another example of a Chirp",User1,"This is an example of a chirp for the fourth time!",null

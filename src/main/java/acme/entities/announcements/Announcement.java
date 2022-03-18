@@ -39,7 +39,7 @@ public class Announcement extends AbstractEntity {
 	@NotBlank
 	protected String body;
 	
-	@NotBlank
+	@NotNull
 	protected Boolean critical;
 	
 	@URL

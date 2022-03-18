@@ -2,3 +2,4 @@ key,key:user-account,company,statement,link
 inventor-01,user-account-administrator-01,Cookie Nat,The best company in the world,http://example.com/
 inventor-02,user-account-authenticated-02,Sara Inventions,The best inventions,""
 inventor-03,user-account-authenticated-04,Noelia Inventions,The second best inventions,http://example.com/
+inventor-04,user-account-authenticated-03,Example inventions,Example inventions,http://example.com/
