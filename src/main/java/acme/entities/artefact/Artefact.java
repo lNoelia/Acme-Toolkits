@@ -2,7 +2,8 @@ package acme.entities.artefact;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.validation.constraints.Min;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -12,6 +13,7 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
+import acme.roles.Inventor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -48,10 +50,21 @@ public class Artefact extends AbstractEntity {
     @Length(min = 1, max = 255)
     protected String         description; 
     
-    @Min(1)
-    @NotNull
+    
     protected Money         retailPrice;
     
     @URL
     protected String 		link;
+    
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
+	
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected Inventor inventor;
+	
+	// Methods ----------------------------------------------------------------
+	
 }
