@@ -38,7 +38,7 @@ public class Artefact extends AbstractEntity {
     protected String         name;
     
     @Column(unique = true)
-    @NotNull
+    @NotBlank
     @Pattern(regexp="^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
     protected String         code;
     
@@ -55,6 +55,9 @@ public class Artefact extends AbstractEntity {
     
     @URL
     protected String 		link;
+
+	@NotNull
+	protected ArtefactType 	type;
     
 	// Derived attributes -----------------------------------------------------
 
