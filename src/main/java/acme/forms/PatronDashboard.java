@@ -16,21 +16,21 @@ public class PatronDashboard implements Serializable{
 
 	// Attributes -------------------------------------------------------------
 	
-	Integer totalNumberOfProposedPatronages;
-    Integer totalNumberOfAcceptedPatronages;
-    Integer totalNumberOfDeniedPatronages;
-    Money averageBudgetOfProposedPatronagesByCurrency;
-    Money averageBudgetOfAcceptedPatronagesByCurrency;
-    Money averageBudgetOfDeniedPatronagesByCurrency;
-    Money deviationBudgetOfProposedPatronagesByCurrency;
-    Money deviationBudgetOfAcceptedPatronagesByCurrency;
-    Money deviationBudgetOfDeniedPatronagesByCurrency;
-    Money minimumBudgetOfProposedPatronagesByCurrency;
-    Money minimumBudgetOfAcceptedPatronagesByCurrency;
-    Money minimumBudgetOfDeniedPatronagesByCurrency;
-    Money maximumBudgetOfProposedPatronagesByCurrency;
-    Money maximumBudgetOfAcceptedPatronagesByCurrency;
-    Money maximumBudgetOfDeniedPatronagesByCurrency;
+	Integer				totalNumberOfProposedPatronages;
+    Integer				totalNumberOfAcceptedPatronages;
+    Integer				totalNumberOfDeniedPatronages;
+    Money				averageBudgetOfProposedPatronagesByCurrency;
+    Money				averageBudgetOfAcceptedPatronagesByCurrency;
+    Money				averageBudgetOfDeniedPatronagesByCurrency;
+    Money				deviationBudgetOfProposedPatronagesByCurrency;
+    Money				deviationBudgetOfAcceptedPatronagesByCurrency;
+    Money				deviationBudgetOfDeniedPatronagesByCurrency;
+    Money 				minimumBudgetOfProposedPatronagesByCurrency;
+    Money 				minimumBudgetOfAcceptedPatronagesByCurrency;
+    Money 				minimumBudgetOfDeniedPatronagesByCurrency;
+    Money 				maximumBudgetOfProposedPatronagesByCurrency;
+    Money 				maximumBudgetOfAcceptedPatronagesByCurrency;
+    Money 				maximumBudgetOfDeniedPatronagesByCurrency;
 
 	// Derived attributes -----------------------------------------------------
 
