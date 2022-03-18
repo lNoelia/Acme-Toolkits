@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>7</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>637</x>
-      <y>210</y>
-      <w>308</w>
-      <h>21</h>
+      <x>600</x>
+      <y>180</y>
+      <w>264</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;420.0;10.0</additional_attributes>
@@ -15,10 +15,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>336</x>
-      <y>126</y>
-      <w>322</w>
-      <h>126</h>
+      <x>342</x>
+      <y>108</y>
+      <w>276</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>440.0;10.0;440.0;130.0;10.0;130.0;10.0;160.0</additional_attributes>
@@ -26,10 +26,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
-      <y>98</y>
-      <w>70</w>
-      <h>42</h>
+      <x>702</x>
+      <y>84</y>
+      <w>60</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Administrator
@@ -39,10 +39,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
-      <y>42</y>
-      <w>70</w>
-      <h>42</h>
+      <x>702</x>
+      <y>36</y>
+      <w>60</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Anonymous
@@ -52,10 +52,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
-      <y>154</y>
-      <w>70</w>
-      <h>42</h>
+      <x>702</x>
+      <y>132</y>
+      <w>60</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Authenticated
@@ -65,10 +65,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>693</x>
-      <y>63</y>
-      <w>77</w>
-      <h>63</h>
+      <x>648</x>
+      <y>54</y>
+      <w>66</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;70.0;70.0;70.0;10.0;90.0;10.0</additional_attributes>
@@ -76,10 +76,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>693</x>
-      <y>105</y>
-      <w>77</w>
-      <h>21</h>
+      <x>648</x>
+      <y>90</y>
+      <w>66</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
@@ -87,10 +87,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>693</x>
-      <y>105</y>
-      <w>77</w>
-      <h>70</h>
+      <x>648</x>
+      <y>90</y>
+      <w>66</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0;70.0;80.0;90.0;80.0</additional_attributes>
@@ -98,10 +98,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>574</x>
-      <y>238</y>
-      <w>140</w>
-      <h>63</h>
+      <x>546</x>
+      <y>204</y>
+      <w>120</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Provider
@@ -114,10 +114,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>266</x>
-      <y>238</y>
-      <w>147</w>
-      <h>56</h>
+      <x>282</x>
+      <y>204</y>
+      <w>126</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Consumer
@@ -130,10 +130,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>595</x>
-      <y>91</y>
-      <w>105</w>
-      <h>42</h>
+      <x>564</x>
+      <y>78</y>
+      <w>90</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 /AbstractUserRole/
@@ -143,16 +143,16 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>371</x>
+      <x>372</x>
       <y>0</y>
-      <w>154</w>
-      <h>84</h>
+      <w>132</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Datatype&gt;&gt;
 DefaultUserIdentity
 --
 + name: String {NotBlank}
-+ surname: String {♫NotBlank}
++ surname: String {NotBlank}
 + email: String {NotBlank, Email}
 + / fullName: String {NotBlank}
 bg=yellow
@@ -162,10 +162,10 @@ bg=yellow
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>371</x>
-      <y>119</y>
-      <w>154</w>
-      <h>49</h>
+      <x>372</x>
+      <y>102</y>
+      <w>132</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Datatype&gt;&gt;
 UserIdentity
@@ -177,10 +177,10 @@ bg=green
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>448</x>
-      <y>77</y>
-      <w>21</w>
-      <h>56</h>
+      <x>438</x>
+      <y>66</y>
+      <w>18</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -188,10 +188,10 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>987</x>
-      <y>378</y>
-      <w>210</w>
-      <h>70</h>
+      <x>900</x>
+      <y>324</y>
+      <w>180</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Patron
@@ -205,10 +205,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>91</x>
-      <y>308</y>
-      <w>98</w>
-      <h>56</h>
+      <x>132</x>
+      <y>264</y>
+      <w>84</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>The author is not 
 required to be the 
@@ -220,10 +220,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>294</x>
-      <y>553</y>
-      <w>273</w>
-      <h>105</h>
+      <x>306</x>
+      <y>474</y>
+      <w>234</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Artefact
@@ -241,10 +241,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>294</x>
-      <y>385</y>
-      <w>273</w>
-      <h>91</h>
+      <x>306</x>
+      <y>330</y>
+      <w>234</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Announcement
@@ -261,10 +261,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>413</x>
-      <y>833</y>
-      <w>273</w>
-      <h>91</h>
+      <x>408</x>
+      <y>714</y>
+      <w>234</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Toolkit
@@ -281,10 +281,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>784</x>
-      <y>721</y>
-      <w>364</w>
-      <h>84</h>
+      <x>726</x>
+      <y>618</y>
+      <w>312</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 PatronageReport
@@ -300,10 +300,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1078</x>
-      <y>154</y>
-      <w>77</w>
-      <h>70</h>
+      <x>936</x>
+      <y>72</y>
+      <w>66</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 CurrencyType
@@ -318,10 +318,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>805</x>
-      <y>497</y>
-      <w>273</w>
-      <h>126</h>
+      <x>744</x>
+      <y>426</y>
+      <w>234</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Patronage
@@ -341,10 +341,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1043</x>
-      <y>637</y>
-      <w>119</w>
-      <h>56</h>
+      <x>948</x>
+      <y>546</y>
+      <w>102</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Period must be at least 
 one month long, starting 
@@ -356,10 +356,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>868</x>
-      <y>847</y>
-      <w>175</w>
-      <h>105</h>
+      <x>798</x>
+      <y>726</y>
+      <w>150</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Secuence Number: 
 〈patronage-code〉:〈serial-number〉”, 
@@ -375,10 +375,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>686</x>
-      <y>378</y>
-      <w>224</w>
-      <h>70</h>
+      <x>642</x>
+      <y>324</y>
+      <w>192</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Inventor
@@ -392,10 +392,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>924</x>
-      <y>210</y>
-      <w>210</w>
-      <h>182</h>
+      <x>846</x>
+      <y>180</y>
+      <w>180</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;200.0;280.0;200.0;280.0;240.0</additional_attributes>
@@ -403,10 +403,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>763</x>
-      <y>287</y>
-      <w>182</w>
-      <h>105</h>
+      <x>708</x>
+      <y>246</y>
+      <w>156</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>240.0;10.0;240.0;90.0;10.0;90.0;10.0;130.0</additional_attributes>
@@ -414,10 +414,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>721</x>
-      <y>441</y>
-      <w>98</w>
-      <h>133</h>
+      <x>672</x>
+      <y>378</y>
+      <w>84</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
@@ -428,10 +428,10 @@ providedBy &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1071</x>
-      <y>441</y>
-      <w>126</w>
-      <h>133</h>
+      <x>972</x>
+      <y>378</y>
+      <w>108</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
@@ -442,10 +442,10 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>686</x>
-      <y>441</y>
-      <w>112</w>
-      <h>343</h>
+      <x>642</x>
+      <y>378</y>
+      <w>96</w>
+      <h>294</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
@@ -456,10 +456,10 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1141</x>
-      <y>441</y>
-      <w>112</w>
-      <h>350</h>
+      <x>1032</x>
+      <y>378</y>
+      <w>96</w>
+      <h>300</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
@@ -470,10 +470,10 @@ writtenBy &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>938</x>
-      <y>616</y>
-      <w>84</w>
-      <h>119</h>
+      <x>858</x>
+      <y>528</y>
+      <w>72</w>
+      <h>102</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
@@ -484,10 +484,10 @@ writtenAbout &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>903</x>
-      <y>798</y>
-      <w>21</w>
-      <h>63</h>
+      <x>828</x>
+      <y>684</y>
+      <w>18</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -495,10 +495,10 @@ writtenAbout &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>126</x>
-      <y>357</y>
-      <w>21</w>
-      <h>42</h>
+      <x>162</x>
+      <y>306</y>
+      <w>18</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
@@ -506,10 +506,10 @@ writtenAbout &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>595</y>
-      <w>56</w>
-      <h>21</h>
+      <x>270</x>
+      <y>510</y>
+      <w>48</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
@@ -517,10 +517,10 @@ writtenAbout &gt;</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>161</x>
-      <y>581</y>
-      <w>98</w>
-      <h>35</h>
+      <x>192</x>
+      <y>498</y>
+      <w>84</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Retail price must
 be positive.
@@ -530,10 +530,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1071</x>
-      <y>588</y>
-      <w>56</w>
-      <h>63</h>
+      <x>972</x>
+      <y>504</y>
+      <w>48</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;60.0;10.0;60.0;70.0</additional_attributes>
@@ -541,10 +541,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>637</x>
-      <y>210</y>
-      <w>21</w>
-      <h>42</h>
+      <x>600</x>
+      <y>180</y>
+      <w>18</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
@@ -552,10 +552,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>259</x>
-      <y>728</y>
-      <w>154</w>
-      <h>70</h>
+      <x>276</x>
+      <y>624</y>
+      <w>132</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 WorksIn
@@ -571,10 +571,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>329</x>
-      <y>791</y>
-      <w>98</w>
-      <h>112</h>
+      <x>336</x>
+      <y>678</y>
+      <w>84</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
@@ -585,10 +585,10 @@ m2=1..*
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>385</y>
-      <w>273</w>
-      <h>91</h>
+      <x>54</x>
+      <y>330</y>
+      <w>234</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Chirp
@@ -605,10 +605,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>462</x>
-      <y>728</y>
-      <w>84</w>
-      <h>56</h>
+      <x>450</x>
+      <y>624</y>
+      <w>72</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 ArtefactType
@@ -622,10 +622,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>420</y>
-      <w>140</w>
-      <h>217</h>
+      <x>534</x>
+      <y>360</y>
+      <w>120</w>
+      <h>186</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
@@ -636,15 +636,14 @@ isBuilt &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1708</x>
-      <y>308</y>
-      <w>280</w>
-      <h>217</h>
+      <x>1518</x>
+      <y>264</y>
+      <w>240</w>
+      <h>174</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 PatronDashboard
 --
-
 + totalNumberOfProposedPatronages: Integer
 + totalNumberOfAcceptedPatronages: Integer
 + totalNumberOfDeniedPatronages: Integer
@@ -667,10 +666,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>294</y>
-      <w>168</w>
-      <h>105</h>
+      <x>486</x>
+      <y>252</y>
+      <w>144</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -681,10 +680,10 @@ isWritten &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>385</y>
-      <w>140</w>
-      <h>35</h>
+      <x>534</x>
+      <y>330</y>
+      <w>120</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -695,25 +694,23 @@ isWritten &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1169</x>
-      <y>154</y>
-      <w>210</w>
-      <h>49</h>
+      <x>1476</x>
+      <y>150</y>
+      <w>66</w>
+      <h>30</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Currency
---
-+ currencyType: currencyType {NotNull}
-bg=green</panel_attributes>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Serializable
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1218</x>
-      <y>504</y>
-      <w>84</w>
-      <h>70</h>
+      <x>1098</x>
+      <y>432</y>
+      <w>72</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 PatronageStatus
@@ -728,10 +725,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1505</x>
-      <y>154</y>
-      <w>210</w>
-      <h>84</h>
+      <x>1026</x>
+      <y>150</y>
+      <w>180</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Spam
@@ -746,10 +743,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1428</x>
-      <y>154</y>
-      <w>63</w>
-      <h>56</h>
+      <x>948</x>
+      <y>150</y>
+      <w>54</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 Language
@@ -763,10 +760,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1428</x>
-      <y>217</y>
-      <w>63</w>
-      <h>56</h>
+      <x>948</x>
+      <y>204</y>
+      <w>54</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 SpamType
@@ -780,10 +777,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1414</x>
-      <y>308</y>
-      <w>273</w>
-      <h>357</h>
+      <x>1266</x>
+      <y>264</y>
+      <w>234</w>
+      <h>306</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 AdministratorDashboard
@@ -826,10 +823,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>483</x>
-      <y>966</y>
-      <w>133</w>
-      <h>56</h>
+      <x>468</x>
+      <y>828</y>
+      <w>114</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>A toolkit may have several 
 instances of the same 
@@ -841,10 +838,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>539</x>
-      <y>917</y>
-      <w>21</w>
-      <h>63</h>
+      <x>516</x>
+      <y>786</y>
+      <w>18</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -852,15 +849,52 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>329</x>
-      <y>651</y>
-      <w>35</w>
-      <h>91</h>
+      <x>336</x>
+      <y>558</y>
+      <w>30</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=1..*
 </panel_attributes>
     <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1026</x>
+      <y>72</y>
+      <w>180</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Currency
+--
++ currencyType: currencyType {NotNull}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1374</x>
+      <y>174</y>
+      <w>144</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>220.0;10.0;220.0;90.0;10.0;90.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1500</x>
+      <y>222</y>
+      <w>156</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>240.0;70.0;240.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
