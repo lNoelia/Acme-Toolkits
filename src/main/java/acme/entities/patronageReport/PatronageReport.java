@@ -40,12 +40,12 @@ public class PatronageReport extends AbstractEntity {
 	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?:[0-9]{4}$")
 	protected String sequenceNumber;
 	
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
 	protected Date creationDate;
 	
-	@Length(max = 255)
+	@Length(min = 1, max = 255)
 	@NotBlank
 	protected String memorandum;
 	
