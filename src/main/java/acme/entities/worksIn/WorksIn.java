@@ -26,8 +26,10 @@ public class WorksIn extends AbstractEntity{
 
 		@NotNull
 		@Min(1)
-		protected Integer amount;
-		
+		protected Integer 			amount;
+	    
+		// Derived attributes -----------------------------------------------------
+
 		// Relationships ----------------------------------------------------------
 		
 		@NotNull
@@ -39,5 +41,7 @@ public class WorksIn extends AbstractEntity{
 		@Valid
 		@ManyToOne(optional = false)
 		protected Toolkit toolkit;
+		
+		// Methods ----------------------------------------------------------------
 		
 }
