@@ -34,12 +34,12 @@ public class WorksIn extends AbstractEntity{
 		
 		@NotNull
 		@Valid
-		@ManyToOne(optional = false)
+		@ManyToOne(optional = true)
 		protected Artefact artefact;
 		
 		@NotNull
 		@Valid
-		@ManyToOne(optional = false)
+		@ManyToOne(optional = true)
 		protected Toolkit toolkit;
 		
 		// Methods ----------------------------------------------------------------
