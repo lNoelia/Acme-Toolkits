@@ -1,8 +1,10 @@
 package acme.forms;
 
 import java.io.Serializable;
+import java.util.Map;
 
-import acme.framework.datatypes.Money;
+import org.springframework.data.util.Pair;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,35 +18,24 @@ public class AdministratorDashboard implements Serializable {
 
 		// Attributes -------------------------------------------------------------
 
-		Integer 			totalNumberOfComponents;
-		Money 				averageRetailPriceOfComponentsByTechnology;
-		Money 				averageRetailPriceOfComponentsByCurrency;
-		Money 				deviationRetailPriceOfComponentsByTechnology;
-		Money 				deviationRetailPriceOfComponentsByCurrency;
-		Money 				minimumRetailPriceOfComponentsByTechnology;
-		Money 				minimumRetailPriceOfComponentsByCurrency;
-		Money 				maximumRetailPriceOfComponentsByTechnology;
-		Money 				maximumRetailPriceOfComponentsByCurrency;
-		Integer 			totalNumberOfTools;
-		Money 				averageRetailPriceOfToolsByCurrency;
-		Money 				deviationRetailPriceOfToolsByCurrency;
-		Money 				minimumRetailPriceOfToolsByCurrency;
-		Money 				maximumRetailPriceOfToolsByCurrency;
-		Integer 			totalNumberOfProposedPatronages;
-		Integer 			totalNumberOfAcceptedPatronages;
-		Integer 			totalNumberOfDeniedPatronages;
-		Money 				averageBudgetOfProposedPatronages;
-		Money 				averageBudgetOfAcceptedPatronages;
-		Money 				averageBudgetOfDeniedPatronages;
-		Money 				deviationBudgetOfProposedPatronages;
-		Money 				deviationBudgetOfAcceptedPatronages;
-		Money 				deviationBudgetOfDeniedPatronages;
-		Money 				minimumBudgetOfProposedPatronages;
-		Money 				minimumBudgetOfAcceptedPatronages;
-		Money 				minimumBudgetOfDeniedPatronages;
-		Money 				maximumBudgetOfProposedPatronages;
-		Money 				maximumBudgetOfAcceptedPatronages;
-		Money 				maximumBudgetOfDeniedPatronages;
+		int 									totalNumberOfComponents;
+		Map<Pair<String,String>,Double>			averageRetailPriceOfComponentsByTechnologyAndCurrency;
+		Map<Pair<String,String>,Double> 		deviationRetailPriceOfComponentsByTechnologyAndCurrency;
+		Map<Pair<String,String>,Double> 		minimumRetailPriceOfComponentsByTechnologyAndCurrency;
+		Map<Pair<String,String>,Double> 		maximumRetailPriceOfComponentsByTechnologyAndCurrency;
+
+		int 									totalNumberOfTools;
+		Map<String,Double> 						averageRetailPriceOfToolsByCurrency;
+		Map<String,Double> 						deviationRetailPriceOfToolsByCurrency;
+		Map<String,Double> 						minimumRetailPriceOfToolsByCurrency;
+		Map<String,Double> 						maximumRetailPriceOfToolsByCurrency;
+		
+		Map<String,Integer> 					totalNumberOfPatronagesByStatus;
+		Map<String,Double> 						averageBudgetOfPatronagesByStatus;
+		Map<String,Double> 						deviationBudgetOfPatronagesByStatus;
+		Map<String,Double> 						minimumBudgetOfPatronagesByStatus;
+		Map<String,Double> 						maximumBudgetOfPatronagesByStatus;
+
 		
 		// Derived attributes -----------------------------------------------------
 

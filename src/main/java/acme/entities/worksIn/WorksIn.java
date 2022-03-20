@@ -3,10 +3,8 @@ package acme.entities.worksIn;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.Length;
 
 import acme.entities.artefact.Artefact;
 import acme.entities.toolkits.Toolkit;
@@ -26,10 +24,12 @@ public class WorksIn extends AbstractEntity{
 
 		// Attributes -------------------------------------------------------------
 
-		@NotBlank
-		@Length(min = 1)
-		protected Integer amount;
-		
+		@NotNull
+		@Min(1)
+		protected Integer 			amount;
+	    
+		// Derived attributes -----------------------------------------------------
+
 		// Relationships ----------------------------------------------------------
 		
 		@NotNull
@@ -41,5 +41,7 @@ public class WorksIn extends AbstractEntity{
 		@Valid
 		@ManyToOne(optional = false)
 		protected Toolkit toolkit;
+		
+		// Methods ----------------------------------------------------------------
 		
 }

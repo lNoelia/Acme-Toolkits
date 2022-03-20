@@ -5,3 +5,4 @@ user-account-authenticated-01,true,"UserIdentity{name: 'Ricardo', surname: 'Nada
 user-account-authenticated-02,true,"UserIdentity{name: 'Sara', surname: 'Cruz', email: 'sarcrudua@alum.us.es'}",inventor1,inventor1
 user-account-authenticated-03,true,"UserIdentity{name: 'Carlos', surname: 'Varela', email: 'carvarsou@alum.us.es'}",patron2,patron2
 user-account-authenticated-04,true,"UserIdentity{name: 'Noelia', surname: 'Lopez', email: 'noelopdur@alum.us.es'}",inventor2,inventor2
+user-account-administrator-02,true,"UserIdentity{name: 'Administrator2', surname: 'Administrator2', email: 'administrator2@acme.com'}",administrator2,administrator2
