@@ -295,7 +295,7 @@ bg=green</panel_attributes>
 PatronageReport
 --
 +sequenceNumber: String {NotBlank, Pattern(^[A-Z]{3}-[0-9]{3}(-[A-Z])?:[0-9]{4}$), Unique}
-+creationDate: Date{NotNull, Temporal(TIMESTAMP), Past}
++creationDate: Date {NotNull, Temporal(TIMESTAMP), Past}
 +memorandum: String {NotBlank, Length(1,255)}
 +link: String {URL}
 
@@ -332,12 +332,12 @@ bg=green</panel_attributes>
 Patronage
 --
 +status: patronageStatus {NotNull}
-+code: String{NotBlank, Pattern(^[A-Z]{3}-[0-9]{3}(-[A-Z])?$), Unique}
++code: String {NotBlank, Pattern(^[A-Z]{3}-[0-9]{3}(-[A-Z])?$), Unique}
 +legalStuff: String {NotBlank, Length(1,255)}
 +budget: Money {Valid, NotNull}
-+creationDate: Date{NotNull, Temporal(TIMESTAMP), Past}
-+startDate: Date{NotNull, Temporal(TIMESTAMP)}
-+endDate: Date{NotNull, Temporal(TIMESTAMP)}
++creationDate: Date {NotNull, Temporal(TIMESTAMP), Past}
++startDate: Date {NotNull, Temporal(TIMESTAMP)}
++endDate: Date {NotNull, Temporal(TIMESTAMP)}
 +link: String {URL}
 
 bg=green</panel_attributes>
@@ -347,7 +347,7 @@ bg=green</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>1341</x>
-      <y>819</y>
+      <y>828</y>
       <w>153</w>
       <h>72</h>
     </coordinates>
@@ -497,10 +497,10 @@ bg=pink</panel_attributes>
       <x>1404</x>
       <y>756</y>
       <w>45</w>
-      <h>81</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;30.0;10.0;30.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;30.0;10.0;30.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -518,13 +518,13 @@ bg=pink</panel_attributes>
     <coordinates>
       <x>333</x>
       <y>936</y>
-      <w>198</w>
+      <w>216</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 WorksIn
 --
-+amount: Integer {NotBlank}
++amount: Integer {NotNull, Min(1)}
 
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -554,7 +554,7 @@ m2=0..*
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Chirp
 --
-+creationDate: Date{NotNull, Temporal(TIMESTAMP), Past}
++creationDate: Date {NotNull, Temporal(TIMESTAMP), Past}
 +title: String {NotBlank, Length(1,100)}
 +author: String {NotBlank, Length(1,100)}
 +body: String {NotBlank, Length(1,255)}
@@ -719,7 +719,7 @@ AdministratorDashboard
 + deviationRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;
 + minimumRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;
 + maximumRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;      
-+ totalNumberOfPatronagesByStatus: Map&lt;String,int&gt;
++ totalNumberOfPatronagesByStatus: Map&lt;String,Integer&gt;
 + averageBudgetOfPatronagesByStatus: Map&lt;String,Double&gt;
 + deviationBudgetOfPatronagesByStatus: Map&lt;String,Double&gt;
 + minimumBudgetOfPatronagesByStatus: Map&lt;String,Double&gt;
