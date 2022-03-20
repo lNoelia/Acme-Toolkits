@@ -43,10 +43,11 @@ public class Patronage extends AbstractEntity{
 	protected String code;
 	
 	@NotBlank
-	@Length(max = 255)
+	@Length(min=1, max = 255)
 	protected String legalStuff;
 	
-	
+	@Valid
+	@NotNull
 	protected Money budget;
 	
 	@URL
@@ -71,12 +72,12 @@ public class Patronage extends AbstractEntity{
 	
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
+	@ManyToOne(optional = true)
 	protected Inventor inventor;
 	
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
+	@ManyToOne(optional = true)
 	protected Patron patron;
 	
 	// Methods ----------------------------------------------------------------
