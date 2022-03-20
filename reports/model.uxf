@@ -458,13 +458,13 @@ writtenBy &gt;</panel_attributes>
     <coordinates>
       <x>1206</x>
       <y>792</y>
-      <w>108</w>
+      <w>72</w>
       <h>153</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
-writtenAbout &gt;</panel_attributes>
+about &gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
@@ -591,7 +591,7 @@ bg=green</panel_attributes>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
-isBuilt &gt;</panel_attributes>
+createdBy &gt;</panel_attributes>
     <additional_attributes>180.0;10.0;80.0;10.0;80.0;280.0;10.0;280.0</additional_attributes>
   </element>
   <element>
@@ -605,9 +605,9 @@ isBuilt &gt;</panel_attributes>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 PatronDashboard
 --
-+ totalNumberOfProposedPatronages: Integer
-+ totalNumberOfAcceptedPatronages: Integer
-+ totalNumberOfDeniedPatronages: Integer
++ totalNumberOfProposedPatronages: int
++ totalNumberOfAcceptedPatronages: int
++ totalNumberOfDeniedPatronages: int
 + averageBudgetOfPatronagesByStatusAndCurrency: Map&lt;Pair&lt;String, String&gt;, Double&gt;
 + deviationBudgetOfPatronagesByStatusAndCurrency: Map&lt;Pair&lt;String, String&gt;, Double&gt;
 + minimumBudgetOfPatronagesByStatusAndCurrency: Map&lt;Pair&lt;String, String&gt;, Double&gt;
@@ -709,17 +709,17 @@ bg=green</panel_attributes>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 AdministratorDashboard
 --
-+ totalNumberOfComponents: Integer
++ totalNumberOfComponents: int
 + averageRetailPriceOfComponentsByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
 + deviationRetailPriceOfComponentsByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
 + minimumRetailPriceOfComponentsByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
 + maximumRetailPriceOfComponentsByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
-+ totalNumberOfTools: Integer
++ totalNumberOfTools: int
 + averageRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;
 + deviationRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;
 + minimumRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;
 + maximumRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;      
-+ totalNumberOfPatronagesByStatus: Map&lt;String,Integer&gt;
++ totalNumberOfPatronagesByStatus: Map&lt;String,int&gt;
 + averageBudgetOfPatronagesByStatus: Map&lt;String,Double&gt;
 + deviationBudgetOfPatronagesByStatus: Map&lt;String,Double&gt;
 + minimumBudgetOfPatronagesByStatus: Map&lt;String,Double&gt;
