@@ -1,3 +1,5 @@
 key,key:user-account
 authenticated-administrator-01,user-account-administrator-01
+authenticated-authenticated-01,user-account-authenticated-01
+authenticated-authenticated-02,user-account-authenticated-02
 authenticated-administrator-02,user-account-administrator-02

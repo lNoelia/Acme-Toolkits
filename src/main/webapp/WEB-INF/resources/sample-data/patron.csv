@@ -1,2 +1,5 @@
 key,key:user-account,company,statement,link
-patron-01,user-account-administrator-01,"DP2Company","An awesome company",""
+patron-01,user-account-administrator-01,DP2Company,An awesome company,null
+patron-02,user-account-authenticated-01,Rickpany,ricnadgar company,null
+patron-03,user-account-authenticated-03,Carlo Inc,carvarsou company,http://example.com/
+patron-04,user-account-authenticated-02,Example,example company,""

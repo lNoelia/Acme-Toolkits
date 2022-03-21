@@ -46,8 +46,10 @@ public class Patronage extends AbstractEntity{
 	@Length(min=1, max = 255)
 	protected String legalStuff;
 	
+
 	@Valid
 	@NotNull
+
 	protected Money budget;
 	
 	@URL
