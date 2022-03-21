@@ -1,5 +1,5 @@
 key,sequenceNumber,creationDate,memorandum,link,key:patronage,key:patron,key:inventor
-patronage-report-01,"AAA-000-A:0000","2020/03/12 10:00","Example text","http://example.com/",patronage-01,patron-01,inventor-01
+patronage-report-01,"AAA-000-A:0001","2020/03/12 10:00","Example text","http://example.com/",patronage-01,patron-01,inventor-01
 patronage-report-02,"ABC-123-B:1234","2020/03/12 11:00","Example text","http://example.com/",patronage-02,patron-01,inventor-02
 patronage-report-03,"ABC-123-C:1234","2020/03/12 11:00","Example text","http://example.com/",patronage-02,patron-01,inventor-02
 patronage-report-04,"ABC-123-D:1234","2020/03/11 11:00","Example text","http://example.com/",patronage-03,patron-02,inventor-01
