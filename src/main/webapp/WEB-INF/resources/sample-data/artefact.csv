@@ -1,7 +1,7 @@
 key,name,code,technology,description,retailPrice,link,type,key:inventor
-artefact-01,Screwdriver,AAA-012-A,"Flat Head","A tool for screws",EUR 2.00,"",TOOL,inventor-01
+artefact-01,Screwdriver,AAA-000-A,"Flat Head","A tool for screws",EUR 2.00,"",TOOL,inventor-01
 artefact-02,Hammer,AAA-012-B,"Iron head","A tool for nails",EUR 3.00,"http://example.com/",TOOL,inventor-01
 artefact-03,Saw,AAA-012-C,"For wood","A tool of high quality",EUR 4.50,"http://example.com/",TOOL,inventor-02
 artefact-04,Screw,ABA-012-A,"Flat Head","Screw made of iron",EUR 0.05,"",COMPONENT,inventor-03
 artefact-05,Nail,ABA-012-B,"Iron","Example text",EUR 0.05,"http://example.com/",COMPONENT,inventor-03
-artefact-06,Screw,ABA-012-C,"Steel","Screw made of steel",EUR 0.06,"http://example.com/",COMPONENT,inventor-01
+artefact-06,Screw,ZZZ-999-Z,"Steel","Screw made of steel",EUR 0.06,"http://example.com/",COMPONENT,inventor-01
