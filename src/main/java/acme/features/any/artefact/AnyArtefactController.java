@@ -17,11 +17,14 @@ public class AnyArtefactController extends AbstractController<Any, Artefact>{
 	@Autowired
 	protected AnyArtefactListService		listService;
 
+	@Autowired
+	protected AnyArtefactShowService		showService;
 
 	// Constructors -----------------------------------------------------------
 
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", "list", this.listService);
+		super.addCommand("show", "show", this.showService);
 	}
 }

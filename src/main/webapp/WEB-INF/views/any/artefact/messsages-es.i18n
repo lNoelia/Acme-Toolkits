@@ -10,5 +10,15 @@
 
 any.artefact.list.label.name = Nombre
 any.artefact.list.label.technology = Tecnología
-any.artefact.list.label.retailPrice = Precio
+any.artefact.list.label.retailPrice = Precio al por menor
 any.artefact.list.label.type = Tipo
+
+any.artefact.form.label.name = Nombre
+any.artefact.form.label.code = Código
+any.artefact.form.label.technology = Tecnología
+any.artefact.form.label.description = Descripción
+any.artefact.form.label.retailPrice = Precio al por menor
+any.artefact.form.label.link = Link
+any.artefact.form.label.type = Tipo
+TOOL = Herramienta
+COMPONENT = Componente

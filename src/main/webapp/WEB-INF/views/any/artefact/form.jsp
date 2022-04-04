@@ -15,13 +15,16 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:form>
-	<acme:input-textbox code="any.artefact.list.label.name" path="name"/>
-	<acme:input-textbox code="any.artefact.list.label.code" path="code"/>
-	<acme:input-textbox code="any.artefact.list.label.technology" path="technology"/>
-	<acme:input-textarea code="any.artefact.list.label.description" path="description"/>
-	<acme:input-double code="any.artefact.list.label.retailPrice" path="retailPrice"/>	
-	<acme:input-textbox code="any.artefact.list.label.link" path="link"/>
-	<acme:input-textbox code="any.artefact.list.label.type" path="type"/>			
+<acme:form readonly="${readonly}">
+	<acme:input-textbox code="any.artefact.form.label.name" path="name"/>
+	<acme:input-textbox code="any.artefact.form.label.code" path="code"/>
+	<acme:input-textbox code="any.artefact.form.label.technology" path="technology"/>
+	<acme:input-textarea code="any.artefact.form.label.description" path="description"/>
+	<acme:input-double code="any.artefact.form.label.retailPrice" path="retailPrice"/>	
+	<acme:input-url code="any.artefact.form.label.link" path="link"/>		
+	<acme:input-select code="any.artefact.form.label.type" path="type">
+		<acme:input-option code="TOOL" value="TOOL" selected="${type == 'TOOL'}"/>
+		<acme:input-option code="COMPONENT" value="COMPONENT" selected="${type == 'COMPONENT'}"/>
+	</acme:input-select>
 </acme:form>
 
