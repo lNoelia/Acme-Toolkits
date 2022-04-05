@@ -1,0 +1,9 @@
+authenticated.announcement.form.label.critical=Critico
+authenticated.announcement.form.label.title = Titulo
+authenticated.announcement.form.label.creationDate = Fecha de creacion
+authenticated.announcement.form.label.body = Cuerpo
+authenticated.announcement.form.label.link = Enlace
+
+authenticated.announcement.list.label.critical=Critico
+authenticated.announcement.list.label.title = Titulo
+authenticated.announcement.list.label.creationDate = Fecha de creacion
