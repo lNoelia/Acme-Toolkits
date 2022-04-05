@@ -36,10 +36,11 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 
-# master.menu.authenticated ########################################################
+# master.menu.any ########################################################
 
-master.menu.authenticated = Authenticated
-master.menu.authenticated.announcement-list = Announcement list
+master.menu.any = Any
+master.menu.any.artefact = List of Artefacts
+
 
 # master.menu.user-account ####################################################
 
