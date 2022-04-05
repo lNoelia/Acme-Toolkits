@@ -1,0 +1,12 @@
+authenticated.announcement.form.label.critical=Critical
+authenticated.announcement.form.label.title = Title
+authenticated.announcement.form.label.creationDate = Creation date
+authenticated.announcement.form.label.body = Body
+authenticated.announcement.form.label.link = Link
+
+authenticated.announcement.list.label.critical=Critical
+authenticated.announcement.list.label.title = Title
+authenticated.announcement.list.label.creationDate = Creation date
+
+
+

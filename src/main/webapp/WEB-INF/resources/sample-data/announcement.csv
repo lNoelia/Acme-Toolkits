@@ -5,3 +5,5 @@ announcement-03,"2021/04/12 12:40","Example of an announcement","This is an exam
 announcement-04,"2019/04/12 13:40","Example of an announcement","This is an example of an announcement for the fourth time!",true,null
 announcement-05,"2019/01/01 0:40","Example of an announcement","This is an example of an announcement!",true,null
 announcement-06,"2020/12/31 12:44","Example of an announcement","This is an example of an announcement",false,http://example.com/
+announcement-07,"2022/04/03 12:44","Example of a recent announcement","This is an example of an announcement",false,http://example.com/
+announcement-08,"2022/04/03 12:44","Example of a recent announcement","This is an example of an announcement",true,http://example.com/
