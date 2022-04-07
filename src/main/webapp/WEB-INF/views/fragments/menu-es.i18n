@@ -41,6 +41,15 @@ master.menu.administrator.shut-down = Parar el sistema
 master.menu.any = Todos
 master.menu.any.artefact = Lista de artefactos
 
+# master.menu.authenticated ########################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.announcement-list = Lista de anuncios
+
+# master.menu.inventor ########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.artefact-list = Lista de artefactos
 
 # master.menu.user-account ####################################################
 
