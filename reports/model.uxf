@@ -223,9 +223,9 @@ bg=green</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>440</x>
-      <y>832</y>
+      <y>816</y>
       <w>352</w>
-      <h>112</h>
+      <h>128</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Toolkit
@@ -235,6 +235,7 @@ Toolkit
 +description: String {NotBlank, Length(1,255)}
 +assemblyNotes: String {NotBlank, Length(1,255)}
 +link: String {URL}
++published: boolean
 +/price: Money
 
 bg=green</panel_attributes>
