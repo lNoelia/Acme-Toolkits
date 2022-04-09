@@ -40,6 +40,7 @@ master.menu.administrator.shut-down = Parar el sistema
 
 master.menu.any = Todos
 master.menu.any.artefact = Lista de artefactos
+master.menu.any.chirp = Lista de mensajes
 
 # master.menu.authenticated ########################################################
 
