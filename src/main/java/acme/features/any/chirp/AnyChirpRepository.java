@@ -12,9 +12,6 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnyChirpRepository extends AbstractRepository{
 	
-	@Query("select c from Chirp c where c.id = :id")
-	Chirp findOneChirpById(int id);
-
 	@Query("select c from Chirp c where c.creationDate >= :deadline")
 	Collection<Chirp> findManyChirpsLastMonth(Date deadline);
 }
