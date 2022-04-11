@@ -18,14 +18,21 @@ public class PatronPatronageReportShowService implements AbstractShowService<Pat
 	@Autowired
 	protected PatronPatronageReportRepository repository;
 
-	// AbstractListService<Patron, Patronage> interface --------------
+	// AbstractListService<Inventor, PatronageReport> interface --------------
 
 
 	@Override
 	public boolean authorise(final Request<PatronageReport> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int patronageReportId;
+		PatronageReport patronageReport;
+		
+		patronageReportId=request.getModel().getInteger("id");
+		patronageReport=this.repository.findOnePatronageReportById(patronageReportId);
+		result = patronageReport != null && patronageReport.getPatron().getId()  == request.getPrincipal().getActiveRoleId();
+		return result;
 	}
 
 	@Override
@@ -34,8 +41,9 @@ public class PatronPatronageReportShowService implements AbstractShowService<Pat
 
 		PatronageReport result;
 		int id;
-
+		
 		id = request.getModel().getInteger("id");
+
 		result = this.repository.findOnePatronageReportById(id);
 
 		return result;
@@ -47,7 +55,7 @@ public class PatronPatronageReportShowService implements AbstractShowService<Pat
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "sequenceNumber", "creationDate", "memorandum", "link", "patronage");		
+		request.unbind(entity, model, "sequenceNumber", "creationDate","memorandum","link");
+		model.setAttribute("patronageCode", entity.getPatronage().getCode());
 	}
-	
 }

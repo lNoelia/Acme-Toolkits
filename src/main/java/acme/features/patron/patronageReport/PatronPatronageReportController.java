@@ -19,7 +19,6 @@ public class PatronPatronageReportController extends AbstractController<Patron, 
 
 	@Autowired
 	protected PatronPatronageReportShowService		showService;
-	
 
 	// Constructors -----------------------------------------------------------
 

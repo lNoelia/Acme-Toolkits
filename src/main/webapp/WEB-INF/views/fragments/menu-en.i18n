@@ -52,6 +52,11 @@ master.menu.inventor = Inventor
 master.menu.inventor.artefact-list = List of Artefacts
 master.menu.inventor.patronage-report-list = List of patronage reports
 
+# master.menu.patron ########################################################
+
+master.menu.patron = Patron
+master.menu.patron.patronage-report-list = List of Patronage reports
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

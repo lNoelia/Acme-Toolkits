@@ -42,6 +42,11 @@ master.menu.any = Todos
 master.menu.any.artefact = Lista de artefactos
 master.menu.inventor.patronage-report-list = Lista de reportes de mecenazgos
 
+# master.menu.patron ########################################################
+
+master.menu.patron = Mecenas
+master.menu.patron.patronage-report-list = Lista de informes de patrocinio
+
 # master.menu.authenticated ########################################################
 
 master.menu.authenticated = Autenticado

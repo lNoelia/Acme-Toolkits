@@ -1,5 +1,5 @@
 <%--
-- form.jsp
+- list.jsp
 -
 - Copyright (C) 2012-2022 Rafael Corchuelo.
 -
@@ -15,11 +15,8 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:form readonly="${readonly}">
-	<acme:input-textbox code="patron.patronageReport.form.label.sequenceNumber" path="sequenceNumber"/>
-	<acme:input-moment code="patron.patronageReport.form.label.creationDate" path="creationDate"/>
-	<acme:input-textarea code="patron.patronageReport.form.label.memorandum" path="memorandum"/>
-	<acme:input-textbox code="patron.patronageReport.form.label.patronage" path="patronage"/>
-	<acme:input-url code="patron.patronageReport.form.label.link" path="link"/>
-</acme:form>
-
+<acme:list>
+	<acme:list-column code="patron.patronageReport.list.label.patronageCode" path="patronageCode" width="33%"/>
+	<acme:list-column code="patron.patronageReport.list.label.sequenceNumber" path="sequenceNumber" width="33%"/>
+	<acme:list-column code="patron.patronageReport.list.label.creationDate" path="creationDate" width="33%"/>
+</acme:list>

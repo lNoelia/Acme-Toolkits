@@ -1,4 +1,4 @@
- package acme.features.patron.patronageReport;
+package acme.features.patron.patronageReport;
 
 import java.util.Collection;
 
@@ -19,7 +19,7 @@ public class PatronPatronageReportListService implements AbstractListService<Pat
 	@Autowired
 	protected PatronPatronageReportRepository repository;
 
-	// AbstractListService<Patron, PatronageReport> interface --------------
+	// AbstractListService<Inventor, PatronageReport> interface --------------
 
 
 	@Override
@@ -34,11 +34,12 @@ public class PatronPatronageReportListService implements AbstractListService<Pat
 		assert request != null;
 
 		Collection<PatronageReport> result;
-		//final int patronId;
+		int patronId;
 
-		//patronId = request.getPrincipal().getActiveRoleId();
-		//System.out.println("--------------------"+patronId);
-		result = this.repository.findAllPatronageReportByPatron();
+		patronId = request.getPrincipal().getActiveRoleId();
+		
+		result = this.repository.findAllPatronageReportByPatronId(patronId);
+
 		return result;
 	}
 	
@@ -48,7 +49,8 @@ public class PatronPatronageReportListService implements AbstractListService<Pat
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model,"creationDate", "memorandum");
+		request.unbind(entity, model, "sequenceNumber", "creationDate");
+		model.setAttribute("patronageCode", entity.getPatronage().getCode());
 	}
 
 }
