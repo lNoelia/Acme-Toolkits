@@ -11,8 +11,8 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnyArtefactRepository extends AbstractRepository {
 	
-	@Query("select a from Artefact a")
-	Collection<Artefact> findAllArtefact();
+	@Query("select a from Artefact a where a.published = true")
+	Collection<Artefact> findAllPublishedArtefact();
 	
 	@Query("select a from Artefact a where a.id = :id")
 	Artefact findOneArtefactById(int id);
