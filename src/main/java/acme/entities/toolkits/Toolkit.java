@@ -44,9 +44,11 @@ public class Toolkit extends AbstractEntity {
 	@URL
 	protected String link;
 	
-	protected Money price;
+	protected boolean published;
 
 	// Derived attributes -----------------------------------------------------
+	
+	protected Money price;
 
 	// Relationships ----------------------------------------------------------
 
