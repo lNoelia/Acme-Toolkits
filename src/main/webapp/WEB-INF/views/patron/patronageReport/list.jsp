@@ -18,5 +18,4 @@
 <acme:list>
 	<acme:list-column code="patron.patronageReport.list.label.creationDate" path="creationDate" width="20%"/>
 	<acme:list-column code="patron.patronageReport.list.label.memorandum" path="memorandum" width="30%"/>
-	<acme:list-column code="patron.patronageReport.list.label.patronage" path="patronage" width="20%"/>
 </acme:list>
