@@ -49,6 +49,10 @@
 			<acme:menu-suboption code="master.menu.inventor.artefact-list" action="/inventor/artefact/list"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
+			<acme:menu-suboption code="master.menu.patron.patronage-list" action="/patron/patronage/list"/>
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>

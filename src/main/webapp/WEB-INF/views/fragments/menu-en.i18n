@@ -51,6 +51,11 @@ master.menu.authenticated.announcement-list = Announcement list
 master.menu.inventor = Inventor
 master.menu.inventor.artefact-list = List of Artefacts
 
+# master.menu.patron ########################################################
+
+master.menu.patron = Patron
+master.menu.patron.patronage-list = List of patronage
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
