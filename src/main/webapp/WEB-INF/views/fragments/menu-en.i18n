@@ -36,15 +36,21 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 
-# master.menu.provider ########################################################
+# master.menu.any ########################################################
 
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
+master.menu.any = Any
+master.menu.any.artefact = List of Artefacts
 
-# master.menu.consumer ##########################################################
+# master.menu.authenticated ########################################################
 
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
+master.menu.authenticated = Authenticated
+master.menu.authenticated.announcement-list = Announcement list
+
+# master.menu.inventor ########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.artefact-list = List of Artefacts
+master.menu.inventor.patronage-report-list = List of patronage reports
 
 # master.menu.inventor ####################################################
 master.menu.inventor = Inventor

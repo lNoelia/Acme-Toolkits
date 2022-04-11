@@ -58,6 +58,9 @@ public class Artefact extends AbstractEntity {
 
 	@NotNull
 	protected ArtefactType 	type;
+	
+	
+	protected boolean 	published;
     
 	// Derived attributes -----------------------------------------------------
 
