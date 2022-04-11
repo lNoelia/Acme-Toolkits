@@ -22,8 +22,8 @@
 		<acme:input-option code="ACCEPTED" value="ACCEPTED" selected="${type == 'ACCEPTED'}"/>
 		<acme:input-option code="DENIED" value="DENIED" selected="${type == 'DENIED'}"/>
 	</acme:input-select>
-	<acme:input-textbox code="patron.patronage.list.label.budget" path="budget"/>
-	<acme:input-double code="patron.patronage.list.label.legalStuff" path="legalStuff"/>
+	<acme:input-money code="patron.patronage.list.label.budget" path="budget"/>
+	<acme:input-textarea code="patron.patronage.list.label.legalStuff" path="legalStuff"/>
 	<acme:input-url code="patron.patronage.list.label.link" path="link"/>
 			
 	<acme:input-moment code="patron.patronage.list.label.creationDate" path="creationDate"/>

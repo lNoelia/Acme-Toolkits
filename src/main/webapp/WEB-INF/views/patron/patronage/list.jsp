@@ -5,7 +5,6 @@
 
 <acme:list>
 	<acme:list-column code="patron.patronage.list.label.code" path="code" width="20%"/>
-	<acme:list-column code="patron.patronage.list.label.status" path="status" width="20%"/>
 	<acme:list-column code="patron.patronage.list.label.budget" path="budget" width="20%"/>	
 	<acme:list-column code="patron.patronage.list.label.startDate" path="startDate" width="20%"/>
 	<acme:list-column code="patron.patronage.list.label.endDate" path="endDate" width="20%"/>
