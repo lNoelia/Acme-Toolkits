@@ -33,7 +33,8 @@ public class InventorPatronageListAllService implements AbstractListService<Inve
 
 		Collection<Patronage> result;
 
-		result = this.repository.findManyPatronagesByAvailability();
+		final Principal principal = request.getPrincipal();
+		result = this.repository.findInventorPatronages(principal.getActiveRoleId());
 
 		return result;
 	}
