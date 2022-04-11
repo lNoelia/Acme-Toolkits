@@ -40,6 +40,7 @@ master.menu.administrator.shut-down = Parar el sistema
 
 master.menu.any = Todos
 master.menu.any.artefact = Lista de artefactos
+master.menu.inventor.patronage-report-list = Lista de reportes de mecenazgos
 
 # master.menu.authenticated ########################################################
 
