@@ -35,7 +35,7 @@ public class AnyArtefactListService implements AbstractListService<Any, Artefact
 
 		Collection<Artefact> result;
 
-		result = this.repository.findAllArtefact();
+		result = this.repository.findAllPublishedArtefact();
 
 		return result;
 	}
