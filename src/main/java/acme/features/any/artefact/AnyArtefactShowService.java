@@ -24,8 +24,11 @@ public class AnyArtefactShowService implements AbstractShowService<Any, Artefact
 	@Override
 	public boolean authorise(final Request<Artefact> request) {
 		assert request != null;
-
-		return true;
+		int id;
+		Artefact artefact;
+		id = request.getModel().getInteger("id");
+		artefact = this.repository.findOneArtefactById(id);
+		return artefact.isPublished();
 	}
 
 	@Override

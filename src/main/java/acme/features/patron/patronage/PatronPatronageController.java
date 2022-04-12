@@ -1,27 +1,27 @@
-package acme.features.any.artefact;
+package acme.features.patron.patronage;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.artefact.Artefact;
+import acme.entities.patronages.Patronage;
 import acme.framework.controllers.AbstractController;
-import acme.framework.roles.Any;
+import acme.roles.Patron;
 
 @Controller
-public class AnyArtefactController extends AbstractController<Any, Artefact>{
+public class PatronPatronageController extends AbstractController<Patron, Patronage> {
 
 	// Internal state ---------------------------------------------------------
-
+	
 	@Autowired
-	protected AnyArtefactListService		listService;
-
+	protected PatronPatronageListService listService;
+	
 	@Autowired
-	protected AnyArtefactShowService		showService;
-
+	protected PatronPatronageShowService showService;
+	
 	// Constructors -----------------------------------------------------------
-
+	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.listService);

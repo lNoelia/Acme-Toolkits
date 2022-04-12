@@ -24,8 +24,17 @@ public class InventorArtefactShowService implements AbstractShowService<Inventor
 	@Override
 	public boolean authorise(final Request<Artefact> request) {
 		assert request != null;
-
-		return true;
+		
+		int artefactId;
+		int activeRolId;
+		Artefact artefact;
+		
+		artefactId = request.getModel().getInteger("id");
+		artefact = this.repository.findOneArtefactById(artefactId);
+		
+		activeRolId = request.getPrincipal().getActiveRoleId();
+		
+		return activeRolId == artefact.getInventor().getId() && artefact.isPublished();
 	}
 
 	@Override
@@ -34,13 +43,10 @@ public class InventorArtefactShowService implements AbstractShowService<Inventor
 
 		Artefact result;
 		int id;
-		int inventorId;
 		
 		id = request.getModel().getInteger("id");
-		inventorId = request.getPrincipal().getActiveRoleId();
-
 		
-		result = this.repository.findOneArtefactById(id, inventorId );
+		result = this.repository.findOneArtefactById(id);
 
 		return result;
 	}
