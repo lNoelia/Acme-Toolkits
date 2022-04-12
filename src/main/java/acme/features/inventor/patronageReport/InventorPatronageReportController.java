@@ -1,24 +1,24 @@
-package acme.features.any.artefact;
+package acme.features.inventor.patronageReport;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.artefact.Artefact;
+import acme.entities.patronageReport.PatronageReport;
 import acme.framework.controllers.AbstractController;
-import acme.framework.roles.Any;
+import acme.roles.Inventor;
 
 @Controller
-public class AnyArtefactController extends AbstractController<Any, Artefact>{
+public class InventorPatronageReportController extends AbstractController<Inventor, PatronageReport>{
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnyArtefactListService		listService;
+	protected InventorPatronageReportListService		listService;
 
 	@Autowired
-	protected AnyArtefactShowService		showService;
+	protected InventorPatronageReportShowService		showService;
 
 	// Constructors -----------------------------------------------------------
 
