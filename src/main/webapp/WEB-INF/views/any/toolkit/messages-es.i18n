@@ -3,3 +3,7 @@ any.toolkit.list.title.list = Todos los conjuntos de herramientas
 any.toolkit.list.label.code = Código
 any.toolkit.list.label.title = Título
 any.toolkit.list.label.description = Descripción
+any.toolkit.list.label.assemblyNotes = Instruciones de montaje
+any.toolkit.list.label.link = Enlace
+any.toolkit.list.label.price = Precio
+any.toolkit.list.label.artefacts = Elementos
