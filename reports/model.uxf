@@ -263,24 +263,6 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1544</x>
-      <y>840</y>
-      <w>88</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Enum&gt;&gt;
-CurrencyType
---
-+ EUR
-+ USD
-+ GBP
-
-bg=green</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>904</x>
       <y>464</y>
       <w>352</w>
@@ -596,58 +578,6 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1856</x>
-      <y>736</y>
-      <w>192</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Spam
---
-+ language: Language {NotNull}
-+ spamType: SpamType {NotNull}
-+ terms: String {NotBlank}
-
-bg=green</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1960</x>
-      <y>880</y>
-      <w>72</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Enum&gt;&gt;
-Language
---
-+ EN
-+ ES
-
-bg=green</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1864</x>
-      <y>880</y>
-      <w>72</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Enum&gt;&gt;
-SpamType
---
-+ STRONG
-+ WEAK
-
-bg=green</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>1544</x>
       <y>240</y>
       <w>504</w>
@@ -714,21 +644,6 @@ m1=1
 m2=0..*
 </panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1528</x>
-      <y>744</y>
-      <w>240</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Currency
---
-+ currencyType: currencyType {NotNull}
-bg=green</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
@@ -814,46 +729,23 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1736</x>
-      <y>600</y>
-      <w>144</w>
-      <h>56</h>
+      <x>1752</x>
+      <y>592</y>
+      <w>304</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 SystemConfiguration
 --
-+ spamThreshold: double
++ acceptedCurrencies: String {NotBlank}
++ systemCurrency: String {NotBlank}
++ strongSpamWords: String {NotBlank}
++ strongSpamThreshold: double {Range(0,100), Digits(1,2)}
++ weakSpamWords: String {NotBlank}
++ weakSpamThreshold: double {Range(0,100), Digits(1,2)}
 
 bg=green</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1640</x>
-      <y>648</y>
-      <w>160</w>
-      <h>112</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-x
-m1=1
-m2=0..*
-&lt; configurates</panel_attributes>
-    <additional_attributes>10.0;120.0;10.0;50.0;160.0;50.0;160.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1832</x>
-      <y>648</y>
-      <w>152</w>
-      <h>104</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-x
-m1=1
-m2=0..*
-configurates &gt;</panel_attributes>
-    <additional_attributes>160.0;110.0;160.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -878,5 +770,75 @@ bg=yellow</panel_attributes>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;110.0;10.0;110.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1688</x>
+      <y>368</y>
+      <w>136</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Period must be at least 
+one month long, starting 
+at least one month after 
+the patronage is created.
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1584</x>
+      <y>616</y>
+      <w>120</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>The system currency
+must be listed in
+the list of 
+accepted currencies.
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1696</x>
+      <y>648</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1576</x>
+      <y>784</y>
+      <w>416</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>*Default values*
+acceptedCurrencies = "EUR, USD, GBP"
+systemCurrency = "EUR"
+strongSpamWords = "sex, sexo, hard core, viagra, cialis"
+strongSpamThreshold = 10.00
+weakSpamWords = "sexy, nigeria, you've won, has ganado, one million, un millón"
+weakSpamThreshold = 25.00
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1832</x>
+      <y>704</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
