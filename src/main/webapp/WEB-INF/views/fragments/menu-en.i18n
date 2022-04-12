@@ -45,6 +45,7 @@ master.menu.any.toolkit-list = List of Toolkits
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.announcement-list = Announcement list
+master.menu.authenticated.currency-info = Currency information
 
 # master.menu.inventor ########################################################
 

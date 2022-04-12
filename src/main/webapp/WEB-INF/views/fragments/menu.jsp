@@ -45,6 +45,7 @@
 			<acme:menu-suboption code="master.menu.any.artefact" action="/any/artefact/list"/>
 			<acme:menu-suboption code="master.menu.any.toolkit-list" action="/any/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.announcement-list" action="/authenticated/announcement/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.currency-info" action="/authenticated/system-configuration/list"/>
 		</acme:menu-option>
 	
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
