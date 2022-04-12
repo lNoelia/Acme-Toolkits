@@ -1,4 +1,4 @@
-package acme.features.inventor.artefact;
+package acme.features.any.artefact;
 
 import java.util.Collection;
 
@@ -6,50 +6,55 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.artefact.Artefact;
+import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
-import acme.roles.Inventor;
 
 @Service
-public class InventorArtefactListService implements AbstractListService<Inventor, Artefact> {
-
-	// Internal state ---------------------------------------------------------
+public class AnyArtefactListByToolkitService implements AbstractListService<Any, Artefact> {
 
 	@Autowired
-	protected InventorArtefactRepository repository;
-
-	// AbstractListService<Inventor, Artefact> interface --------------
-
-
+	protected AnyArtefactRepository repository;
+	
 	@Override
 	public boolean authorise(final Request<Artefact> request) {
 		assert request != null;
-
-		return true;
+		
+		int toolkitId;
+		Toolkit toolkit;
+		
+		toolkitId = request.getModel().getInteger("toolkitId");
+		toolkit = this.repository.findOneToolkitById(toolkitId);
+		
+		return toolkit.isPublished();
 	}
-
+	
+	
 	@Override
 	public Collection<Artefact> findMany(final Request<Artefact> request) {
 		assert request != null;
 
+		int toolkitId;		
 		Collection<Artefact> result;
-		int inventorId;
 
-		inventorId = request.getPrincipal().getActiveRoleId();
-		
-		result = this.repository.findAllArtefactByInventorId(inventorId);
+		toolkitId = request.getModel().getInteger("toolkitId");
+		result = this.repository.findArtefactsByToolkitId(toolkitId);
 
 		return result;
 	}
-	
+
+
 	@Override
 	public void unbind(final Request<Artefact> request, final Artefact entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "technology", "retailPrice", "type");
+		request.unbind(entity, model, "name", "technology", "retailPrice", "type");	
 	}
+
+
 
 }
