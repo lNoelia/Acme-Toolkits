@@ -21,7 +21,7 @@ public class InventorArtefactController extends AbstractController<Inventor, Art
 	protected InventorArtefactShowService		showService;
 
 	// Constructors -----------------------------------------------------------
-
+ 
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.listService);
