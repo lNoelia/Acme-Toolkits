@@ -42,6 +42,7 @@ master.menu.any.artefact = Lista de artefactos
 master.menu.any.chirp = Lista de mensajes
 master.menu.any.toolkit-list = Lista de conjuntos de herramientas
 
+
 # master.menu.authenticated ########################################################
 
 master.menu.authenticated = Autenticado
@@ -51,13 +52,17 @@ master.menu.authenticated.announcement-list = Lista de anuncios
 
 master.menu.inventor = Inventor
 master.menu.inventor.artefact-list = Lista de artefactos
-master.menu.inventor.patronage-report-list = Lista de reportes de patrocinios
+master.menu.inventor.toolkit-list = Lista de conjuntos de herramientas
+master.menu.inventor.patronage-list = Lista de patrocinios
+master.menu.inventor.patronage-report-list = Lista de informes de patrocinio
 
-# master.menu.patron ########################################################
 
+# master.menu.patron ####################################################
 master.menu.patron = Patrocinador
 master.menu.patron.patronage-list = Lista de patrocinios
 master.menu.patron.patronage-report-list = Lista de informes de patrocinios
+
+
 
 # master.menu.user-account ####################################################
 
