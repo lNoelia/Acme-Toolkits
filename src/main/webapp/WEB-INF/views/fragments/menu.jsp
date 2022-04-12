@@ -21,6 +21,7 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.any.artefact"  action="/any/artefact/list"/>
 			<acme:menu-suboption code="master.menu.any.toolkit-list"  action="/any/toolkit/list"/>
+			<acme:menu-suboption code="master.menu.any.user-account" action="/any/user-account/list"/>
 			
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-carlos" action="https://serebii.net/"/>
@@ -44,6 +45,7 @@
 		<acme:menu-option code="master.menu.authenticated" access="hasRole('Authenticated')">
 			<acme:menu-suboption code="master.menu.any.artefact" action="/any/artefact/list"/>
 			<acme:menu-suboption code="master.menu.any.toolkit-list" action="/any/toolkit/list"/>
+			<acme:menu-suboption code="master.menu.any.user-account" action="/any/user-account/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.announcement-list" action="/authenticated/announcement/list"/>
 		</acme:menu-option>
 	
