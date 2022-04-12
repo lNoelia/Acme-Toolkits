@@ -57,6 +57,7 @@ master.menu.authenticated.announcement-list = Lista de anuncios
 
 master.menu.inventor = Inventor
 master.menu.inventor.artefact-list = Lista de artefactos
+master.menu.inventor.toolkit-list = Lista de conjuntos de herramientas
 
 # master.menu.inventor ####################################################
 master.menu.inventor = Inventor
