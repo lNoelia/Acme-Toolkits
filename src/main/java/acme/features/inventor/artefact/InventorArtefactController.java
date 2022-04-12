@@ -24,7 +24,7 @@ public class InventorArtefactController extends AbstractController<Inventor, Art
 
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list", "list", this.listService);
-		super.addCommand("show", "show", this.showService);
+		super.addCommand("list", this.listService);
+		super.addCommand("show", this.showService);
 	}
 }
