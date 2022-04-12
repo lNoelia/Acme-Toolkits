@@ -11,9 +11,9 @@
 
 inventor.patronageReport.list.label.sequenceNumber = Numero de secuencia
 inventor.patronageReport.list.label.creationDate = Fecha de creacion
-inventor.patronageReport.list.label.patronageCode = Codigo del mecenazgo
+inventor.patronageReport.list.label.patronageCode = Codigo del patrocinio
 
-inventor.patronageReport.form.label.patronageCode = Codigo de mecenazgo
+inventor.patronageReport.form.label.patronageCode = Codigo de patrocinio
 inventor.patronageReport.form.label.memorandum = Memorando
 inventor.patronageReport.form.label.sequenceNumber = Numero de secuencia
 inventor.patronageReport.form.label.creationDate = Fecha de creacion
