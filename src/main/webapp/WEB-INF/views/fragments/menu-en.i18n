@@ -39,6 +39,7 @@ master.menu.administrator.shut-down = Shut down
 # master.menu.any ########################################################
 
 master.menu.any.artefact = List of Artefacts
+master.menu.any.chirp = List of Chirps
 master.menu.any.toolkit-list = List of Toolkits
 master.menu.any.user-account = User accounts
 
@@ -51,13 +52,17 @@ master.menu.authenticated.announcement-list = Announcement list
 
 master.menu.inventor = Inventor
 master.menu.inventor.artefact-list = List of Artefacts
+master.menu.inventor.toolkit-list = List of Toolkits
 master.menu.inventor.patronage-report-list = List of patronage reports
+master.menu.inventor.patronage-list = List of patronages
 
 # master.menu.patron ########################################################
 
 master.menu.patron = Patron
-master.menu.patron.patronage-report-list = List of Patronage reports
+master.menu.patron.patronage-report-list = List of patronage reports
 master.menu.patron.patronage-list = List of patronage
+>>>>>>> refs/remotes/origin/master
+
 
 # master.menu.user-account ####################################################
 

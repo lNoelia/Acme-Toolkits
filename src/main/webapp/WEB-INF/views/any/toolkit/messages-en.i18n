@@ -3,3 +3,7 @@ any.toolkit.list.title.list = All toolkits
 any.toolkit.list.label.code = Code
 any.toolkit.list.label.title = Title
 any.toolkit.list.label.description = Description
+any.toolkit.list.label.assemblyNotes = Assembly Notes
+any.toolkit.list.label.link = Link
+any.toolkit.list.label.price = Price
+any.toolkit.list.label.artefacts = Artefacts

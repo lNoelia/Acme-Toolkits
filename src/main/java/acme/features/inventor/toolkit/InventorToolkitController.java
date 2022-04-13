@@ -1,27 +1,24 @@
-package acme.features.any.artefact;
+package acme.features.inventor.toolkit;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.artefact.Artefact;
+import acme.entities.toolkits.Toolkit;
 import acme.framework.controllers.AbstractController;
-import acme.framework.roles.Any;
+import acme.roles.Inventor;
 
 @Controller
-public class AnyArtefactController extends AbstractController<Any, Artefact>{
+public class InventorToolkitController extends AbstractController<Inventor, Toolkit>{
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnyArtefactListService		listService;
+	protected InventorToolkitListMineService		listService;
 
 	@Autowired
-	protected AnyArtefactShowService		showService;
-	
-	@Autowired
-	protected AnyArtefactListByToolkitService listByToolkitService;
+	protected InventorToolkitShowService		showService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -29,6 +26,5 @@ public class AnyArtefactController extends AbstractController<Any, Artefact>{
 	protected void initialise() {
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
-		super.addCommand("list-by-toolkit", "list", this.listByToolkitService);
 	}
 }

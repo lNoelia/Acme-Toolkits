@@ -22,7 +22,8 @@
 			<acme:menu-suboption code="master.menu.any.artefact"  action="/any/artefact/list"/>
 			<acme:menu-suboption code="master.menu.any.toolkit-list"  action="/any/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.any.user-account" action="/any/user-account/list"/>
-			
+			<acme:menu-suboption code="master.menu.any.chirp" action="/any/chirp/list"/>
+
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-carlos" action="https://serebii.net/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-noelia" action="https://spreadthesign.com/es.es/search/?"/>
@@ -46,19 +47,21 @@
 			<acme:menu-suboption code="master.menu.any.artefact" action="/any/artefact/list"/>
 			<acme:menu-suboption code="master.menu.any.toolkit-list" action="/any/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.any.user-account" action="/any/user-account/list"/>
+			<acme:menu-suboption code="master.menu.any.chirp" action="/any/chirp/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.announcement-list" action="/authenticated/announcement/list"/>
 		</acme:menu-option>
-	
+
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
-			<acme:menu-suboption code="master.menu.inventor.artefact-list" action="/inventor/artefact/list"/>
+			<acme:menu-suboption code="master.menu.inventor.artefact-list" action="/inventor/artefact/list-mine"/>
+			<acme:menu-suboption code="master.menu.inventor.toolkit-list" action="/inventor/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.inventor.patronage-report-list" action="/inventor/patronage-report/list"/>
+      <acme:menu-suboption code="master.menu.inventor.patronage-list" action="/inventor/patronage/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
 			<acme:menu-suboption code="master.menu.patron.patronage-report-list" action="/patron/patronage-report/list"/>
 			<acme:menu-suboption code="master.menu.patron.patronage-list" action="/patron/patronage/list"/>
 		</acme:menu-option>
-		
 	</acme:menu-left>
 
 	<acme:menu-right>

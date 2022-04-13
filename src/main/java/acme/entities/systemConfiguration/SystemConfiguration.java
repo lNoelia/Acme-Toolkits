@@ -1,12 +1,11 @@
 package acme.entities.systemConfiguration;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotBlank;
 
-import acme.entities.currency.Currency;
-import acme.entities.spam.Spam;
+import org.hibernate.validator.constraints.Range;
+
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,18 +19,24 @@ public class SystemConfiguration extends AbstractEntity {
 	
 	// Attributes
 	
-	protected double spamThreshold;
+	@NotBlank
+	protected String acceptedCurrencies;
 	
-	// Relationships
+	@NotBlank
+	protected String systemCurrency;
 	
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	protected Currency currency;
+	@NotBlank
+	protected String strongSpamWords;
 	
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	protected Spam spam;
+	@Range(min = 0, max = 100)
+	@Digits(fraction = 1, integer = 2)
+	protected double strongSpamThreshold;
+	
+	@NotBlank
+	protected String weakSpamWords;
+	
+	@Range(min = 0, max = 100)
+	@Digits(fraction = 1, integer = 2)
+	protected double weakSpamThreshold;
 	
 }
