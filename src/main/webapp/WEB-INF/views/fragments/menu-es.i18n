@@ -41,6 +41,12 @@ master.menu.administrator.shut-down = Parar el sistema
 master.menu.any.artefact = Lista de artefactos
 master.menu.any.chirp = Lista de mensajes
 master.menu.any.toolkit-list = Lista de conjuntos de herramientas
+master.menu.any.user-account = Cuentas de usuario
+master.menu.inventor.patronage-report-list = Lista de reportes de mecenazgos
+
+# master.menu.patron ########################################################
+master.menu.patron = Mecenas
+master.menu.patron.patronage-report-list = Lista de informes de patrocinio
 
 
 # master.menu.authenticated ########################################################

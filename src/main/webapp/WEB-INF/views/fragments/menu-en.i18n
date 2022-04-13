@@ -41,6 +41,7 @@ master.menu.administrator.shut-down = Shut down
 master.menu.any.artefact = List of Artefacts
 master.menu.any.chirp = List of Chirps
 master.menu.any.toolkit-list = List of Toolkits
+master.menu.any.user-account = User accounts
 
 # master.menu.authenticated ########################################################
 
