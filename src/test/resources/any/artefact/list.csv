@@ -1,0 +1,5 @@
+recordIndex,key,name,code,technology,description,retailPrice,link,type,key:inventor,published
+0,artefact-02,Hammer,AAA-012-B,"Iron head","A tool for nails",EUR 3.00,"http://example.com/",TOOL,inventor-01,true
+1,artefact-05,Nail,ABA-012-B,"Iron","Example text",EUR 0.05,"http://example.com/",COMPONENT,inventor-03,true
+2,artefact-06,Screw,ZZZ-999-Z,"Steel","Screw made of steel",EUR 0.06,"http://example.com/",COMPONENT,inventor-01,true
+3,artefact-01,Screwdriver,AAA-000-A,"Flat Head","A tool for screws",EUR 2.00,"",TOOL,inventor-01,true
