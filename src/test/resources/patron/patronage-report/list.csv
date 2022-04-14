@@ -1,0 +1,5 @@
+recordIndex,sequenceNumber,creationDate,patronageCode,memorandum,link
+0,"AAA-000-A:0001","2020/03/12 11:00",AAA-000-A,"Example text","http://example.com/"
+1,"ABC-123-B:0001","2020/03/12 11:00",ABC-123-B,"Example text","http://example.com/"
+2,"ABC-123-B:0002","2020/03/12 11:00",ABC-123-B,"Example text","http://example.com/"
+
