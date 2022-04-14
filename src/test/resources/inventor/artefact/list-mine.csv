@@ -1,0 +1,4 @@
+recordIndex,name,code,technology,description,retailPrice,link,type
+0,"Screwdriver","AAA-000-A","Flat Head","A tool for screws","EUR 2.00","","Tool"
+1,"Hammer","AAA-012-B","Iron head","A tool for nails","EUR 3.00","http://example.com/","Tool"
+2,"Screw","ZZZ-999-Z","Steel","Screw made of steel","EUR 0.06","http://example.com/","Component"
