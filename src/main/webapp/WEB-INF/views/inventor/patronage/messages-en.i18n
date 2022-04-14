@@ -1,0 +1,18 @@
+inventor.patronage.form.label.code = Code:
+inventor.patronage.form.label.status = Status:
+inventor.patronage.form.label.budget = Budget:
+inventor.patronage.form.label.patron = Patron:
+inventor.patronage.form.label.legalStuff = Legal stuff:
+inventor.patronage.form.label.link = Link:
+inventor.patronage.form.label.creationDate = Creation date:
+inventor.patronage.form.label.startDate = Start date: 
+inventor.patronage.form.label.endDate = End date:
+
+inventor.patronage.form.button.patronages = Patronages
+
+inventor.patronage.list.title.list = All patronages
+
+inventor.patronage.list.label.code = Code
+inventor.patronage.list.label.status = Status
+inventor.patronage.list.label.budget = Budget
+inventor.patronage.list.label.patron = Patron
