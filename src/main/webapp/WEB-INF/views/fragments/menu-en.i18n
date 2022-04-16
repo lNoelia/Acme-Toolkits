@@ -48,6 +48,7 @@ master.menu.any.user-account = User accounts
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.announcement-list = Announcement list
+master.menu.authenticated.currency-info = Currency information
 
 # master.menu.inventor ########################################################
 

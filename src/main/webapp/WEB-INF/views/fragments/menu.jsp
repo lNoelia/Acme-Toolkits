@@ -50,6 +50,7 @@
 			<acme:menu-suboption code="master.menu.any.user-account" action="/any/user-account/list"/>
 			<acme:menu-suboption code="master.menu.any.chirp" action="/any/chirp/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.announcement-list" action="/authenticated/announcement/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.currency-info" action="/authenticated/system-configuration/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">

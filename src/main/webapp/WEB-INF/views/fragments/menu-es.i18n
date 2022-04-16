@@ -54,6 +54,7 @@ master.menu.patron.patronage-report-list = Lista de informes de patrocinio
 
 master.menu.authenticated = Autenticado
 master.menu.authenticated.announcement-list = Lista de anuncios
+master.menu.authenticated.currency-info = Información de las monedas
 
 # master.menu.inventor ########################################################
 
