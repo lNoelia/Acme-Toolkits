@@ -24,25 +24,14 @@ public class AnyToolkitListTest extends TestHarness{
 			super.checkColumnHasValue(recordIndex, 0, code);
 			super.checkColumnHasValue(recordIndex, 1, title);
 			super.checkColumnHasValue(recordIndex, 2, description);
-			
-			super.clickOnListingRecord(recordIndex);
-			super.checkFormExists();
-			super.checkInputBoxHasValue("code", code);
-			super.checkInputBoxHasValue("title", title);
-			super.checkInputBoxHasValue("description", description);
-			super.checkInputBoxHasValue("assemblyNotes", assemblyNotes);
-			super.checkInputBoxHasValue("link", link);
-			super.checkInputBoxHasValue("price", price);
 
 			super.signOut();
 		}
 		
 		@ParameterizedTest
-		@CsvFileSource(resources = "/any/toolkit/list2.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
-		public void positiveTestAnonymous(final int recordIndex, final String code, final String title, final String description, 
-			final String assemblyNotes, final String link, final String price, final String name, final String codeA, final String technology,
-			final String descriptionA, final String retailPrice, final String type) {
+		public void positiveTestAnonymous(final int recordIndex, final String code, final String title, final String description) {
 			
 			super.clickOnMenu("Anonymous", "List of Toolkits");
 			super.checkListingExists();
@@ -51,26 +40,35 @@ public class AnyToolkitListTest extends TestHarness{
 			super.checkColumnHasValue(recordIndex, 0, code);
 			super.checkColumnHasValue(recordIndex, 1, title);
 			super.checkColumnHasValue(recordIndex, 2, description);
+		}
+		
+		@ParameterizedTest
+		@CsvFileSource(resources = "/any/toolkit/searchList.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@Order(10)
+		public void searchPositiveTest(final int recordIndex, final String code, final String title, final String description, final String assemblyNotes, final String link, final String price) {
+
+			super.clickOnMenu("Anonymous", "List of Toolkits");
 			
-			super.clickOnListingRecord(recordIndex);
-			super.checkFormExists();
-			super.checkInputBoxHasValue("code", code);
-			super.checkInputBoxHasValue("title", title);
-			super.checkInputBoxHasValue("description", description);
-			super.checkInputBoxHasValue("assemblyNotes", assemblyNotes);
-			super.checkInputBoxHasValue("link", link);
-			super.checkInputBoxHasValue("price", price);
+			super.fillInputBoxIn("keyword", "screw");
+			super.clickOnSubmit("Search");
 			
-			super.clickOnButton("Artefacts");
 			super.checkListingExists();
+			super.checkColumnHasValue(recordIndex, 0, code);
+			super.checkColumnHasValue(recordIndex, 1, title);
+			super.checkColumnHasValue(recordIndex, 2, description);
+		}
+		
+		@ParameterizedTest
+		@CsvFileSource(resources = "/any/toolkit/searchList.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@Order(10)
+		public void searchNegativeTest(final int recordIndex, final String code, final String title, final String description, final String assemblyNotes, final String link, final String price) {
+
+			super.clickOnMenu("Anonymous", "List of Toolkits");
+			super.sortListing(0, "asc");
 			
-			super.clickOnListingRecord(0);
-			super.checkFormExists();	
-			super.checkInputBoxHasValue("code", codeA);
-			super.checkInputBoxHasValue("name", name);
-			super.checkInputBoxHasValue("description", descriptionA);
-			super.checkInputBoxHasValue("technology", technology);
-			super.checkInputBoxHasValue("type", type);
-			super.checkInputBoxHasValue("retailPrice", retailPrice);
+			super.fillInputBoxIn("keyword", "xxxx");
+			super.clickOnSubmit("Search");
+			
+			super.checkListingEmpty();
 		}
 }
