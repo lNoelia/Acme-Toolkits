@@ -10,7 +10,7 @@ public class AnyToolkitListTest extends TestHarness{
 
 	// Lifecycle management ---------------------------------------------------
 
-		// Test cases -------------------------------------------------------------
+	// Test cases -------------------------------------------------------------
 		@ParameterizedTest
 		@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
@@ -38,10 +38,12 @@ public class AnyToolkitListTest extends TestHarness{
 		}
 		
 		@ParameterizedTest
-		@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@CsvFileSource(resources = "/any/toolkit/list2.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
-		public void positiveTestAnonymous(final int recordIndex, final String code, final String title, final String description, final String assemblyNotes, final String link, final String price) {
-
+		public void positiveTestAnonymous(final int recordIndex, final String code, final String title, final String description, 
+			final String assemblyNotes, final String link, final String price, final String name, final String codeA, final String technology,
+			final String descriptionA, final String retailPrice, final String type) {
+			
 			super.clickOnMenu("Anonymous", "List of Toolkits");
 			super.checkListingExists();
 			super.sortListing(0, "asc");
@@ -59,5 +61,16 @@ public class AnyToolkitListTest extends TestHarness{
 			super.checkInputBoxHasValue("link", link);
 			super.checkInputBoxHasValue("price", price);
 			
+			super.clickOnButton("Artefacts");
+			super.checkListingExists();
+			
+			super.clickOnListingRecord(0);
+			super.checkFormExists();	
+			super.checkInputBoxHasValue("code", codeA);
+			super.checkInputBoxHasValue("name", name);
+			super.checkInputBoxHasValue("description", descriptionA);
+			super.checkInputBoxHasValue("technology", technology);
+			super.checkInputBoxHasValue("type", type);
+			super.checkInputBoxHasValue("retailPrice", retailPrice);
 		}
 }
