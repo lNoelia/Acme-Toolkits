@@ -32,6 +32,7 @@ master.menu.anonymous.favourite-link-sara = 29585651S: Cruz Duárez, Sara
 master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.system-configuration = System configuration
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
@@ -39,12 +40,15 @@ master.menu.administrator.shut-down = Shut down
 # master.menu.any ########################################################
 
 master.menu.any.artefact = List of Artefacts
+master.menu.any.chirp = List of Chirps
 master.menu.any.toolkit-list = List of Toolkits
+master.menu.any.user-account = User accounts
 
 # master.menu.authenticated ########################################################
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.announcement-list = Announcement list
+master.menu.authenticated.currency-info = Currency information
 
 # master.menu.inventor ########################################################
 
@@ -52,13 +56,15 @@ master.menu.inventor = Inventor
 master.menu.inventor.artefact-list = List of Artefacts
 master.menu.inventor.toolkit-list = List of Toolkits
 master.menu.inventor.patronage-report-list = List of patronage reports
+master.menu.inventor.patronage-list = List of patronages
 
 # master.menu.patron ########################################################
 
 master.menu.patron = Patron
-master.menu.patron.patronage-report-list = List of Patronage reports
+master.menu.patron.patronage-report-list = List of patronage reports
 master.menu.patron.patronage-list = List of patronage
 >>>>>>> refs/remotes/origin/master
+
 
 # master.menu.user-account ####################################################
 

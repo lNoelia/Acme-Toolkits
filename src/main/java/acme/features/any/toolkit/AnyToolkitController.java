@@ -14,9 +14,17 @@ public class AnyToolkitController extends AbstractController<Any, Toolkit> {
 
 	@Autowired
 	protected AnyToolkitListAllService listAllService;
+	
+	@Autowired
+	protected AnyToolkitListByArtefactService listByArtefactService;
+	
+	@Autowired
+	protected AnyToolkitShowService showService;
 
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.listAllService);
+		super.addCommand("list-by-artefact", "list", this.listByArtefactService);
+		super.addCommand("show", this.showService);
 	}
 }

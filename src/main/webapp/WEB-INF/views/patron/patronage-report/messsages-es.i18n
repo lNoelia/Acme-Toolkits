@@ -11,9 +11,9 @@
 
 patron.patronageReport.list.label.sequenceNumber = Numero de secuencia
 patron.patronageReport.list.label.creationDate = Fecha de creacion
-patron.patronageReport.list.label.patronageCode = Codigo del mecenazgo
+patron.patronageReport.list.label.patronageCode = Codigo del patrocinio
 
-patron.patronageReport.form.label.patronageCode = Codigo de mecenazgo
+patron.patronageReport.form.label.patronageCode = Codigo de patrocinio
 patron.patronageReport.form.label.memorandum = Memorando
 patron.patronageReport.form.label.sequenceNumber = Numero de secuencia
 patron.patronageReport.form.label.creationDate = Fecha de creacion

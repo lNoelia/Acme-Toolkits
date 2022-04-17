@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.artefact.Artefact;
+import acme.entities.artefact.ArtefactType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
@@ -51,7 +52,14 @@ public class InventorArtefactPerToolkitListService implements AbstractListServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "technology", "retailPrice", "type");		
+		request.unbind(entity, model, "name", "technology", "retailPrice", "type");	
+		
+		final ArtefactType type = model.getAttribute("type", ArtefactType.class);
+		String typex = type.toString();
+		final String lowercase = typex.toLowerCase();
+		final String t = typex.substring(0,1);
+		typex = t.concat(lowercase.substring(1));
+		model.setAttribute("type", typex);
 	}
 
 }
