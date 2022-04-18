@@ -1,0 +1,5 @@
+key,creationDate,title,author,body,email
+0,2022/04/01 10:24,Example of a Chirp,User2,This is an example of a chirp,email@example.com
+1,2022/04/02 13:40,Example of a Chirp,User1,This is an example of a chirp,
+2,2022/03/20 07:00,Example of a Chirp,User2,This is an example of a chirp,email@example.com
+3,2022/03/30 19:50,Example of a Chirp,User1,This is an example of a chirp,email@example.com
