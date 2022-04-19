@@ -1,5 +1,11 @@
 key,creationDate,title,author,body,email
-chirp-01,"2020/03/12 10:00","Example of a Chirp",User1,"This is an example of a chirp",email@example.com
-chirp-02,"2020/04/12 12:40","Example of a Chirp",User2,"This is an example of a chirp",null
-chirp-03,"2021/04/12 12:40","Another example of a Chirp",User2,"This is an example of a chirp for the third time",email2@example.com
-chirp-04,"2019/04/12 13:40","Another example of a Chirp",User1,"This is an example of a chirp for the fourth time!",null
+chirp-01,2020/03/12 10:00,Example of a Chirp,User1,This is an example of a chirp,email@example.com
+chirp-02,2020/04/12 12:40,Example of a Chirp,User2,This is an example of a chirp,null
+chirp-03,2021/04/12 12:40,Another example of a Chirp,User2,This is an example of a chirp for the third time,email2@example.com
+chirp-04,2019/04/12 13:40,Another example of a Chirp,User1,This is an example of a chirp for the fourth time!,null
+chirp-05,2022/04/02 13:40,Example of a Chirp,User1,This is an example of a chirp,null
+chirp-06,2022/03/09 13:20,Example of a Chirp,User2,This is an example of a chirp,email@example.com
+chirp-07,2022/02/19 17:10,Example of a Chirp,User1,This is another example of a chirp,email@example.com
+chirp-08,2022/04/01 10:24,Example of a Chirp,User2,This is an example of a chirp,email@example.com
+chirp-09,2022/03/20 07:00,Example of a Chirp,User2,This is an example of a chirp,email@example.com
+chirp-10,2022/03/30 19:50,Example of a Chirp,User1,This is an example of a chirp,email@example.com

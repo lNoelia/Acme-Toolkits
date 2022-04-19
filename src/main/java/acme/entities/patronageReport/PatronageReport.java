@@ -56,17 +56,17 @@ public class PatronageReport extends AbstractEntity {
 	
 	// Relationships
 	
-	@ManyToOne(optional = true)
+	@ManyToOne(optional = false)
 	@Valid
 	@NotNull
 	protected Patronage patronage;
 	
-	@ManyToOne(optional = true)
+	@ManyToOne(optional = false)
 	@Valid
 	@NotNull
 	protected Patron patron;
 	
-	@ManyToOne(optional = true)
+	@ManyToOne(optional = false)
 	@Valid
 	@NotNull
 	protected Inventor inventor;

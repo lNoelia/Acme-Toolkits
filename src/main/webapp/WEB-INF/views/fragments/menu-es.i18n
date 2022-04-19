@@ -26,26 +26,51 @@ master.menu.anonymous.favourite-link-joseMaria = 53587002S: Delgado Sánchez, Jo
 master.menu.anonymous.favourite-link-ricardo = 77925188S: Nadal Garcia, Ricardo
 master.menu.anonymous.favourite-link-sara = 29585651S: Cruz Duárez, Sara
 
-
-
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.system-configuration = Configuración del sistema
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 
-# master.menu.provider ########################################################
 
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+# master.menu.any ########################################################
 
-# master.menu.consumer ##########################################################
+master.menu.any.artefact = Lista de artefactos
+master.menu.any.chirp = Lista de mensajes
+master.menu.any.toolkit-list = Lista de conjuntos de herramientas
+master.menu.any.user-account = Cuentas de usuario
+master.menu.inventor.patronage-report-list = Lista de reportes de mecenazgos
 
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
+# master.menu.patron ########################################################
+master.menu.patron = Mecenas
+master.menu.patron.patronage-report-list = Lista de informes de patrocinio
+
+
+# master.menu.authenticated ########################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.announcement-list = Lista de anuncios
+master.menu.authenticated.currency-info = Información de las monedas
+
+# master.menu.inventor ########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.artefact-list = Lista de artefactos
+master.menu.inventor.toolkit-list = Lista de conjuntos de herramientas
+master.menu.inventor.patronage-list = Lista de patrocinios
+master.menu.inventor.patronage-report-list = Lista de informes de patrocinio
+
+
+# master.menu.patron ####################################################
+master.menu.patron = Patrocinador
+master.menu.patron.patronage-list = Lista de patrocinios
+master.menu.patron.patronage-report-list = Lista de informes de patrocinios
+
+
 
 # master.menu.user-account ####################################################
 
