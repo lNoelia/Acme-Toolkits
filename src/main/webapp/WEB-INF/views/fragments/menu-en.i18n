@@ -63,7 +63,7 @@ master.menu.inventor.patronage-list = List of patronages
 master.menu.patron = Patron
 master.menu.patron.patronage-report-list = List of patronage reports
 master.menu.patron.patronage-list = List of patronage
->>>>>>> refs/remotes/origin/master
+master.menu.patron.dashboard = Patron dashboard
 
 
 # master.menu.user-account ####################################################
