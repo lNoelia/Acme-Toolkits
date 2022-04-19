@@ -18,9 +18,9 @@
 <acme:form readonly="${readonly}">
 	<acme:input-textbox code="patron.patronage.list.label.code" path="code"/>
 	<acme:input-select code="patron.patronage.list.label.status" path="status">
-		<acme:input-option code="PROPOSED" value="PROPOSED" selected="${type == 'PROPOSED'}"/>
-		<acme:input-option code="ACCEPTED" value="ACCEPTED" selected="${type == 'ACCEPTED'}"/>
-		<acme:input-option code="DENIED" value="DENIED" selected="${type == 'DENIED'}"/>
+		<acme:input-option code="PROPOSED" value="PROPOSED" selected="${status == 'PROPOSED'}"/>
+		<acme:input-option code="ACCEPTED" value="ACCEPTED" selected="${status == 'ACCEPTED'}"/>
+		<acme:input-option code="DENIED" value="DENIED" selected="${status == 'DENIED'}"/>
 	</acme:input-select>
 	<acme:input-money code="patron.patronage.list.label.budget" path="budget"/>
 	<acme:input-textarea code="patron.patronage.list.label.legalStuff" path="legalStuff"/>

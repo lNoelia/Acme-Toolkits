@@ -6,4 +6,6 @@ any.toolkit.list.label.description = Descripción
 any.toolkit.list.label.assemblyNotes = Instruciones de montaje
 any.toolkit.list.label.link = Enlace
 any.toolkit.list.label.price = Precio
-any.toolkit.list.label.artefacts = Elementos
+any.toolkit.list.label.artefacts = Artefactos
+any.toolkit.form.label.keyword = Filtrar por un artefacto específico
+any.toolkit.form.button.search = Buscar
