@@ -34,7 +34,7 @@ public class InventorArtefactShowService implements AbstractShowService<Inventor
 		
 		activeRolId = request.getPrincipal().getActiveRoleId();
 		
-		return activeRolId == artefact.getInventor().getId() && artefact.isPublished();
+		return activeRolId == artefact.getInventor().getId();
 	}
 
 	@Override
