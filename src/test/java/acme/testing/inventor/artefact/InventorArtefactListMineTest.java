@@ -39,15 +39,9 @@ public class InventorArtefactListMineTest extends TestHarness {
 	}
 	
 	@Test
-	@Order(10)
+	@Order(20)
 	public void negativeTest() {
-		super.signIn("inventor1", "inventor1");
-		
-		super.clickOnMenu("Inventor", "List of Artefacts");
-		super.checkListingExists();
-		super.sortListing(1, "asc");
-
-		super.clickOnListingRecord(0);
-		super.checkNotFormExists();
+		super.navigate("/inventor/artefact/list-mine");
+		super.checkErrorsExist();
 	}
 }
