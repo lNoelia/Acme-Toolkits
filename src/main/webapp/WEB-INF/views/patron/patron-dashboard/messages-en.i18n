@@ -9,6 +9,11 @@
 # they accept any liabilities with respect to them.
 
 patron.dashboard.form.title.general-indicators = General indicators
+patron.dashboard.form.title.general-indicators-average-budgets = Average budgets of patronages by status and currency
+patron.dashboard.form.title.general-indicators-deviation-budgets = Deviation budgets of patronages by status and currency
+patron.dashboard.form.title.general-indicators-minimum-budgets = Minimum budgets of patronages by status and currency
+patron.dashboard.form.title.general-indicators-maximum-budgets = Maximum budgets of patronages by status and currency
+
 
 patron.dashboard.form.label.total-number-of-proposed-patronages = Total number of proposed patronages
 patron.dashboard.form.label.total-number-of-accepted-patronages= Total number of accepted patronages

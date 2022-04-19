@@ -46,5 +46,75 @@
 	</tr>	
 </table>
 
+<h2>
+	<acme:message code="patron.dashboard.form.title.general-indicators-average-budgets"/>
+</h2>
+
+<table class="table table-sm">
+	<jstl:forEach var="map" items="${averageBudgetOfPatronagesByStatusAndCurrency}" >	
+		<tr>
+			<th scope="row">
+				<jstl:out  value="${map.key}"/>
+			</th>
+			
+			<td>
+				<jstl:out value="${map.value}"/>
+			</td>
+		</tr>
+	</jstl:forEach>
+</table>
+
+<h2>
+	<acme:message code="patron.dashboard.form.title.general-indicators-deviation-budgets"/>
+</h2>
+
+<table class="table table-sm">
+	<jstl:forEach var="map" items="${deviationBudgetOfPatronagesByStatusAndCurrency}" >	
+		<tr>
+			<th scope="row">
+				<jstl:out  value="${map.key}"/>
+			</th>
+			
+			<td>
+				<jstl:out value="${map.value}"/>
+			</td>
+		</tr>
+	</jstl:forEach>
+</table>
+
+<h2>
+	<acme:message code="patron.dashboard.form.title.general-indicators-minimum-budgets"/>
+</h2>
+<table class="table table-sm">
+	<jstl:forEach var="map" items="${minimumBudgetOfPatronagesByStatusAndCurrency}" >	
+		<tr>
+			<th scope="row">
+				<jstl:out  value="${map.key}"/>
+			</th>
+			
+			<td>
+				<jstl:out value="${map.value}"/>
+			</td>
+		</tr>
+	</jstl:forEach>
+</table>
+
+<h2>
+	<acme:message code="patron.dashboard.form.title.general-indicators-maximum-budgets"/>
+</h2>
+<table class="table table-sm">
+	<jstl:forEach var="map" items="${maximumBudgetOfPatronagesByStatusAndCurrency}" >	
+		<tr>
+			<th scope="row">
+				<jstl:out  value="${map.key}"/>
+			</th>
+			
+			<td>
+				<jstl:out value="${map.value}"/>
+			</td>
+		</tr>
+	</jstl:forEach>
+</table>
+
 
 

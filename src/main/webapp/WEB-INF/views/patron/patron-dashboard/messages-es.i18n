@@ -9,6 +9,10 @@
 # they accept any liabilities with respect to them.
 
 patron.dashboard.form.title.general-indicators = Indicaciones generales
+patron.dashboard.form.title.general-indicators-average-budgets = Media de presupuesto por estado y moneda
+patron.dashboard.form.title.general-indicators-deviation-budgets = Desviacion de presupuesto por estado y moneda
+patron.dashboard.form.title.general-indicators-minimum-budgets = Minimo de presupuesto por estado y moneda
+patron.dashboard.form.title.general-indicators-maximum-budgets = Maximo de presupuesto por estado y moneda
 
 patron.dashboard.form.label.total-number-of-proposed-patronages = Numero total de mecenazgos propuestos
 patron.dashboard.form.label.total-number-of-accepted-patronages= Numero total de mecenazgos aceptados
