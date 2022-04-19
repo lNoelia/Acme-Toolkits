@@ -9,7 +9,7 @@ import acme.testing.TestHarness;
 public class AdministratorSystemConfigurationShowTest extends TestHarness{
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/systemConfiguration/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/administrator/system-configuration/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String acceptedCurrencies, final String systemCurrency, final String strongSpamWords, final String strongSpamThreshold, final String weakSpamWords, final String weakSpamThreshold) {
 		super.signIn("administrator", "administrator");
