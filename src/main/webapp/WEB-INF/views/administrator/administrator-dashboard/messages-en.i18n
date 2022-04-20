@@ -1,0 +1,31 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.general-indicators = General indicators
+
+
+administrator.dashboard.form.label.total-number-of-components = Total number of components
+administrator.dashboard.form.label.total-number-of-tools = Total number of tools
+
+administrator.dashboard.form.title.average-retail-price-of-components-by-technology-and-currency = Average retail price of components grouped by technology and currency
+administrator.dashboard.form.title.deviation-retail-price-of-components-by-technology-and-currency = Deviation retail price of components grouped by technology and currency
+administrator.dashboard.form.title.minimum-retail-price-of-components-by-technology-and-currency = Minimum retail price of components grouped by technology and currency
+administrator.dashboard.form.title.maximum-retail-price-of-components-by-technology-and-currency = Maximum retail price of components grouped by technology and currency
+
+administrator.dashboard.form.title.average-retail-price-of-tools-by-currency = Average retail price of components grouped by currency
+administrator.dashboard.form.title.deviation-retail-price-of-tools-by-currency = Deviation retail price of components grouped by currency
+administrator.dashboard.form.title.minimum-retail-price-of-tools-by-currency = Minimum retail price of components grouped by currency
+administrator.dashboard.form.title.maximum-retail-price-of-tools-by-currency = Maximum retail price of components grouped by currency
+
+administrator.dashboard.form.title.total-number-of-patronages-by-status = Total number of patronages by status
+administrator.dashboard.form.title.average-budget-of-patronages-by-status = Average budget of components grouped by status
+administrator.dashboard.form.title.deviation-budget-of-patronages-by-status = Deviation budget of components grouped by status
+administrator.dashboard.form.title.minimum-budget-of-patronages-by-status = Minimum budget of components grouped by status
+administrator.dashboard.form.title.maximum-budget-of-patronages-by-status = Maximum budget of components grouped by status

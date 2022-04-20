@@ -1,0 +1,31 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.general-indicators = Indicaciones generales
+
+
+administrator.dashboard.form.label.total-number-of-components = Número total de componentes
+administrator.dashboard.form.label.total-number-of-tools = Número total de herramientas
+
+administrator.dashboard.form.title.average-retail-price-of-components-by-technology-and-currency = Media del precio al por menor agrupado por tecnología y divisa
+administrator.dashboard.form.title.deviation-retail-price-of-components-by-technology-and-currency = Desviación del precio al por menor agrupado por tecnología y divisa
+administrator.dashboard.form.title.minimum-retail-price-of-components-by-technology-and-currency = Precio al por menor mínimo agrupado por tecnología y divisa
+administrator.dashboard.form.title.maximum-retail-price-of-components-by-technology-and-currency = Precio al por menor máximo agrupado por tecnología y divisa
+
+administrator.dashboard.form.title.average-retail-price-of-tools-by-currency = Media del precio al por menor agrupado por divisa
+administrator.dashboard.form.title.deviation-retail-price-of-tools-by-currency = Desviación del precio al por menor agrupado por divisa
+administrator.dashboard.form.title.minimum-retail-price-of-tools-by-currency = Precio al por menor mínimo agrupado por divisa
+administrator.dashboard.form.title.maximum-retail-price-of-tools-by-currency = Precio al por menor máximo agrupado por divisa
+
+administrator.dashboard.form.title.total-number-of-patronages-by-status = Número total de herramientas agrupado por estado
+administrator.dashboard.form.title.average-budget-of-patronages-by-status = Media del presupuesto agrupado por estado
+administrator.dashboard.form.title.deviation-budget-of-patronages-by-status = Desviación del presupuesto agrupado por estado
+administrator.dashboard.form.title.minimum-budget-of-patronages-by-status = Presupuesto mínimo agrupado por estado
+administrator.dashboard.form.title.maximum-budget-of-patronages-by-status = Presupuesto máximo agrupado por estado
