@@ -1,0 +1,3 @@
+recordIndex,key,code,title,description,assemblyNotes,link,published,artefactName,artefactCode,artefactTechnology,artefactDescription,artefactRetailPrice,artefactLink,artefactType
+0,toolkit-01,"AAA-000-A","Example title","Example description","Example assembly notes","",false,Screw,ABA-012-A,"Flat Head","Screw made of iron",EUR 0.05,"",Component,inventor-03
+1,toolkit-02,"AAC-012-B","Example title","Example description","Example assembly notes","http://example.com/",true,Nail,ABA-012-B,"Iron","Example text",EUR 0.05,"http://example.com/",Component,inventor-03
