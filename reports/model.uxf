@@ -368,30 +368,16 @@ providedFor &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
-      <y>400</y>
-      <w>88</w>
-      <h>392</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-x
-m1=1
-m2=0..*
-&lt; writtenBy</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;460.0;90.0;460.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1304</x>
+      <x>688</x>
       <y>400</y>
       <w>128</w>
-      <h>400</h>
+      <h>432</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
-writtenBy &gt;</panel_attributes>
-    <additional_attributes>70.0;10.0;70.0;470.0;10.0;470.0</additional_attributes>
+createdBy &gt;</panel_attributes>
+    <additional_attributes>130.0;10.0;130.0;460.0;10.0;460.0;10.0;520.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
