@@ -1,0 +1,6 @@
+administrator.systemConfiguration.form.label.acceptedCurrencies = Accepted currencies
+administrator.systemConfiguration.form.label.systemCurrency = System currency
+administrator.systemConfiguration.form.label.strongSpamWords = Strong spam words
+administrator.systemConfiguration.form.label.strongSpamThreshold = Strong spam threshold
+administrator.systemConfiguration.form.label.weakSpamWords = Weak spam words
+administrator.systemConfiguration.form.label.weakSpamThreshold = Weak spam threshold

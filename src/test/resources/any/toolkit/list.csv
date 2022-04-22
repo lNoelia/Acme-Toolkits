@@ -1,0 +1,4 @@
+recordIndex,code,title,description,assemblyNotes,link,price,name,codeA,technology,descriptionA,retailPrice,linkA,type
+0,"AAC-012-B","Example title","Example description","Example assembly notes","http://example.com/", ,Hammer,AAA-012-B,"Iron head","A tool for nails",EUR 3.00,"http://example.com/",Tool
+1,"AAC-012-C","Example title","Example description","Example assembly notes","http://example.com/", ,Screwdriver,AAA-000-A,"Flat Head","A tool for screws",EUR 2.00,"",Tool
+2,"AAC-012-D","Example title","Example description","Example assembly notes","http://example.com/", ,Screw,ZZZ-999-Z,"Steel","Screw made of steel",EUR 0.06,"http://example.com/",Component

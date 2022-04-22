@@ -1,0 +1,4 @@
+recordIndex,code,status,legalStuff,budget,link,creationDate,startDate,endDate
+0,ABC-123-C,Denied,Example text,GBP 100.00,http://example.com/,2020/03/12 10:00,2023/05/12 10:00,2023/09/12 10:00
+1,ABC-123-E,Proposed,Example text,EUR 0.00,http://example.com/,2020/03/12 10:00,2023/05/12 10:00,2023/09/12 10:00
+2,ZZZ-999-Z,Accepted,Example text,EUR 2.00,"",2020/03/12 10:00,2023/05/12 10:00,2023/09/12 10:00
