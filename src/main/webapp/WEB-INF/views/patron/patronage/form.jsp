@@ -30,6 +30,7 @@
 	<acme:input-moment code="patron.patronage.list.label.startDate" path="startDate"/>
 	<acme:input-moment code="patron.patronage.list.label.endDate" path="endDate"/>
 	
-	<acme:input-textbox code="patron.patronage.list.label.inventor" path="inventor"/>
+	<acme:input-textbox code="patron.patronage.list.label.inventorFullName" path="inventorFullName"/>
+	<acme:input-textbox code="patron.patronage.list.label.inventorCompany" path="inventorCompany"/>
 </acme:form>
 
