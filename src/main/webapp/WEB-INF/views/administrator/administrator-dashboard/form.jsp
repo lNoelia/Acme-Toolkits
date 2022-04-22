@@ -240,7 +240,7 @@
 <hr>
 
 <h2>
-	<acme:message code="administrator.dashboard.form.title.budget-of-patronages-by-status"/>
+	<acme:message code="administrator.dashboard.form.title.budget-of-patronages-by-status-and-currency"/>
 </h2>
 <div class="container">
 	<div class="row">
@@ -249,7 +249,7 @@
 				<acme:message code="administrator.dashboard.form.title.average"/>
 			</h2>
 			<table class="table table-sm">
-				<jstl:forEach var="map" items="${averageBudgetOfPatronagesByStatus}" >	
+				<jstl:forEach var="map" items="${averageBudgetOfPatronagesByStatusAndCurrency}" >	
 					<tr>
 						<th scope="row">
 							<jstl:out  value="${map.key}"/>
@@ -268,7 +268,7 @@
 				<acme:message code="administrator.dashboard.form.title.deviation"/>
 			</h2>
 			<table class="table table-sm">
-				<jstl:forEach var="map" items="${deviationBudgetOfPatronagesByStatus}" >	
+				<jstl:forEach var="map" items="${deviationBudgetOfPatronagesByStatusAndCurrency}" >	
 					<tr>
 						<th scope="row">
 							<jstl:out  value="${map.key}"/>
@@ -288,7 +288,7 @@
 				<acme:message code="administrator.dashboard.form.title.minimum"/>
 			</h2>
 			<table class="table table-sm">
-				<jstl:forEach var="map" items="${minimumBudgetOfPatronagesByStatus}" >	
+				<jstl:forEach var="map" items="${minimumBudgetOfPatronagesByStatusAndCurrency}" >	
 					<tr>
 						<th scope="row">
 							<jstl:out  value="${map.key}"/>
@@ -307,7 +307,7 @@
 				<acme:message code="administrator.dashboard.form.title.maximum"/>
 			</h2>
 			<table class="table table-sm">
-				<jstl:forEach var="map" items="${maximumBudgetOfPatronagesByStatus}" >	
+				<jstl:forEach var="map" items="${maximumBudgetOfPatronagesByStatusAndCurrency}" >	
 					<tr>
 						<th scope="row">
 							<jstl:out  value="${map.key}"/>
