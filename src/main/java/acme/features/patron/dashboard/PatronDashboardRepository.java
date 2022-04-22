@@ -29,16 +29,16 @@ public interface PatronDashboardRepository extends AbstractRepository {
 	@Query("select count(p) FROM Patronage p WHERE p.status =  :status")
 	int totalNumberOfPatronagesByStatus(PatronageStatus status);
 	
-	@Query("select p.budget.currency,avg(p.budget.amount) from Patronage p where p.status = :status group by p.budget.currency")
-	Collection<Tuple> averageBudgetOfPatronagesByStatusAndCurrency(PatronageStatus status);
+	@Query("select p.status,p.budget.currency,avg(p.budget.amount) from Patronage p group by p.budget.currency,p.status")
+	Collection<Tuple> averageBudgetOfPatronagesByStatusAndCurrency();
 
-	@Query("select p.budget.currency,stddev(p.budget.amount) from Patronage p where p.status = :status group by p.budget.currency")
-	Collection<Tuple> deviationBudgetOfPatronagesByStatusAndCurrency(PatronageStatus status);
+	@Query("select p.status,p.budget.currency,stddev(p.budget.amount) from Patronage p group by p.budget.currency,p.status")
+	Collection<Tuple> deviationBudgetOfPatronagesByStatusAndCurrency();
 
-	@Query("select p.budget.currency,min(p.budget.amount) from Patronage p where p.status = :status group by p.budget.currency")
-	Collection<Tuple> minimumBudgetOfPatronagesByStatusAndCurrency(PatronageStatus status);
+	@Query("select p.status,p.budget.currency,min(p.budget.amount) from Patronage p group by p.budget.currency,p.status")
+	Collection<Tuple> minimumBudgetOfPatronagesByStatusAndCurrency();
 
-	@Query("select p.budget.currency,max(p.budget.amount) from Patronage p where p.status = :status group by p.budget.currency")
-	Collection<Tuple> maximumBudgetOfPatronagesByStatusAndCurrency(PatronageStatus status);
+	@Query("select p.status,p.budget.currency,max(p.budget.amount) from Patronage p group by p.budget.currency,p.status")
+	Collection<Tuple> maximumBudgetOfPatronagesByStatusAndCurrency();
 
 }
