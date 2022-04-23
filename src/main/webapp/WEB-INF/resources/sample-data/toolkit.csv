@@ -1,6 +1,6 @@
-key,code,title,description,assemblyNotes,link,published
-toolkit-01,"AAA-000-A","Example title","Example description","Example assembly notes","",false
-toolkit-02,"AAC-012-B","Example title","Example description","Example assembly notes","http://example.com/",true
-toolkit-03,"AAC-012-C","Example title","Example description","Example assembly notes","http://example.com/",true
-toolkit-04,"AAC-012-D","Example title","Example description","Example assembly notes","http://example.com/",true
-toolkit-05,"ZZZ-999-Z","Example title","Example description","Example assembly notes","http://example.com/",false
+key,code,title,description,assemblyNotes,link,published,key:inventor
+toolkit-01,"AAA-000-A","Example title","Example description","Example assembly notes","",false,inventor-01
+toolkit-02,"AAC-012-B","Example title","Example description","Example assembly notes","http://example.com/",true,inventor-01
+toolkit-03,"AAC-012-C","Example title","Example description","Example assembly notes","http://example.com/",true,inventor-02
+toolkit-04,"AAC-012-D","Example title","Example description","Example assembly notes","http://example.com/",true,inventor-02
+toolkit-05,"ZZZ-999-Z","Example title","Example description","Example assembly notes","http://example.com/",false,inventor-02
