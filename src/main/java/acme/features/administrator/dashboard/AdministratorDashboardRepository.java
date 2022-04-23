@@ -1,7 +1,8 @@
 package acme.features.administrator.dashboard;
 
 import java.util.Collection;
-import java.util.List;
+
+import javax.persistence.Tuple;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -17,16 +18,16 @@ public interface AdministratorDashboardRepository extends AbstractRepository{
 	
 		//average, deviation, minimum and maximum retail price of components, grouped by technology and currency -------------------------------------------------
 		@Query("select a.technology, a.retailPrice.currency, avg( a.retailPrice.amount ) from Artefact a where a.type = acme.entities.artefact.ArtefactType.COMPONENT group by a.technology, a.retailPrice.currency")
-		Collection<List<String>> averageRetailPriceOfComponentsByTechnologyAndCurrency();
+		Collection<Tuple> averageRetailPriceOfComponentsByTechnologyAndCurrency();
 	
 		@Query("select a.technology, a.retailPrice.currency, stddev( a.retailPrice.amount ) from Artefact a where a.type = acme.entities.artefact.ArtefactType.COMPONENT group by a.technology, a.retailPrice.currency")
-		Collection<List<String>> deviationRetailPriceOfComponentsByTechnologyAndCurrency();
+		Collection<Tuple> deviationRetailPriceOfComponentsByTechnologyAndCurrency();
 		
 		@Query("select a.technology, a.retailPrice.currency, min( a.retailPrice.amount ) from Artefact a where a.type = acme.entities.artefact.ArtefactType.COMPONENT group by a.technology, a.retailPrice.currency")
-		Collection<List<String>> minimumRetailPriceOfComponentsByTechnologyAndCurrency();
+		Collection<Tuple> minimumRetailPriceOfComponentsByTechnologyAndCurrency();
 		
 		@Query("select a.technology, a.retailPrice.currency, max( a.retailPrice.amount ) from Artefact a where a.type = acme.entities.artefact.ArtefactType.COMPONENT group by a.technology, a.retailPrice.currency")
-		Collection<List<String>> maximumRetailPriceOfComponentsByTechnologyAndCurrency();
+		Collection<Tuple> maximumRetailPriceOfComponentsByTechnologyAndCurrency();
 		
 		
 		//total number of tools --------------------------------------------------------------------------------------------------
@@ -35,34 +36,34 @@ public interface AdministratorDashboardRepository extends AbstractRepository{
 		
 		//average, deviation, minimum and maximum retail price of components, grouped by currency -------------------------------------------------
 		@Query("select a.retailPrice.currency, avg( a.retailPrice.amount ) from Artefact a where a.type = acme.entities.artefact.ArtefactType.TOOL group by a.retailPrice.currency")
-		Collection<List<String>> averageRetailPriceOfToolsByCurrency();
+		Collection<Tuple> averageRetailPriceOfToolsByCurrency();
 		
 		@Query("select a.retailPrice.currency, stddev( a.retailPrice.amount ) from Artefact a where a.type = acme.entities.artefact.ArtefactType.TOOL group by a.retailPrice.currency")
-		Collection<List<String>> deviationRetailPriceOfToolsByCurrency();
+		Collection<Tuple> deviationRetailPriceOfToolsByCurrency();
 		
 		@Query("select a.retailPrice.currency, min( a.retailPrice.amount ) from Artefact a where a.type = acme.entities.artefact.ArtefactType.TOOL group by a.retailPrice.currency")
-		Collection<List<String>> minimumRetailPriceOfToolsByCurrency();
+		Collection<Tuple> minimumRetailPriceOfToolsByCurrency();
 		
 		@Query("select a.retailPrice.currency, max( a.retailPrice.amount ) from Artefact a where a.type = acme.entities.artefact.ArtefactType.TOOL group by a.retailPrice.currency")
-		Collection<List<String>> maximumRetailPriceOfToolsByCurrency();
+		Collection<Tuple> maximumRetailPriceOfToolsByCurrency();
 		
 		
 		//total number of patronages by status --------------------------------------------------------------------------------------------------
 		@Query("select p.status, count(p) from Patronage p group by p.status")
-		Collection<List<String>> totalNumberOfPatronagesByStatus();
+		Collection<Tuple> totalNumberOfPatronagesByStatus();
 		
 		//average, deviation, minimum and maximum budget of components, grouped by status -------------------------------------------------
-		@Query("select p.status, avg(p.budget.amount) from Patronage p group by p.status")
-		Collection<List<String>> averageBudgetOfPatronagesByStatus();
+		@Query("select p.status, p.budget.currency, avg(p.budget.amount) from Patronage p group by p.status, p.budget.currency")
+		Collection<Tuple> averageBudgetOfPatronagesByStatusAndCurrency();
 		
-		@Query("select p.status, stddev(p.budget.amount) from Patronage p group by p.status")
-		Collection<List<String>> deviationBudgetOfPatronagesByStatus();
+		@Query("select p.status, p.budget.currency, stddev(p.budget.amount) from Patronage p group by p.status, p.budget.currency")
+		Collection<Tuple> deviationBudgetOfPatronagesByStatusAndCurrency();
 		
-		@Query("select p.status, min(p.budget.amount) from Patronage p group by p.status")
-		Collection<List<String>> minimumBudgetOfPatronagesByStatus();
+		@Query("select p.status, p.budget.currency, min(p.budget.amount) from Patronage p group by p.status, p.budget.currency")
+		Collection<Tuple> minimumBudgetOfPatronagesByStatusAndCurrency();
 		
-		@Query("select p.status, max(p.budget.amount) from Patronage p group by p.status")
-		Collection<List<String>> maximumBudgetOfPatronagesByStatus();
+		@Query("select p.status, p.budget.currency, max(p.budget.amount) from Patronage p group by p.status, p.budget.currency")
+		Collection<Tuple> maximumBudgetOfPatronagesByStatusAndCurrency();
 		
 		
 }

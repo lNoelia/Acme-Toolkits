@@ -16,7 +16,7 @@ administrator.dashboard.form.label.total-number-of-tools = Número total de herr
 administrator.dashboard.form.title.total-number-of-patronages-by-status = Número total de patrocinios agrupado por estado
 
 administrator.dashboard.form.title.retail-price-of-tools-by-currency = Métricas sobre el precio al por menor de las herramientas agrupado por divisa
-administrator.dashboard.form.title.budget-of-patronages-by-status = Métricas sobre el presupuesto de los patrocinios agrupado por estado
+administrator.dashboard.form.title.budget-of-patronages-by-status-and-currency = Métricas sobre el presupuesto de los patrocinios agrupado por estado y divisa
 administrator.dashboard.form.title.retail-price-of-components-by-technology-and-currency = Métricas sobre el precio al por menor de los componentes agrupado por tecnología y divisa
 
 administrator.dashboard.form.title.minimum = Mínimo

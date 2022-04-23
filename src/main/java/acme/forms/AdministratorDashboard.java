@@ -31,10 +31,10 @@ public class AdministratorDashboard implements Serializable {
 		Map<String,Double> 						maximumRetailPriceOfToolsByCurrency;
 		
 		Map<String,Integer> 					totalNumberOfPatronagesByStatus;
-		Map<String,Double> 						averageBudgetOfPatronagesByStatus;
-		Map<String,Double> 						deviationBudgetOfPatronagesByStatus;
-		Map<String,Double> 						minimumBudgetOfPatronagesByStatus;
-		Map<String,Double> 						maximumBudgetOfPatronagesByStatus;
+		Map<Pair<String,String>,Double> 		averageBudgetOfPatronagesByStatusAndCurrency;
+		Map<Pair<String,String>,Double> 		deviationBudgetOfPatronagesByStatusAndCurrency;
+		Map<Pair<String,String>,Double> 		minimumBudgetOfPatronagesByStatusAndCurrency;
+		Map<Pair<String,String>,Double> 		maximumBudgetOfPatronagesByStatusAndCurrency;
 
 		
 		// Derived attributes -----------------------------------------------------
