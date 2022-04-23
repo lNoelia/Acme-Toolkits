@@ -13,38 +13,32 @@ import acme.framework.services.AbstractListService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorArtefactPerToolkitListService implements AbstractListService<Inventor, Artefact>{
-
-	// Internal state ---------------------------------------------------------
+public class InventorArtefactListByToolkitService implements AbstractListService<Inventor, Artefact> {
 
 	@Autowired
 	protected InventorArtefactRepository repository;
-
-	// AbstractListService<Inventor, Artefact> interface --------------
-
-
+	
 	@Override
 	public boolean authorise(final Request<Artefact> request) {
 		assert request != null;
 		
 		return true;
 	}
-
+	
+	
 	@Override
 	public Collection<Artefact> findMany(final Request<Artefact> request) {
 		assert request != null;
 
+		int toolkitId;		
 		Collection<Artefact> result;
-		int masterId;
-		int inventorId;
 
-		masterId = request.getModel().getInteger("masterId");
-		inventorId = request.getPrincipal().getActiveRoleId();
-		
-		result = this.repository.findAllArtefactByInventorPerToolkitId(masterId, inventorId);
+		toolkitId = request.getModel().getInteger("toolkitId");
+		result = this.repository.findAllArtefactByToolkitId(toolkitId);
 
 		return result;
 	}
+
 
 	@Override
 	public void unbind(final Request<Artefact> request, final Artefact entity, final Model model) {
@@ -61,5 +55,7 @@ public class InventorArtefactPerToolkitListService implements AbstractListServic
 		typex = t.concat(lowercase.substring(1));
 		model.setAttribute("type", typex);
 	}
+
+
 
 }
