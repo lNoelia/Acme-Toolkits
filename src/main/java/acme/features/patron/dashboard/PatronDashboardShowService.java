@@ -65,67 +65,25 @@ public class PatronDashboardShowService implements AbstractShowService<Patron, P
 		totalNumberOfAcceptedPatronages=this.repository.totalNumberOfPatronagesByStatus(PatronageStatus.ACCEPTED);
 		totalNumberOfDeniedPatronages= this.repository.totalNumberOfPatronagesByStatus(PatronageStatus.DENIED);
 		
-		final Collection<Tuple> averageBudgetOfPatronagesProposedByCurrency = this.repository.averageBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.PROPOSED);
-		
-		
-		averageBudgetOfPatronagesProposedByCurrency.stream()
+		final Collection<Tuple> averageBudgetOfPatronagesByStatusAndCurrencyCollection = this.repository.averageBudgetOfPatronagesByStatusAndCurrency();	
+		averageBudgetOfPatronagesByStatusAndCurrencyCollection.stream()
 													.forEach( t -> 
-															averageBudgetOfPatronagesByStatusAndCurrency.put(Pair.of(PatronageStatus.PROPOSED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));													
+															averageBudgetOfPatronagesByStatusAndCurrency.put(Pair.of(t.get(0).toString(),t.get(1).toString()),Double.parseDouble(t.get(2).toString())));													
 		
-		final Collection<Tuple> averageBudgetOfPatronagesAcceptedByCurrency = this.repository.averageBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.ACCEPTED);
-		averageBudgetOfPatronagesAcceptedByCurrency.stream()
-															.forEach( t -> averageBudgetOfPatronagesByStatusAndCurrency.put(Pair.of(PatronageStatus.ACCEPTED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
-		
-		final Collection<Tuple> averageBudgetOfPatronagesDeniedByCurrency = this.repository.averageBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.DENIED);
-		averageBudgetOfPatronagesDeniedByCurrency.stream()
-															.forEach( t -> averageBudgetOfPatronagesByStatusAndCurrency.put(Pair.of(PatronageStatus.DENIED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
-		
-		final Collection<Tuple> deviationBudgetOfPatronagesProposedByCurrency = this.repository.deviationBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.PROPOSED);
-		deviationBudgetOfPatronagesProposedByCurrency.stream()
+		final Collection<Tuple> deviationBudgetOfPatronagesByStatusAndCurrencyCollection = this.repository.deviationBudgetOfPatronagesByStatusAndCurrency();
+		deviationBudgetOfPatronagesByStatusAndCurrencyCollection.stream()
 															.forEach( t -> deviationBudgetOfPatronagesByStatusAndCurrency
-																.put(Pair.of(PatronageStatus.PROPOSED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
+																.put(Pair.of(t.get(0).toString(),t.get(1).toString()),Double.parseDouble(t.get(2).toString())));
 		
-		final Collection<Tuple> deviationBudgetOfPatronagesAcceptedByCurrency = this.repository.deviationBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.ACCEPTED);
-		deviationBudgetOfPatronagesAcceptedByCurrency.stream()
-															.forEach( t -> deviationBudgetOfPatronagesByStatusAndCurrency
-																.put(Pair.of(PatronageStatus.ACCEPTED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
-		
-		final Collection<Tuple> deviationBudgetOfPatronagesDeniedByCurrency = this.repository.deviationBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.DENIED);
-		deviationBudgetOfPatronagesDeniedByCurrency.stream()
-															.forEach( t -> deviationBudgetOfPatronagesByStatusAndCurrency
-																.put(Pair.of(PatronageStatus.DENIED.toString(), t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
-		
-
-		final Collection<Tuple> minimumBudgetOfPatronagesProposedByCurrency = this.repository.minimumBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.PROPOSED);
-		minimumBudgetOfPatronagesProposedByCurrency.stream()
+		final Collection<Tuple> minimumBudgetOfPatronagesByStatusAndCurrencyCollection = this.repository.minimumBudgetOfPatronagesByStatusAndCurrency();
+		minimumBudgetOfPatronagesByStatusAndCurrencyCollection.stream()
 															.forEach( t -> minimumBudgetOfPatronagesByStatusAndCurrency
-																.put(Pair.of(PatronageStatus.PROPOSED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
+																.put(Pair.of(t.get(0).toString(),t.get(1).toString()),Double.parseDouble(t.get(2).toString())));
 		
-		final Collection<Tuple> minimumBudgetOfPatronagesAcceptedByCurrency = this.repository.minimumBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.ACCEPTED);
-		minimumBudgetOfPatronagesAcceptedByCurrency.stream()
-															.forEach( t -> minimumBudgetOfPatronagesByStatusAndCurrency
-																.put(Pair.of(PatronageStatus.ACCEPTED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
-		
-		final Collection<Tuple> minimumBudgetOfPatronagesDeniedByCurrency = this.repository.minimumBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.DENIED);
-		minimumBudgetOfPatronagesDeniedByCurrency.stream()
-															.forEach( t -> minimumBudgetOfPatronagesByStatusAndCurrency
-																.put(Pair.of(PatronageStatus.DENIED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
-		
-		final Collection<Tuple> maximumBudgetOfPatronagesProposedByCurrency = this.repository.maximumBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.PROPOSED);
-		maximumBudgetOfPatronagesProposedByCurrency.stream()
+		final Collection<Tuple> maximumBudgetOfPatronagesByStatusCurrencyCollection = this.repository.maximumBudgetOfPatronagesByStatusAndCurrency();
+		maximumBudgetOfPatronagesByStatusCurrencyCollection.stream()
 															.forEach( t -> maximumBudgetOfPatronagesByStatusAndCurrency
-																.put(Pair.of(PatronageStatus.PROPOSED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
-		
-		final Collection<Tuple> maximumBudgetOfPatronagesAcceptedByCurrency = this.repository.maximumBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.ACCEPTED);
-		maximumBudgetOfPatronagesAcceptedByCurrency.stream()
-															.forEach( t -> maximumBudgetOfPatronagesByStatusAndCurrency
-																.put(Pair.of(PatronageStatus.ACCEPTED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
-		
-		final Collection<Tuple> maximumBudgetOfPatronagesDeniedByCurrency = this.repository.maximumBudgetOfPatronagesByStatusAndCurrency(PatronageStatus.DENIED);
-		maximumBudgetOfPatronagesDeniedByCurrency.stream()
-															.forEach( t -> maximumBudgetOfPatronagesByStatusAndCurrency
-																.put(Pair.of(PatronageStatus.DENIED.toString(),t.get(0).toString()),Double.parseDouble(t.get(1).toString())));
-		
+																.put(Pair.of(t.get(0).toString(),t.get(1).toString()),Double.parseDouble(t.get(2).toString())));
 		
 		
 		result = new PatronDashboard();
