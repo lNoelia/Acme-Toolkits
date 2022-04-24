@@ -19,7 +19,7 @@
 	<acme:message code="patron.dashboard.form.title.general-indicators"/>
 </h2>
 
-<table class="table table-sm">
+<table class="table table-sm" aria-describedby="Total number of proposed patronages">
 	<tr>
 		<th scope="row">
 			<acme:message code="patron.dashboard.form.label.total-number-of-proposed-patronages"/>
@@ -50,7 +50,7 @@
 	<acme:message code="patron.dashboard.form.title.general-indicators-average-budgets"/>
 </h2>
 
-<table class="table table-sm">
+<table class="table table-sm" aria-describedby="Average budget of patronages by status and currency">
 	<jstl:forEach var="map" items="${averageBudgetOfPatronagesByStatusAndCurrency}" >	
 		<tr>
 			<th scope="row">
@@ -68,7 +68,7 @@
 	<acme:message code="patron.dashboard.form.title.general-indicators-deviation-budgets"/>
 </h2>
 
-<table class="table table-sm">
+<table class="table table-sm" aria-describedby="Deviation budget of patronages by status and currency">
 	<jstl:forEach var="map" items="${deviationBudgetOfPatronagesByStatusAndCurrency}" >	
 		<tr>
 			<th scope="row">
@@ -85,7 +85,7 @@
 <h2>
 	<acme:message code="patron.dashboard.form.title.general-indicators-minimum-budgets"/>
 </h2>
-<table class="table table-sm">
+<table class="table table-sm" aria-describedby="Mninimum budget of patronages by status and currency">
 	<jstl:forEach var="map" items="${minimumBudgetOfPatronagesByStatusAndCurrency}" >	
 		<tr>
 			<th scope="row">
@@ -102,7 +102,7 @@
 <h2>
 	<acme:message code="patron.dashboard.form.title.general-indicators-maximum-budgets"/>
 </h2>
-<table class="table table-sm">
+<table class="table table-sm" aria-describedby="Maximum budget of patronages by status and currency">
 	<jstl:forEach var="map" items="${maximumBudgetOfPatronagesByStatusAndCurrency}" >	
 		<tr>
 			<th scope="row">

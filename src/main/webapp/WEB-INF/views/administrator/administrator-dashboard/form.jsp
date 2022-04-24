@@ -23,7 +23,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm">
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Total number of components">
 				<tr>
 					<th scope="row">
 						<acme:message code="administrator.dashboard.form.label.total-number-of-components"/>
@@ -49,7 +49,7 @@
 			<h3>
 				<acme:message code="administrator.dashboard.form.title.total-number-of-patronages-by-status"/>
 			</h3>	
-			<table class="table table-sm">
+			<table class="table table-sm"  aria-describedby="Total number of patronages by status">
 				<jstl:forEach var="map" items="${totalNumberOfPatronagesByStatus}" >	
 					<tr>
 						<th scope="row">
@@ -78,7 +78,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.average"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm"  aria-describedby="Average retail price of components by technology and currency">
 				<jstl:forEach var="map" items="${averageRetailPriceOfComponentsByTechnologyAndCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -97,7 +97,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.deviation"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Deviation retail price of components by technology and currency">
 				<jstl:forEach var="map" items="${deviationRetailPriceOfComponentsByTechnologyAndCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -116,7 +116,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.minimum"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Minimum retail price of components by technology and currency">
 				<jstl:forEach var="map" items="${minimumRetailPriceOfComponentsByTechnologyAndCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -135,7 +135,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.maximum"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Maximum retail price of components by technology and currency">
 				<jstl:forEach var="map" items="${maximumRetailPriceOfComponentsByTechnologyAndCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -163,7 +163,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.average"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Average retail price of tools by currency">
 				<jstl:forEach var="map" items="${averageRetailPriceOfToolsByCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -182,7 +182,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.deviation"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Deviation retail price of tools by currency">
 				<jstl:forEach var="map" items="${deviationRetailPriceOfToolsByCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -201,7 +201,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.minimum"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Minimum retail price of tools by currency">
 				<jstl:forEach var="map" items="${minimumRetailPriceOfToolsByCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -220,7 +220,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.maximum"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Maximum retail price of tools by currency">
 				<jstl:forEach var="map" items="${maximumRetailPriceOfToolsByCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -248,7 +248,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.average"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Average budget of patronages by status and currency">
 				<jstl:forEach var="map" items="${averageBudgetOfPatronagesByStatusAndCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -267,7 +267,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.deviation"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Deviation budget of patronages by status and currency">
 				<jstl:forEach var="map" items="${deviationBudgetOfPatronagesByStatusAndCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -287,7 +287,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.minimum"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Minimum budget of patronages by status and currency">
 				<jstl:forEach var="map" items="${minimumBudgetOfPatronagesByStatusAndCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -306,7 +306,7 @@
 			<h2>
 				<acme:message code="administrator.dashboard.form.title.maximum"/>
 			</h2>
-			<table class="table table-sm">
+			<table class="table table-sm" aria-describedby="Maximum budget of patronages by status and currency">
 				<jstl:forEach var="map" items="${maximumBudgetOfPatronagesByStatusAndCurrency}" >	
 					<tr>
 						<th scope="row">
@@ -322,4 +322,3 @@
 		</div>
 	</div>
 </div>
-
