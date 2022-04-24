@@ -23,6 +23,6 @@
 	<acme:input-double code="inventor.toolkit.form.label.assemblyNotes" path="assemblyNotes"/>	
 	<acme:input-url code="inventor.toolkit.form.label.link" path="link"/>
 	
-	<acme:button code="inventor.toolkit.form.button.artefacts" action="/inventor/artefact/list-per-toolkit?masterId=${id}"/>
+	<acme:button code="inventor.toolkit.form.button.artefacts" action="/inventor/artefact/list-by-toolkit?toolkitId=${id}"/>
 </acme:form>
 
