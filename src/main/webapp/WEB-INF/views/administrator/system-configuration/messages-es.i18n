@@ -4,3 +4,6 @@ administrator.systemConfiguration.form.label.strongSpamWords = Palabras fuertes 
 administrator.systemConfiguration.form.label.strongSpamThreshold = Umbral de spam fuerte
 administrator.systemConfiguration.form.label.weakSpamWords = Palabras débiles de spam
 administrator.systemConfiguration.form.label.weakSpamThreshold = Umbral de spam débil
+administrator.systemConfiguration.form.button.update = Actualizar
+administrator.systemConfiguration.form.invalid-accepted-currencies-format = Las divisas aceptadas deben especificarse con tres letras mayúsculas separadas por comas
+administrator.systemConfiguration.form.invalid-system-currency = La divisa del sistema debe especificarse en letra mayúscula y ser una de las divisas aceptadas
