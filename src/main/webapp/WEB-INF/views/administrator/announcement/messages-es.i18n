@@ -1,0 +1,12 @@
+administrator.announcement.form.label.critical = Critico
+administrator.announcement.form.label.title = Titulo
+administrator.announcement.form.label.body = Cuerpo
+administrator.announcement.form.label.link = Enlace
+
+administrator.announcement.form.label.confirmation = Confirme que el anuncio es correcto
+administrator.announcement.form.button.create = Crear
+
+administrator.announcement.list.label.critical = Critico
+administrator.announcement.list.label.title = Titulo
+administrator.announcement.list.label.creationDate = Fecha de creacion
+administrator.announcement.list.button.create = Crear
