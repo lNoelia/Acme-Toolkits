@@ -14,4 +14,7 @@
 	<acme:input-textbox code="inventor.patronage.form.label.startDate" path="startDate"/>
 	<acme:input-textbox code="inventor.patronage.form.label.endDate" path="endDate"/>
 </acme:form>
+	
+	<acme:button code="inventor.patronage.form.button.patronage-reports" action="/inventor/patronage-report/create?masterId=${id}"/>
+
 

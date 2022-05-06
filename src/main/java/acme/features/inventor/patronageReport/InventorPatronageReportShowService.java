@@ -57,5 +57,6 @@ public class InventorPatronageReportShowService implements AbstractShowService<I
 
 		request.unbind(entity, model, "sequenceNumber", "creationDate","memorandum","link");
 		model.setAttribute("patronageCode", entity.getPatronage().getCode());
+		model.setAttribute("readonly", true);
 	}
 }
