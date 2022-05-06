@@ -4,3 +4,6 @@ administrator.systemConfiguration.form.label.strongSpamWords = Strong spam words
 administrator.systemConfiguration.form.label.strongSpamThreshold = Strong spam threshold
 administrator.systemConfiguration.form.label.weakSpamWords = Weak spam words
 administrator.systemConfiguration.form.label.weakSpamThreshold = Weak spam threshold
+administrator.systemConfiguration.form.button.update = Update
+administrator.systemConfiguration.form.invalid-accepted-currencies-format = Accepted currencies must be specified with three capital letters separated by commas
+administrator.systemConfiguration.form.invalid-system-currency = System currency must be specified in capital letter and be one of the accepted currencies
