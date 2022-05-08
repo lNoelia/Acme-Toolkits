@@ -65,6 +65,7 @@ master.menu.patron = Patron
 master.menu.patron.patronage-report-list = List of patronage reports
 master.menu.patron.patronage-list = List of patronage
 master.menu.patron.dashboard = Patron dashboard
+master.menu.patron.patronage-create = Create patronage
 
 
 # master.menu.user-account ####################################################

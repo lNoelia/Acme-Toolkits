@@ -1,7 +1,7 @@
-key,status,code,legalStuff,budget,link,creationDate,startDate,endDate,key:inventor,key:patron
-patronage-01,PROPOSED,"AAA-000-A","Example text","EUR 100.00","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-01,patron-01
-patronage-02,ACCEPTED,"ABC-123-B","Example text","USD 100.00","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-02,patron-01
-patronage-03,DENIED,"ABC-123-C","Example text","GBP 100.00","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-01,patron-02
-patronage-04,PROPOSED,"ABC-123-E","Example text","EUR 0.00","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-02,patron-02
-patronage-05,ACCEPTED,"ZZZ-999-Z","Example text","EUR 2.00",null,"2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-02,patron-02
-patronage-06,DENIED,"ABC-123-F","Example text","USD 0.20",null,"2020/03/12 10:00","2023/05/12 12:00","2023/09/12 10:00",inventor-02,patron-01
+key,status,code,legalStuff,budget,link,creationDate,startDate,endDate,key:inventor,key:patron,draftMode
+patronage-01,PROPOSED,"AAA-000-A","Example text","EUR 100.00","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-01,patron-01,false
+patronage-02,ACCEPTED,"ABC-123-B","Example text","USD 100.00","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-02,patron-01,false
+patronage-03,DENIED,"ABC-123-C","Example text","GBP 100.00","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-01,patron-02,false
+patronage-04,PROPOSED,"ABC-123-E","Example text","EUR 0.00","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-02,patron-02,true
+patronage-05,ACCEPTED,"ZZZ-999-Z","Example text","EUR 2.00",null,"2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00",inventor-02,patron-02,false
+patronage-06,DENIED,"ABC-123-F","Example text","USD 0.20",null,"2020/03/12 10:00","2023/05/12 12:00","2023/09/12 10:00",inventor-02,patron-01,true

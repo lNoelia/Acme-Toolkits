@@ -71,6 +71,7 @@ master.menu.patron = Patrocinador
 master.menu.patron.patronage-list = Lista de patrocinios
 master.menu.patron.patronage-report-list = Lista de informes de patrocinios
 master.menu.patron.dashboard = Panel de patrocinador
+master.menu.patron.patronage-create = Crear patrocinio
 
 
 # master.menu.user-account ####################################################
