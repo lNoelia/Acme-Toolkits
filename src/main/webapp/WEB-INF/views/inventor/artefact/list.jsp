@@ -31,5 +31,6 @@
 			<acme:list-column code="inventor.artefact.list.label.retailPrice" path="retailPrice" width="20%"/>	
 			<acme:list-column code="inventor.artefact.list.label.type" path="type" width="20%"/>
 		</acme:list>
+		<acme:button code="inventor.artefact.form.button.create" action="/inventor/artefact/create"/>
 	</jstl:when>
 </jstl:choose>
