@@ -31,6 +31,9 @@
 		<acme:submit code="inventor.patronage.form.button.update.save" action="/inventor/patronage/update"/>
 	</jstl:if>
 </acme:form>
+	
+	<acme:button code="inventor.patronage.form.button.patronage-reports" action="/inventor/patronage-report/create?masterId=${id}"/>
+
 
 
 
