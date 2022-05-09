@@ -71,6 +71,7 @@ master.menu.patron = Patrocinador
 master.menu.patron.patronage-list = Lista de patrocinios
 master.menu.patron.patronage-report-list = Lista de informes de patrocinios
 master.menu.patron.dashboard = Panel de patrocinador
+master.menu.patron.patronage-create = Crear patrocinio
 
 
 # master.menu.user-account ####################################################
@@ -81,3 +82,7 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.inventor = Datos de inventor
+master.menu.user-account.become-inventor = Hazte inventor
+master.menu.user-account.patron = Datos de patrocinador
+master.menu.user-account.become-patron = Hazte patrocinador

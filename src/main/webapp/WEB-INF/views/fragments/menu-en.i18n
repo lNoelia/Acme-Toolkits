@@ -65,6 +65,7 @@ master.menu.patron = Patron
 master.menu.patron.patronage-report-list = List of patronage reports
 master.menu.patron.patronage-list = List of patronage
 master.menu.patron.dashboard = Patron dashboard
+master.menu.patron.patronage-create = Create patronage
 
 
 # master.menu.user-account ####################################################
@@ -75,3 +76,7 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.inventor = Inventor data
+master.menu.user-account.become-inventor = Become an inventor
+master.menu.user-account.patron = Patron data
+master.menu.user-account.become-patron = Become a patron

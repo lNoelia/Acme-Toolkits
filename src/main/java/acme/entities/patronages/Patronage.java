@@ -35,6 +35,9 @@ public class Patronage extends AbstractEntity{
 	// Attributes -------------------------------------------------------------
 	
 	@NotNull
+	protected boolean draftMode;
+	
+	@NotNull
 	protected PatronageStatus status;
 	
 	@NotNull
@@ -49,7 +52,6 @@ public class Patronage extends AbstractEntity{
 
 	@Valid
 	@NotNull
-
 	protected Money budget;
 	
 	@URL
@@ -72,7 +74,7 @@ public class Patronage extends AbstractEntity{
 
 	// Relationships ----------------------------------------------------------
 	
-	@NotNull
+	
 	@Valid
 	@ManyToOne(optional = false)
 	protected Inventor inventor;
@@ -81,9 +83,13 @@ public class Patronage extends AbstractEntity{
 	@Valid
 	@ManyToOne(optional = false)
 	protected Patron patron;
+
+	
 	
 	// Methods ----------------------------------------------------------------
 	
-
+	public boolean getDraftMode() {
+		return this.draftMode;
+	}
 	
 }
