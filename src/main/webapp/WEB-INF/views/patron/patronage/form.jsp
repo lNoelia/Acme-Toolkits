@@ -17,20 +17,38 @@
 
 <acme:form readonly="${readonly}">
 	<acme:input-textbox code="patron.patronage.list.label.code" path="code"/>
-	<acme:input-select code="patron.patronage.list.label.status" path="status">
-		<acme:input-option code="PROPOSED" value="PROPOSED" selected="${status == 'PROPOSED'}"/>
-		<acme:input-option code="ACCEPTED" value="ACCEPTED" selected="${status == 'ACCEPTED'}"/>
-		<acme:input-option code="DENIED" value="DENIED" selected="${status == 'DENIED'}"/>
-	</acme:input-select>
-	<acme:input-money code="patron.patronage.list.label.budget" path="budget"/>
-	<acme:input-textarea code="patron.patronage.list.label.legalStuff" path="legalStuff"/>
-	<acme:input-url code="patron.patronage.list.label.link" path="link"/>
-			
-	<acme:input-moment code="patron.patronage.list.label.creationDate" path="creationDate"/>
+	
+	<acme:input-textbox code="patron.patronage.list.label.status" path="status" readonly="true"/>
+	
+	<acme:input-moment code="patron.patronage.list.label.creationDate" path="creationDate" readonly="true"/>
+	
+	
 	<acme:input-moment code="patron.patronage.list.label.startDate" path="startDate"/>
 	<acme:input-moment code="patron.patronage.list.label.endDate" path="endDate"/>
 	
-	<acme:input-textbox code="patron.patronage.list.label.inventorFullName" path="inventorFullName"/>
-	<acme:input-textbox code="patron.patronage.list.label.inventorCompany" path="inventorCompany"/>
+	<acme:input-money code="patron.patronage.list.label.budget" path="budget"/>
+	<acme:input-textarea code="patron.patronage.list.label.legalStuff" path="legalStuff"/>
+	<acme:input-url code="patron.patronage.list.label.link" path="link"/>
+	
+	<jstl:if test="${create || update}">
+		<acme:input-textbox code="patron.patronage.list.label.inventorUsername" path="inventorUsername"/>
+	</jstl:if>
+	<jstl:if test="${!create}">
+		<acme:input-textbox code="patron.patronage.list.label.inventorFullName" path="inventorFullName"  readonly="true"/>
+		<acme:input-textbox code="patron.patronage.list.label.inventorCompany" path="inventorCompany"  readonly="true"/>
+	</jstl:if>
+	<jstl:if test="${update}">
+		<acme:submit code="patron.patronage.form.button.update.save" action="/patron/patronage/update"/>
+	</jstl:if>
+	
+	<jstl:if test="${create}">
+		<acme:submit code="patron.patronage.form.button.create" action="/patron/patronage/create"/>
+	</jstl:if>
+	
+	<jstl:if test="${draftMode}">
+		<acme:button code="patron.patronage.form.button.update" action="/patron/patronage/update?id=${id}"/>
+		<acme:submit code="patron.patronage.form.button.delete" action="/patron/patronage/delete"/>
+		<acme:submit code="patron.patronage.form.button.publish" action="/patron/patronage/publish"/>
+	</jstl:if>
 </acme:form>
 
