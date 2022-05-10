@@ -33,6 +33,8 @@
 			<acme:submit code="inventor.toolkit.form.button.create" action="/inventor/toolkit/create"/>
 		</jstl:when>		
 	</jstl:choose>
+		
+	<acme:button test="${command != 'create'}" code="inventor.toolkit.form.button.artefacts" action="/inventor/artefact/list-by-toolkit?toolkitId=${id}"/>
 	
 </acme:form>
 
