@@ -10,3 +10,11 @@ inventor.toolkit.form.label.assemblyNotes = Assembly Notes
 inventor.toolkit.form.label.link = Link
 
 inventor.toolkit.form.button.artefacts = Artefacts
+
+inventor.toolkit.form.button.update = Update
+inventor.toolkit.form.button.delete = Delete
+inventor.toolkit.form.button.publish = Publish
+inventor.toolkit.form.button.create = Create new toolkit
+
+inventor.toolkit.form.error.duplicated = This code is already being used
+inventor.toolkit.form.error.negative-price = Retail price should be positive for Components and zero or positive for Tools
