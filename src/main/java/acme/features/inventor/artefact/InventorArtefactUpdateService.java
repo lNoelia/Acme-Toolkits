@@ -8,6 +8,7 @@ import acme.entities.artefact.ArtefactType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
 
@@ -52,9 +53,14 @@ public class InventorArtefactUpdateService implements AbstractUpdateService<Inve
 			}
 
 			if (!errors.hasErrors("retailPrice")) {
-				Double amount;
-				amount = entity.getRetailPrice().getAmount();
-				errors.state(request, (amount>0 && entity.getType()==ArtefactType.COMPONENT)||(amount>=0 && entity.getType()==ArtefactType.TOOL) , "retailPrice", "inventor.artefact.form.error.negative-price");
+				Money price;
+				price = entity.getRetailPrice();
+				if(price!=null) {
+					final Double amount = price.getAmount();
+					errors.state(request, (amount>0 && entity.getType()==ArtefactType.COMPONENT)||(amount>=0 && entity.getType()==ArtefactType.TOOL), "retailPrice", "inventor.artefact.form.error.negative-price");	
+				}else {
+					errors.state(request, (price!=null), "retailPrice", "inventor.artefact.form.error.no-price");
+				}
 			}
 		}
 
