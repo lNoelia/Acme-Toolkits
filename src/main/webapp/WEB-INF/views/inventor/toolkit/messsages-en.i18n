@@ -17,4 +17,3 @@ inventor.toolkit.form.button.publish = Publish
 inventor.toolkit.form.button.create = Create new toolkit
 
 inventor.toolkit.form.error.duplicated = This code is already being used
-inventor.toolkit.form.error.negative-price = Retail price should be positive for Components and zero or positive for Tools

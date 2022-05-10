@@ -72,12 +72,6 @@ public class InventorToolkitPublishService implements AbstractUpdateService<Inve
 			existing = this.repository.findOneToolkitByCode(entity.getCode());
 			errors.state(request, existing == null || existing.getId() == entity.getId() , "code", "inventor.toolkit.form.error.duplicated");
 		}
-
-		if (!errors.hasErrors("price")) {
-			Double amount;
-			amount = entity.getPrice().getAmount();
-			errors.state(request, amount>0 , "price", "inventor.toolkit.form.error.negative-price");
-		}
 	}
 
 	@Override
