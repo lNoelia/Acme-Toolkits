@@ -10,3 +10,10 @@ inventor.toolkit.form.label.assemblyNotes = Instrucciones
 inventor.toolkit.form.label.link = Link
 
 inventor.toolkit.form.button.artefacts = Artefactos
+
+inventor.toolkit.form.button.update = Editar
+inventor.toolkit.form.button.delete = Borrar
+inventor.toolkit.form.button.publish = Publicar
+inventor.toolkit.form.button.create = Crear nuevo conjunto de herramientas
+
+inventor.toolkit.form.error.duplicated = Este código ya está en uso
