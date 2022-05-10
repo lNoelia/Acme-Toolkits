@@ -48,7 +48,7 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
         Integer lastNumber;
 		result = new PatronageReport();
 		
-        System.out.println(request.getModel().getAttribute("masterId"));
+        
         patronage = this.repositoryPatronage.findPatronageById(request.getModel().getInteger("masterId"));
         sequenceNumbers = this.repository.findSequenceNumberByPatronageId(patronage.getId());
         if(sequenceNumbers.isEmpty()) {
@@ -60,7 +60,6 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
             result.setSequenceNumber(patronage.getCode() + ":" + number.charAt(number.length()-4) + number.charAt(number.length()-3) + number.charAt(number.length()-2) + number.charAt(number.length()-1));
         }
         
-        System.out.println(result.getSequenceNumber());
 
 		creationDate = new Date(System.currentTimeMillis() - 1);
 		
