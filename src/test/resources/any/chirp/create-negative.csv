@@ -1,0 +1,8 @@
+key,title,author,body,email,confirmation
+0,Chirp 1,User2,This is an example of a chirp,email@example.com,false
+1,,Hack3r,This is an example of a chirp without email,,true
+2,I forgot my pencil,,This is an example of a chirp 2,,true
+3,Found pencil on A1.13,Student2,,,true
+4,This is a way too long title to be put in the title section so this title should not be correct to create this chirp,Student2,and this is the description,,true
+5,Chirp test too-long author, This is a way too long author input text to be put in the title section so this title should not be correct to create this chirp, and this is the description,email@alum.us.es, true
+6,Description too long, ILikeToWrite,Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis vulputate tellus mi in sodales justo imperdiet non. Vestibulum bibendum facilisis est sed molestie. Quisque id mi vitae mauris commodo pharetra hendrerit vel nunc. Nulla fermentum rhoncus neque ut efficitur. Quisque quis sem mi,,true
