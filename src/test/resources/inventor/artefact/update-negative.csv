@@ -1,0 +1,3 @@
+recordIndex,name,code,technology,description,retailPrice,link,type
+0,"",AAA-011-B,"Electric","A tool for screws but electric",EUR 3.00,"example@#/",TOOL
+1,Hammer,"","","",EUR 3.00,"",TOOL
