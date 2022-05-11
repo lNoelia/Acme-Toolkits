@@ -6,3 +6,10 @@ user-account-authenticated-02,true,"UserIdentity{name: 'Sara', surname: 'Cruz', 
 user-account-authenticated-03,true,"UserIdentity{name: 'Carlos', surname: 'Varela', email: 'carvarsou@alum.us.es'}",patron2,patron2
 user-account-authenticated-04,true,"UserIdentity{name: 'Noelia', surname: 'Lopez', email: 'noelopdur@alum.us.es'}",inventor2,inventor2
 user-account-administrator-02,true,"UserIdentity{name: 'Administrator2', surname: 'Administrator2', email: 'administrator2@acme.com'}",administrator2,administrator2
+user-account-user-01,true,"UserIdentity{name: 'user1', surname: 'user1', email: 'user1@acme.com'}",user1,user1
+user-account-user-02,true,"UserIdentity{name: 'user2', surname: 'user2', email: 'user2@acme.com'}",user2,user2
+user-account-user-03,true,"UserIdentity{name: 'user3', surname: 'user3', email: 'user3@acme.com'}",user3,user3
+user-account-user-04,true,"UserIdentity{name: 'user4', surname: 'user4', email: 'user4@acme.com'}",user4,user4
+user-account-user-05,true,"UserIdentity{name: 'user5', surname: 'user5', email: 'user5@acme.com'}",user5,user5
+user-account-user-06,true,"UserIdentity{name: 'user6', surname: 'user6', email: 'user6@acme.com'}",user6,user6
+user-account-user-07,true,"UserIdentity{name: 'user7', surname: 'user7', email: 'user7@acme.com'}",user7,user7
