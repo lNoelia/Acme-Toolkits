@@ -33,27 +33,9 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 	}
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/inventor/patronage-report/create.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/inventor/patronage-report/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativeTestEmptyMemorandum(final int recordIndex, final String sequenceNumber, final String creationDate, final String patronageCode, final String memorandum, final String link,final String confirmation) {
-		super.signIn("inventor1", "inventor1");
-
-		super.clickOnMenu("Inventor", "List of patronages");
-		super.clickOnListingRecord(recordIndex);
-		
-		super.clickOnButton("Create a patronage report");
-		super.fillInputBoxIn("link", link);
-		super.fillInputBoxIn("confirmation", confirmation);
-		super.clickOnSubmit("Create");
-		
-		super.checkErrorsExist();
-
-		super.signOut();
-	}
-	@ParameterizedTest
-	@CsvFileSource(resources = "/inventor/patronage-report/create.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
-	public void negativeTestNoConfirmation(final int recordIndex, final String sequenceNumber, final String creationDate, final String patronageCode, final String memorandum, final String link,final String confirmation) {
+	public void negativeTest(final int recordIndex, final String sequenceNumber, final String creationDate, final String patronageCode, final String memorandum, final String link,final String confirmation) {
 		super.signIn("inventor1", "inventor1");
 
 		super.clickOnMenu("Inventor", "List of patronages");
@@ -62,6 +44,7 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 		super.clickOnButton("Create a patronage report");
 		super.fillInputBoxIn("memorandum", memorandum);
 		super.fillInputBoxIn("link", link);
+		super.fillInputBoxIn("confirmation", confirmation);
 		super.clickOnSubmit("Create");
 		
 		super.checkErrorsExist();

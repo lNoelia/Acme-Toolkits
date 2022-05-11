@@ -1,0 +1,4 @@
+recordIndex,sequenceNumber,creationDate,patronageCode,memorandum,link,confirmation
+0,"ABC-123-B:0003","2020/03/12 11:00",ABC-123-B,"","http://example.com/",true
+1,"ABC-123-B:0004","2020/03/12 11:00",ABC-123-B,"Example text 2","http://example.com/",false
+2,"ABC-123-B:0004","2020/03/12 11:00",ABC-123-B,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolorrrr","http://example.com/",true
