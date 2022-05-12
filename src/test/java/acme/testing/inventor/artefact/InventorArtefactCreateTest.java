@@ -15,11 +15,22 @@ public class InventorArtefactCreateTest extends TestHarness {
 
 	// Test cases -------------------------------------------------------------
 
+	@Test
+	@Order(10)
+	public void SignUpForThisTest() {
+		super.signUp("inventorTest", "inventorTest", "inventorTest", "inventorTest", "inventorTest@us.es");
+		super.signIn("inventorTest", "inventorTest");
+		super.clickOnMenu("Account", "Become an inventor");
+		super.fillInputBoxIn("company", "inventorTest");
+		super.fillInputBoxIn("statement", "inventorTest");
+		super.clickOnSubmit("Register");
+	}
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/artefact/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(20)
 	public void positiveTest(final int recordIndex, final String name, final String code, final String technology, final String description, final String retailPrice, final String link, final String type) {
-		super.signIn("inventor1", "inventor1");
+		super.signIn("inventorTest", "inventorTest");
 
 		super.clickOnMenu("Inventor", "List of Artefacts");
 		super.checkListingExists();
@@ -56,9 +67,9 @@ public class InventorArtefactCreateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/artefact/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(30)
 	public void negativeTest(final int recordIndex, final String name, final String code, final String technology, final String description, final String retailPrice, final String link, final String type) {
-		super.signIn("inventor1", "inventor1");
+		super.signIn("inventorTest", "inventorTest");
 
 		super.clickOnMenu("Inventor", "List of Artefacts");
 		super.clickOnButton("Create new artefact");
@@ -79,7 +90,7 @@ public class InventorArtefactCreateTest extends TestHarness {
 	}
 
 	@Test
-	@Order(30)
+	@Order(40)
 	public void hackingTest() {
 		super.checkNotLinkExists("Account");
 		super.navigate("/inventor/artefact/create");
