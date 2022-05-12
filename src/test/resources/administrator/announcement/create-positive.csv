@@ -1,0 +1,8 @@
+recordIndex,title,body,critical,link
+0,"1Example of an announcement","This is an example of an announcement",false,http://example.com/
+1,"2Example of an announcement without url","This is an example of an announcement",false,
+2,"3Example of an announcement not critical","This is an example of an announcement",true,http://example.com/
+3,"4","This is an example of an announcement with short title",false,http://example.com/
+4,"5orem ipsum dolor sit amet consectetur adipiscing elit duis. torquent consequat imperdiet varius po.","This is an example of an announcement with long title",false,http://example.com/
+5,"6Example of an announcement with short body","L",true,http://example.com/
+6,"7Example of an announcement with long body","Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim pretium ante. augue turpis molestie est himenaeos non vulputate fringilla. Tellus facilisi suspendisse nibh nisl etiam interdum aenean venenatis odio curabitur. conubia montes lobortis ulla.",true,http://example.com/
