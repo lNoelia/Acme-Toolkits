@@ -1,0 +1,7 @@
+username,password,confirmation,name,surname,email,phone
+johnnnn1,password,password,John,Doe,john@doe.com,+34 675 675675
+johnnnn2,password,password,John,Doe,john@doe.com,
+john2,password,password,John,Doe,john@doe.com,
+60car ipsum dolor sit amet consectetur adipiscing elit odio.,password,password,John,Doe,john@doe.com,+34 675 675675
+johnnnn4,passwo,passwo,John,Doe,john@doe.com,+34 675 675675
+johnnnn5,60car ipsum dolor sit amet consectetur adipiscing elit odio.,60car ipsum dolor sit amet consectetur adipiscing elit odio.,John,Doe,john@doe.com,+34 675 675675
