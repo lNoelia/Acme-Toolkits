@@ -9,6 +9,7 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
+import acme.utils.SpamDetector;
 
 @Service
 public class InventorToolkitCreateService implements AbstractCreateService<Inventor, Toolkit>{
@@ -64,6 +65,13 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 			existing = this.repository.findOneToolkitByCode(entity.getCode());
 			errors.state(request, existing == null, "code", "inventor.toolkit.form.error.duplicated");
 		}
+		
+		boolean spam;
+		SpamDetector.readData();
+		spam = SpamDetector.check(entity.getTitle())
+			|| SpamDetector.check(entity.getDescription())
+			|| SpamDetector.check(entity.getAssemblyNotes());
+		errors.state(request, !spam, "spam", "inventor.toolkit.spam");
 	}
 
 	@Override

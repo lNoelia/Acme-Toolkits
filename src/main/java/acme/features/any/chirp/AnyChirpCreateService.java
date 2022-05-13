@@ -11,6 +11,7 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractCreateService;
+import acme.utils.SpamDetector;
 
 @Service
 public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp>  {
@@ -75,9 +76,16 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 		assert errors != null;
 
 		boolean confirmation;
+		boolean spam;
 
 		confirmation = request.getModel().getBoolean("confirmation");
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+	
+		SpamDetector.readData();
+		spam = SpamDetector.check(entity.getTitle())
+			|| SpamDetector.check(entity.getAuthor())
+			|| SpamDetector.check(entity.getBody());
+		errors.state(request, !spam, "spam", "any.chirp.spam");
 	}
 
 	@Override

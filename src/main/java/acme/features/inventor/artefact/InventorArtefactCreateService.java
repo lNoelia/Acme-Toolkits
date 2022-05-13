@@ -11,6 +11,7 @@ import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
+import acme.utils.SpamDetector;
 
 @Service
 public class InventorArtefactCreateService implements AbstractCreateService<Inventor , Artefact>{
@@ -76,6 +77,13 @@ public class InventorArtefactCreateService implements AbstractCreateService<Inve
 					errors.state(request, (price!=null), "retailPrice", "inventor.artefact.form.error.no-price");
 				}
 			}
+			
+			boolean spam;
+			SpamDetector.readData();
+			spam = SpamDetector.check(entity.getName())
+				|| SpamDetector.check(entity.getDescription())
+				|| SpamDetector.check(entity.getTechnology());
+			errors.state(request, !spam, "spam", "inventor.artefact.spam");
 		}
 
 		@Override

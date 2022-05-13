@@ -11,4 +11,6 @@ administrator.announcement.list.label.title = Title
 administrator.announcement.list.label.creationDate = Creation date
 administrator.announcement.list.button.create = Create
 
+administrator.announcement.spam = Spam has been detected. Please, review your text
+
 
