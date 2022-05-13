@@ -6,3 +6,5 @@ recordIndex,name,code,technology,description,retailPrice,link,type
 4,Saw,AAA-234-C,"For wood","A tool of high quality",EUR 4.50,"http://example.com/",TOOL
 5,Screw,ZAZ-998-Z,"Steel","Screw made of steel",EUR 0.06,"http://example.com/",COMPONENT
 6,Screwdriver,AAA-111-A,"Flat Head","A tool for screws",EUR 2.00,"",TOOL
+7,Prueba de spam con palabras fuertes deja porque sex solo aparece una vez,SPA-112-M,"Flat Head","A tool for screws",EUR 2.00,"",TOOL
+8,Prueba de spam con palabras fuertes deja porque sexy sexy sexy solo aparece tres veces,SPA-113-M,"Flat Head","A tool for screws",EUR 2.00,"",TOOL

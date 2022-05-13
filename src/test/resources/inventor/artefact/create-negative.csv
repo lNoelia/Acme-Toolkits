@@ -2,4 +2,7 @@ recordIndex,name,code,technology,description,retailPrice,link,type
 0,"",AAA-011-B,"101 letras Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.","A tool for screws but electric",EUR 3.00,"example@#/",TOOL
 1,Hammer,AAA-789-B,"","256letras Lorem ipsum dolor sit amet consectetur adipiscing elit. In vehicula iaculis massa quis mattis. Integer tristique ultricies justo ac vestibulum lorem. Curabitur a libero commodo volutpat tellus sit amet tempus ex. Nam blandit lorem arcu  molestie.",EUR 3.00,"",TOOL
 2,Metal Bar,ABA-015-A,"101 letras Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.","Bar made of metal",,"",COMPONENT
-3,"",ZZZ-999-Z,"","",,"",COMPONENT
+3,"spam sex",ZZZ-999-Z,"","",,"",COMPONENT
+4,"spam spam sex",ZZZ-999-Z,"","",,"",COMPONENT
+5,"sexy sexy sexy sexy spam",ZZZ-999-Z,"","",,"",COMPONENT
+6,"sex",ZZZ-999-Z,"sexy sexy sexy sexy spam","",,"",COMPONENT
