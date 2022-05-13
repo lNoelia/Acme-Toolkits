@@ -29,6 +29,7 @@ patron.patronage.form.error.too-close-startDate= La fecha de inicio debe estar a
 patron.patronage.form.error.too-close-endDate= La fecha del final debe estar alejada al menos un mes de la fecha de inicio
 patron.patronage.form.error.inventorUsername= Este inventor no existe
 patron.patronage.form.error.minimum-budget=El presupuesto minimo es de 0
+patron.patronage.form.error.not-accepted-currency=Este tipo de divisa no esta en el sistema
 PROPOSED = Propuesto
 ACCEPTED = Aceptado
 DENIED = Denegado

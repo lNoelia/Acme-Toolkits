@@ -1,15 +1,3 @@
-/*
- * AuthenticatedEmployerUpdateService.java
- *
- * Copyright (C) 2012-2022 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
-
 package acme.features.patron.patronage;
 
 import java.util.Calendar;
@@ -135,12 +123,15 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		}
 		
 		if (!errors.hasErrors("budget")) {
-			Money budget;
-			
-			budget = entity.getBudget();
-		
-			errors.state(request, budget.getAmount() >= 0,"budget", "patron.patronage.form.error.minimum-budget");
-		}
+            Money budget;
+            String acceptedCurrencies;
+
+            budget = entity.getBudget();
+            acceptedCurrencies=this.repository.findAcceptedCurrencies();
+
+            errors.state(request, budget.getAmount() >= 0,"budget", "patron.patronage.form.error.minimum-budget");
+            errors.state(request,acceptedCurrencies.contains(budget.getCurrency()), "budget","patron.patronage.form.error.not-accepted-currency");
+        }
 		
 		if (!errors.hasErrors("inventorUsername")) {
 			Inventor inventor;

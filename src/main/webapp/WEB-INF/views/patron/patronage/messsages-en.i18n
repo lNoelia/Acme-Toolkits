@@ -29,6 +29,7 @@ patron.patronage.form.error.too-close-startDate= The start date must be separate
 patron.patronage.form.error.too-close-endDate= The end date must be separated at least a month from the star date
 patron.patronage.form.error.inventorUsername=This inventor does not exist
 patron.patronage.form.error.minimum-budget= The minimum budget is 0
+patron.patronage.form.error.not-accepted-currency=This type of currency is not in the system
 PROPOSED = Proposed
 ACCEPTED = Accepted
 DENIED = Denied
