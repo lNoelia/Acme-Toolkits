@@ -30,7 +30,9 @@
 	<jstl:if test="${!readonly}">
 		<acme:submit code="inventor.patronage.form.button.update.save" action="/inventor/patronage/update"/>
 	</jstl:if>
+	<jstl:if test="${readonly}">
 	<acme:button code="inventor.patronage.form.button.patronage-reports" action="/inventor/patronage-report/create?masterId=${id}"/>
+	</jstl:if>
 </acme:form>
 	
 
