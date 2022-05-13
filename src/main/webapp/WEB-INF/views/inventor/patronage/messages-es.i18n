@@ -7,6 +7,8 @@ inventor.patronage.form.label.link = Enlace:
 inventor.patronage.form.label.creationDate = Fecha de creación:
 inventor.patronage.form.label.startDate = Fecha de inicio: 
 inventor.patronage.form.label.endDate = Fecha de fin:
+inventor.patronage.form.button.update= Actualizar
+inventor.patronage.form.button.update.save = Guardar actualizado
 
 inventor.patronage.form.button.patronages = Patrocinios
 
@@ -16,3 +18,5 @@ inventor.patronage.list.label.code = Código
 inventor.patronage.list.label.status = Estado
 inventor.patronage.list.label.budget = Presupuesto
 inventor.patronage.list.label.patron = Patrocinador
+
+inventor.patronage.form.button.patronage-reports= Crear un informe del patrocinio

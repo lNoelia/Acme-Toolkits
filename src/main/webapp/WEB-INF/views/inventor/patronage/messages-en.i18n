@@ -7,6 +7,8 @@ inventor.patronage.form.label.link = Link:
 inventor.patronage.form.label.creationDate = Creation date:
 inventor.patronage.form.label.startDate = Start date: 
 inventor.patronage.form.label.endDate = End date:
+inventor.patronage.form.button.update=Update
+inventor.patronage.form.button.update.save= Save update
 
 inventor.patronage.form.button.patronages = Patronages
 
@@ -16,3 +18,5 @@ inventor.patronage.list.label.code = Code
 inventor.patronage.list.label.status = Status
 inventor.patronage.list.label.budget = Budget
 inventor.patronage.list.label.patron = Patron
+
+inventor.patronage.form.button.patronage-reports= Create a patronage report

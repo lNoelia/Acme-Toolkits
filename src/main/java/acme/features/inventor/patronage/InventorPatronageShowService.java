@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.patronages.Patronage;
+import acme.entities.patronages.PatronageStatus;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.entities.Principal;
@@ -62,5 +63,7 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 		final Patron patron = this.repository.findPatronByPatronId(patronId);
 		request.unbind(entity, model, "code", "status", "budget", "legalStuff", "link", "creationDate", "startDate", "endDate");
 		model.setAttribute("patron", patron.getCompany());
+		model.setAttribute("readonly", true);
+		model.setAttribute("canBeUpdated", entity.getStatus()==PatronageStatus.PROPOSED);
 	}
 }

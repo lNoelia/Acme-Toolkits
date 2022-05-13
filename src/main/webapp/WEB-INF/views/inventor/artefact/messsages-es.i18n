@@ -17,8 +17,21 @@ inventor.artefact.form.label.name = Nombre
 inventor.artefact.form.label.code = Código
 inventor.artefact.form.label.technology = Tecnología
 inventor.artefact.form.label.description = Descripción
-inventor.artefact.form.label.retailPrice = Precio al por menor
+inventor.artefact.form.label.retail-price = Precio al por menor
 inventor.artefact.form.label.link = Link
 inventor.artefact.form.label.type = Tipo
+
+inventor.artefact.form.placeholder.retailPrice = 0,00 EUR
+inventor.artefact.form.placeholder.code= AAA-000-A
+
+inventor.artefact.form.button.update = Actualizar
+inventor.artefact.form.button.delete = Eliminar
+inventor.artefact.form.button.publish = Publicar
+inventor.artefact.form.button.create = Crear nuevo artefacto
+
+inventor.artefact.form.error.duplicated = Este código ya está siendo usado
+inventor.artefact.form.error.negative-price = El precio al por menor debe ser positivo para Componentes y cero o positivo para Herramientas
+inventor.artefact.form.error.no-price = El precio al por menor no debe esta vacio y debe cumplir el patrón 0,00 EUR
+
 TOOL = Herramienta
 COMPONENT = Componente

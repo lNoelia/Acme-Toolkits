@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.artefact.Artefact;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.repositories.AbstractRepository;
 
@@ -16,10 +17,8 @@ public interface AnyToolkitRepository extends AbstractRepository {
 
 	@Query("select t from Toolkit t where t.id = :id")
 	Toolkit findToolkitById(int id);
-
-	@Query("select w.toolkit from WorksIn w inner join w.artefact a"
-		+ " where (a.name like :keyword or a.code like :keyword"
-		+ " or a.technology like :keyword or a.description like :keyword)"
-		+ " and w.toolkit.published = true")
-	Collection<Toolkit> findPublishedToolkitsByArtefactKeyword(String keyword);
+	
+	@Query("select a from WorksIn w inner join w.artefact a"
+		+ " where w.toolkit.id = :id and w.toolkit.published = true")
+	Collection<Artefact> findArtefactsByToolkitId(int id);
 }

@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.artefact.Artefact;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -38,8 +39,22 @@ public class AnyToolkitListAllService implements AbstractListService<Any, Toolki
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
+		
+		final StringBuilder builder = new StringBuilder();
+		final int toolkitId = entity.getId();
+		final Collection<Artefact> toolkitArtefacts = this.repository.findArtefactsByToolkitId(toolkitId);
+		
 		request.unbind(entity, model, "code", "title", "description");
+		
+		for (final Artefact a:toolkitArtefacts) {
+			builder.append(String.format("%s; %s; %s; %s; ", 
+				a.getName(),
+				a.getDescription(),
+				a.getCode(),
+				a.getTechnology()));
+		}
+		final String payload = builder.toString();
+		model.setAttribute("payload", payload);
 	}
 
 }

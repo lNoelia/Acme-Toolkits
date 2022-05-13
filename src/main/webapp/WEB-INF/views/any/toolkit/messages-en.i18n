@@ -7,5 +7,3 @@ any.toolkit.list.label.assemblyNotes = Assembly Notes
 any.toolkit.list.label.link = Link
 any.toolkit.list.label.price = Price
 any.toolkit.list.label.artefacts = Artefacts
-any.toolkit.form.label.keyword = Filter by a particular artefact
-any.toolkit.form.button.search = Search

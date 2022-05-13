@@ -1,0 +1,3 @@
+key,title,author,body,email,confirmation
+0,Chirp 1,User2,This is an example of a chirp,email@example.com,true
+1,No more chirps,Hack3r,This is an example of a chirp without email,,true

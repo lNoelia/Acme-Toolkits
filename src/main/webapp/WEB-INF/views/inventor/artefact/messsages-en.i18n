@@ -17,9 +17,23 @@ inventor.artefact.form.label.name = Name
 inventor.artefact.form.label.code = Code
 inventor.artefact.form.label.technology = Technology
 inventor.artefact.form.label.description = Description
-inventor.artefact.form.label.retailPrice = Retail Price
+inventor.artefact.form.label.retail-price = Retail Price
 inventor.artefact.form.label.link = Link
 inventor.artefact.form.label.type = Type
+
+inventor.artefact.form.placeholder.retail-price= 0.00 EUR
+inventor.artefact.form.placeholder.code= AAA-000-A
+
+inventor.artefact.form.button.update = Update
+inventor.artefact.form.button.delete = Delete
+inventor.artefact.form.button.publish = Publish
+inventor.artefact.form.button.create = Create new artefact
+
+inventor.artefact.form.error.duplicated = This code is already being used
+inventor.artefact.form.error.negative-price = Retail price should be positive for Components and zero or positive for Tools
+inventor.artefact.form.error.no-price = Retail price should not be empty and match the pattern 0.00 EUR 
+
+
 TOOL = Tool
 COMPONENT = Component
 

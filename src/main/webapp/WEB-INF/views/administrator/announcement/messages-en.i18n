@@ -1,0 +1,14 @@
+administrator.announcement.form.label.critical = Critical
+administrator.announcement.form.label.title = Title
+administrator.announcement.form.label.body = Body
+administrator.announcement.form.label.link = Link
+
+administrator.announcement.form.label.confirmation = Confirm that the announcement is correct
+administrator.announcement.form.button.create = Create
+
+administrator.announcement.list.label.critical = Critical
+administrator.announcement.list.label.title = Title
+administrator.announcement.list.label.creationDate = Creation date
+administrator.announcement.list.button.create = Create
+
+

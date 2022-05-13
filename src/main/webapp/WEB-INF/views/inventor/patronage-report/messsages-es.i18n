@@ -18,3 +18,6 @@ inventor.patronageReport.form.label.memorandum = Memorando
 inventor.patronageReport.form.label.sequenceNumber = Numero de secuencia
 inventor.patronageReport.form.label.creationDate = Fecha de creacion
 inventor.patronageReport.form.label.link = Enlace
+
+inventor.patronageReport.form.label.confirmation = Confirmación
+inventor.patronageReport.form.button.create = Crear

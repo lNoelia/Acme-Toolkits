@@ -1,0 +1,8 @@
+recordIndex,name,code,technology,description,retailPrice,link,type
+0,Electric screwdriver,AAA-011-B,"Electric","A tool for screws but electric",EUR 3.00,"http://example.com/",TOOL
+1,Hammer,AAA-789-B,"Iron head","A tool for nails",EUR 3.00,"http://example.com/",TOOL
+2,Metal Bar,ABA-015-A,"Metal","Bar made of metal",EUR 0.05,"",COMPONENT
+3,Nail,ABA-016-B,"Iron","Example text",EUR 0.05,"http://example.com/",COMPONENT
+4,Saw,AAA-234-C,"For wood","A tool of high quality",EUR 4.50,"http://example.com/",TOOL
+5,Screw,ZAZ-998-Z,"Steel","Screw made of steel",EUR 0.06,"http://example.com/",COMPONENT
+6,Screwdriver,AAA-111-A,"Flat Head","A tool for screws",EUR 2.00,"",TOOL
