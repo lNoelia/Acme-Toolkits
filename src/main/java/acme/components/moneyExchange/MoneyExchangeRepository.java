@@ -1,4 +1,4 @@
-package acme.features.authenticated.moneyExchange;
+package acme.components.moneyExchange;
 
 import java.util.Optional;
 
@@ -9,8 +9,11 @@ import acme.entities.exanchageRate.ExchangeRate;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedMoneyExchangeRepository extends AbstractRepository {
+public interface MoneyExchangeRepository extends AbstractRepository {
 
 	@Query("select er from ExchangeRate er where er.source= :source and er.target= :target")
 	Optional<ExchangeRate> findExchangeRate(String source, String target);
+	
+	@Query("select sc.systemCurrency from SystemConfiguration sc")
+	String findSystemCurrency();
 }

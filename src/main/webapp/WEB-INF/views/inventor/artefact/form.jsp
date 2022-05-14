@@ -20,7 +20,8 @@
 	<acme:input-textbox code="inventor.artefact.form.label.code" path="code" placeholder="inventor.artefact.form.placeholder.code"/>
 	<acme:input-textbox code="inventor.artefact.form.label.technology" path="technology"/>
 	<acme:input-textarea code="inventor.artefact.form.label.description" path="description"/>
-	<acme:input-double code="inventor.artefact.form.label.retail-price" path="retailPrice" placeholder="inventor.artefact.form.placeholder.retail-price"/>	
+	<acme:input-money code="inventor.artefact.form.label.retail-price" path="retailPrice" placeholder="inventor.artefact.form.placeholder.retail-price"/>	
+	<acme:input-money code="inventor.artefact.form.label.convertedPrice" path="convertedPrice" readonly="true"/>
 	<acme:input-url code="inventor.artefact.form.label.link" path="link"/>		
 	<acme:input-select code="inventor.artefact.form.label.type" path="type">
 		<acme:input-option code="TOOL" value="TOOL" selected="${type == 'TOOL'}"/>

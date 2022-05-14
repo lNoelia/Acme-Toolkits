@@ -1,6 +1,7 @@
 inventor.patronage.form.label.code = Código:
 inventor.patronage.form.label.status = Estado:
 inventor.patronage.form.label.budget = Presupuesto:
+inventor.patronage.form.label.convertedPrice = Precio convertido:
 inventor.patronage.form.label.patron = Patrocinador:
 inventor.patronage.form.label.legalStuff = Asuntos legales:
 inventor.patronage.form.label.link = Enlace:

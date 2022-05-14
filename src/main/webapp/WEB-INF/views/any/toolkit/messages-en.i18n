@@ -6,4 +6,5 @@ any.toolkit.list.label.description = Description
 any.toolkit.list.label.assemblyNotes = Assembly Notes
 any.toolkit.list.label.link = Link
 any.toolkit.list.label.price = Price
+any.toolkit.form.label.convertedPrice = Converted Price
 any.toolkit.list.label.artefacts = Artefacts

@@ -53,8 +53,6 @@
 			<acme:menu-suboption code="master.menu.any.chirp" action="/any/chirp/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.announcement-list" action="/authenticated/announcement/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.currency-info" action="/authenticated/system-configuration/list"/>
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.authenticated.money-exchage" action="/authenticated/money-exchange/perform"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">

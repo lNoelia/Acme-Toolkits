@@ -11,6 +11,7 @@
 patron.patronage.list.label.code = Código
 patron.patronage.list.label.status = Estado
 patron.patronage.list.label.budget = Presupuesto
+patron.patronage.form.label.convertedPrice = Precio convertido
 patron.patronage.list.label.legalStuff = Condiciones legales
 patron.patronage.list.label.startDate = Fecha de inicio
 patron.patronage.list.label.endDate = Fecha de fin

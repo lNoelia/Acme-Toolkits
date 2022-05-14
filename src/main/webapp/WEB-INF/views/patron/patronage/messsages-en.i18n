@@ -11,6 +11,7 @@
 patron.patronage.list.label.code = Code
 patron.patronage.list.label.status = Status
 patron.patronage.list.label.budget = Budget
+patron.patronage.form.label.convertedPrice = Converted Price
 patron.patronage.list.label.legalStuff = Legal stuff
 patron.patronage.list.label.startDate = Start date
 patron.patronage.list.label.endDate = End date

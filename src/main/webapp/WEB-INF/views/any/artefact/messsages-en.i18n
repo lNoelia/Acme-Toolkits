@@ -20,6 +20,7 @@ any.artefact.form.label.description = Description
 any.artefact.form.label.retailPrice = Retail Price
 any.artefact.form.label.link = Link
 any.artefact.form.label.type = Type
+any.artefact.form.label.convertedPrice = Converted Price
 TOOL = Tool
 COMPONENT = Component
 

@@ -1,4 +1,4 @@
-package acme.components;
+package acme.components.moneyExchange;
 
 import java.util.Date;
 import java.util.Map;
