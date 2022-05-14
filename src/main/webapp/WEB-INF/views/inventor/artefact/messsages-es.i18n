@@ -32,6 +32,7 @@ inventor.artefact.form.button.create = Crear nuevo artefacto
 inventor.artefact.form.error.duplicated = Este código ya está siendo usado
 inventor.artefact.form.error.negative-price = El precio al por menor debe ser positivo para Componentes y cero o positivo para Herramientas
 inventor.artefact.form.error.no-price = El precio al por menor no debe esta vacio y debe cumplir el patrón 0,00 EUR
+inventor.artefact.form.invalid-system-currency = Esta divisa no está aceptada por el sistema
 
 TOOL = Herramienta
 COMPONENT = Componente
