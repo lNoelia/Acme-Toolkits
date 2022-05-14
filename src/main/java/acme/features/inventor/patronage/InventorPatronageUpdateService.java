@@ -35,7 +35,7 @@ public class InventorPatronageUpdateService implements AbstractUpdateService<Inv
 		
 		id = request.getModel().getInteger("id");
 		patronage = this.repository.findPatronageById(id);
-		result = (patronage.getStatus()==PatronageStatus.PROPOSED && patronage != null  && request.isPrincipal(patronage.getInventor()));
+		result = (!patronage.getDraftMode() && patronage.getStatus()==PatronageStatus.PROPOSED && patronage != null  && request.isPrincipal(patronage.getInventor()));
 
 		return result;
 	}
