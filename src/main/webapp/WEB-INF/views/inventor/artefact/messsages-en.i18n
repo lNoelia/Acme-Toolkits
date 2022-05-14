@@ -33,6 +33,7 @@ inventor.artefact.form.button.create = Create new artefact
 inventor.artefact.form.error.duplicated = This code is already being used
 inventor.artefact.form.error.negative-price = Retail price should be positive for Components and zero or positive for Tools
 inventor.artefact.form.error.no-price = Retail price should not be empty and match the pattern 0.00 EUR 
+inventor.artefact.form.invalid-system-currency = This currency is not accepted by the system
 
 inventor.artefact.spam = Spam has been detected. Please, review your text
 

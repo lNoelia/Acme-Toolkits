@@ -71,10 +71,17 @@ public class InventorArtefactCreateService implements AbstractCreateService<Inve
 			if (!errors.hasErrors("retailPrice")) {
 				Money price;
 				price = entity.getRetailPrice();
+				final String currencyPattern = "^[A-Z]{3}$";
 				if(price!=null) {
+					final String currency = price.getCurrency();
+					// Error for currency not accepted
+					final String acceptedCurrencies = this.repository.findSystemConfiguration().getAcceptedCurrencies();
+					errors.state(request, currency.matches(currencyPattern)&&acceptedCurrencies.contains(currency), "retailPrice", "inventor.artefact.form.invalid-system-currency");
+
+					
 					final Double amount = price.getAmount();
 					errors.state(request, (amount>0 && entity.getType()==ArtefactType.COMPONENT)||(amount>=0 && entity.getType()==ArtefactType.TOOL), "retailPrice", "inventor.artefact.form.error.negative-price");	
-				}else {
+				}else{
 					errors.state(request, (price!=null), "retailPrice", "inventor.artefact.form.error.no-price");
 				}
 			}
