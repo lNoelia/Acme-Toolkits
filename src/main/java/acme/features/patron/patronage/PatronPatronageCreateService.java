@@ -1,6 +1,7 @@
 package acme.features.patron.patronage;
 
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -117,13 +118,7 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
             errors.state(request, budget.getAmount() >= 0,"budget", "patron.patronage.form.error.minimum-budget");
             errors.state(request,acceptedCurrencies.contains(budget.getCurrency()), "budget","patron.patronage.form.error.not-accepted-currency");
         }
-		
-		if (!errors.hasErrors("inventorUsername")) {
-			Inventor inventor;
-			
-			inventor = this.repository.findOneInventorByUsername(request.getModel().getString("inventorUsername"));
-			errors.state(request, inventor != null, "inventorUsername", "patron.patronage.form.error.inventorUsername");
-		}
+
 
 	}
 
@@ -134,7 +129,8 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		assert model != null;
 
 		Date creationDate;
-		
+		Collection<Inventor> inventors;
+		inventors=this.repository.findAllInventors();
 		
 		creationDate = new Date(System.currentTimeMillis() - 1);
 		
@@ -142,7 +138,7 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		entity.setCreationDate(creationDate);
 		request.unbind(entity, model,"creationDate","code", "legalStuff", "budget", "link","startDate","endDate","status");
 		model.setAttribute("create",true);
-		model.setAttribute("inventorUsername","");
+		model.setAttribute("inventors", inventors);
 	}
 
 	@Override
@@ -153,7 +149,7 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		Date creationDate;
 		Inventor inventor;
 		
-		inventor = this.repository.findOneInventorByUsername(request.getModel().getString("inventorUsername"));
+		inventor = this.repository.findInventorById(request.getModel().getInteger("inventorId"));
 		creationDate = new Date(System.currentTimeMillis() - 1);
 		
 		entity.setInventor(inventor);

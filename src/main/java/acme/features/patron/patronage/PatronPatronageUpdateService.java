@@ -1,6 +1,7 @@
 package acme.features.patron.patronage;
 
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -59,11 +60,12 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		Collection<Inventor> inventors;
+		inventors=this.repository.findAllInventors();
 
-		request.unbind(entity, model,"code","status","creationDate","startDate","endDate", "budget", "legalStuff", "link");
-		model.setAttribute("inventorFullName", entity.getInventor().getIdentity().getFullName());
-		model.setAttribute("inventorCompany", entity.getInventor().getCompany());
-		model.setAttribute("inventorUsername",entity.getInventor().getUserAccount().getUsername());
+		request.unbind(entity, model,"code","status","creationDate","startDate","endDate", "budget", "legalStuff", "link","inventor");
+		model.setAttribute("inventors", inventors);
 		model.setAttribute("update", true);
 	}
 
@@ -133,12 +135,6 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
             errors.state(request,acceptedCurrencies.contains(budget.getCurrency()), "budget","patron.patronage.form.error.not-accepted-currency");
         }
 		
-		if (!errors.hasErrors("inventorUsername")) {
-			Inventor inventor;
-			
-			inventor = this.repository.findOneInventorByUsername(request.getModel().getString("inventorUsername"));
-			errors.state(request, inventor != null, "inventorUsername", "patron.patronage.form.error.inventorUsername");
-		}
 	}
 
 	@Override
@@ -146,7 +142,7 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		assert request != null;
 		assert entity != null;
 		Inventor inventor;
-		inventor = this.repository.findOneInventorByUsername(request.getModel().getString("inventorUsername"));
+		inventor = this.repository.findInventorById(request.getModel().getInteger("inventorId"));
 		
 		entity.setInventor(inventor);
 		this.repository.save(entity);
