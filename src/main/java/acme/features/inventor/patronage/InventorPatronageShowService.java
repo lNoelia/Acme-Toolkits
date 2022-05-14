@@ -40,7 +40,7 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 		result = patronage.getEndDate().after(currentMoment);
 		
 		final Principal principal = request.getPrincipal();	
-		return result && 
+		return result && !patronage.getDraftMode() &&
 				principal.hasRole(Inventor.class) && 
 				principal.getActiveRoleId()==patronage.getInventor().getId();
 	}
