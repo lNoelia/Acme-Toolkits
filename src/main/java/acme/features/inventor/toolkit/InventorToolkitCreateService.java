@@ -3,12 +3,14 @@ package acme.features.inventor.toolkit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
+import acme.utils.SpamDetector;
 
 @Service
 public class InventorToolkitCreateService implements AbstractCreateService<Inventor, Toolkit>{
@@ -64,6 +66,15 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 			existing = this.repository.findOneToolkitByCode(entity.getCode());
 			errors.state(request, existing == null, "code", "inventor.toolkit.form.error.duplicated");
 		}
+		
+		boolean spam;
+		final SystemConfiguration sc = this.repository.findSystemConfiguration();
+		SpamDetector.readData(sc.getStrongSpamWords(), sc.getWeakSpamWords(), 
+							  sc.getStrongSpamThreshold(), sc.getWeakSpamThreshold());
+		spam = SpamDetector.check(entity.getTitle())
+			|| SpamDetector.check(entity.getDescription())
+			|| SpamDetector.check(entity.getAssemblyNotes());
+		errors.state(request, !spam, "spam", "inventor.toolkit.spam");
 	}
 
 	@Override

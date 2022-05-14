@@ -11,3 +11,5 @@ any.chirp.form.label.body = Cuerpo
 any.chirp.form.label.email = Email
 any.chirp.form.label.confirmation = Confirmación
 any.chirp.form.button.create = Crear
+
+any.chirp.spam = Se ha detectado spam. Por favor, revise su texto
