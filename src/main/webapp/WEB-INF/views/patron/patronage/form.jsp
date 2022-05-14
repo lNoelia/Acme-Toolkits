@@ -14,6 +14,7 @@
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <acme:form readonly="${readonly}">
 	<acme:input-textbox code="patron.patronage.list.label.code" path="code"/>
@@ -22,6 +23,13 @@
 	
 	<acme:input-moment code="patron.patronage.list.label.creationDate" path="creationDate" readonly="true"/>
 	
+	<jstl:if test="${create || update}">
+        <acme:input-select code="patron.patronage.list.label.inventor" path="inventorId">
+        	<c:forEach var="inventorOption" items="${inventors}">
+            	<acme:input-option selected="${inventorOption.id==inventor.id}" code="${inventorOption.userAccount.identity.name} ${inventorOption.userAccount.identity.surname}" value="${inventorOption.id}"/>
+        	</c:forEach>
+    	</acme:input-select>
+    </jstl:if>
 	
 	<acme:input-moment code="patron.patronage.list.label.startDate" path="startDate"/>
 	<acme:input-moment code="patron.patronage.list.label.endDate" path="endDate"/>
@@ -30,11 +38,8 @@
 	<acme:input-money code="patron.patronage.form.label.convertedPrice" path="convertedPrice" readonly="true"/>
 	<acme:input-textarea code="patron.patronage.list.label.legalStuff" path="legalStuff"/>
 	<acme:input-url code="patron.patronage.list.label.link" path="link"/>
-	
-	<jstl:if test="${create || update}">
-		<acme:input-textbox code="patron.patronage.list.label.inventorUsername" path="inventorUsername"/>
-	</jstl:if>
-	<jstl:if test="${!create}">
+
+	<jstl:if test="${!create && !update}">
 		<acme:input-textbox code="patron.patronage.list.label.inventorFullName" path="inventorFullName"  readonly="true"/>
 		<acme:input-textbox code="patron.patronage.list.label.inventorCompany" path="inventorCompany"  readonly="true"/>
 	</jstl:if>
