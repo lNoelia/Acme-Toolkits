@@ -27,6 +27,7 @@
 	<acme:input-moment code="patron.patronage.list.label.endDate" path="endDate"/>
 	
 	<acme:input-money code="patron.patronage.list.label.budget" path="budget"/>
+	<acme:input-money code="patron.patronage.form.label.convertedPrice" path="convertedPrice" readonly="true"/>
 	<acme:input-textarea code="patron.patronage.list.label.legalStuff" path="legalStuff"/>
 	<acme:input-url code="patron.patronage.list.label.link" path="link"/>
 	

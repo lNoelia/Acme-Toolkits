@@ -3,9 +3,11 @@ package acme.features.inventor.artefact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.moneyExchange.MoneyExchangeService;
 import acme.entities.artefact.Artefact;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
 
@@ -17,6 +19,9 @@ public class InventorArtefactShowService implements AbstractShowService<Inventor
 
 	@Autowired
 	protected InventorArtefactRepository repository;
+	
+	@Autowired
+	protected MoneyExchangeService moneyExchangeService;
 
 	// AbstractListService<Inventor, Artefact> interface --------------
 
@@ -56,7 +61,14 @@ public class InventorArtefactShowService implements AbstractShowService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		Money convertedPrice;
+		Money retailPrice;
+				
+		retailPrice = entity.getRetailPrice();
+		convertedPrice = this.moneyExchangeService.convertToSystemCurrency(retailPrice);
 
-		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "link", "type","published");		
+		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "link", "type","published");
+		model.setAttribute("convertedPrice", convertedPrice);
 	}
 }

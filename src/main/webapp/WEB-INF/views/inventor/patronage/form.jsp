@@ -17,6 +17,7 @@
 	</jstl:if>
 	
 	<acme:input-money  readonly="true" code="inventor.patronage.form.label.budget" path="budget"/>
+	<acme:input-money code="inventor.patronage.form.label.convertedPrice" path="convertedPrice" readonly="true"/>
 	<acme:input-textbox readonly="true" code="inventor.patronage.form.label.patron" path="patron"/>
 	<acme:input-textbox readonly="true" code="inventor.patronage.form.label.legalStuff" path="legalStuff"/>
 	<acme:input-url readonly="true" code="inventor.patronage.form.label.link" path="link"/>

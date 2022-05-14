@@ -3,6 +3,7 @@ package acme.features.any.toolkit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.moneyExchange.MoneyExchangeService;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -15,6 +16,9 @@ public class AnyToolkitShowService implements AbstractShowService<Any,Toolkit>{
 	// Internal state ---------------------------------------------------------
 	@Autowired
 	protected AnyToolkitRepository repository;
+	
+	@Autowired
+	protected MoneyExchangeService moneyExchangeService;
 	
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
@@ -48,8 +52,14 @@ public class AnyToolkitShowService implements AbstractShowService<Any,Toolkit>{
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "link", "published", "price");
+		//Money convertedPrice;
+		//Money price;
+				
+		//price = entity.getPrice();
+		//convertedPrice = this.moneyExchangeService.convertToSystemCurrency(price);
 		
+		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "link", "published", "price");
+		//model.setAttribute("convertedPrice", convertedPrice);
 	}
 
 }

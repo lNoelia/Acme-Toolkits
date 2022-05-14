@@ -5,6 +5,7 @@ inventor.toolkit.list.label.price = Precio
 inventor.toolkit.form.label.title = Título
 inventor.toolkit.form.label.code = Código
 inventor.toolkit.form.label.price = Precio
+inventor.toolkit.form.label.convertedPrice = Precio convertido
 inventor.toolkit.form.label.description = Descripción
 inventor.toolkit.form.label.assemblyNotes = Instrucciones
 inventor.toolkit.form.label.link = Link

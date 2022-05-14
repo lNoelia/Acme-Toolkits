@@ -18,6 +18,7 @@ inventor.artefact.form.label.code = Código
 inventor.artefact.form.label.technology = Tecnología
 inventor.artefact.form.label.description = Descripción
 inventor.artefact.form.label.retail-price = Precio al por menor
+inventor.artefact.form.label.convertedPrice = Precio convertido
 inventor.artefact.form.label.link = Link
 inventor.artefact.form.label.type = Tipo
 

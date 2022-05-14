@@ -18,9 +18,10 @@
 <acme:form>
 	<acme:input-textbox code="inventor.toolkit.form.label.title" path="title"/>
 	<acme:input-textbox code="inventor.toolkit.form.label.code" path="code"/>
-	<acme:input-textbox code="inventor.toolkit.form.label.price" path="price"/>
+	<acme:input-money code="inventor.toolkit.form.label.price" path="price"/>
+	<acme:input-money code="inventor.toolkit.form.label.convertedPrice" path="convertedPrice" readonly="true"/>
 	<acme:input-textarea code="inventor.toolkit.form.label.description" path="description"/>
-	<acme:input-double code="inventor.toolkit.form.label.assemblyNotes" path="assemblyNotes"/>	
+	<acme:input-textarea code="inventor.toolkit.form.label.assemblyNotes" path="assemblyNotes"/>	
 	<acme:input-url code="inventor.toolkit.form.label.link" path="link"/>
 	
 	<jstl:choose>	 

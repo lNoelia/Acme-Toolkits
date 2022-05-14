@@ -11,6 +11,7 @@
 inventor.artefact.list.label.name = Name
 inventor.artefact.list.label.technology = Technology
 inventor.artefact.list.label.retailPrice = Retail Price
+inventor.artefact.form.label.convertedPrice = Converted Price
 inventor.artefact.list.label.type = Type
 
 inventor.artefact.form.label.name = Name

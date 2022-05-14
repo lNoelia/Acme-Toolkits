@@ -3,6 +3,7 @@ package acme.features.inventor.toolkit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.moneyExchange.MoneyExchangeService;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -17,6 +18,9 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 
 	@Autowired
 	protected InventorToolkitRepository repository;
+	
+	@Autowired
+	protected MoneyExchangeService moneyExchangeService;
 
 	// AbstractListService<Inventor, Toolkit> interface --------------
 
@@ -55,7 +59,14 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		//Money convertedPrice;
+		//Money price;
+		
+		//price = entity.getPrice();
+		//convertedPrice = this.moneyExchangeService.convertToSystemCurrency(price);
 
-		request.unbind(entity, model, "title", "code", "price", "description", "assemblyNotes", "link", "published");				
+		request.unbind(entity, model, "title", "code", "price", "description", "assemblyNotes", "link", "published");
+		//model.setAttribute("convertedPrice", convertedPrice);
 	}
 }
