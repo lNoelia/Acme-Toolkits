@@ -20,7 +20,8 @@
 	<acme:input-textbox code="any.artefact.form.label.code" path="code"/>
 	<acme:input-textbox code="any.artefact.form.label.technology" path="technology"/>
 	<acme:input-textarea code="any.artefact.form.label.description" path="description"/>
-	<acme:input-double code="any.artefact.form.label.retailPrice" path="retailPrice"/>	
+	<acme:input-money code="any.artefact.form.label.retailPrice" path="retailPrice"/>
+	<acme:input-money code="any.artefact.form.label.convertedPrice" path="convertedPrice" readonly="true"/>
 	<acme:input-url code="any.artefact.form.label.link" path="link"/>		
 	<acme:input-select code="any.artefact.form.label.type" path="type">
 		<acme:input-option code="TOOL" value="TOOL" selected="${type == 'TOOL'}"/>

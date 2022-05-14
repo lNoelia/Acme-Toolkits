@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.artefact.Artefact;
+import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Inventor;
 
@@ -26,4 +27,7 @@ public interface InventorArtefactRepository extends AbstractRepository {
 
 	@Query("select a from Artefact a where a.code = :code")
 	Artefact findOneArtefactByCode(String code);
+	
+	@Query("select sc from SystemConfiguration sc")
+	SystemConfiguration findSystemConfiguration();
 }

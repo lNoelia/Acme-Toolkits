@@ -5,6 +5,7 @@ inventor.toolkit.list.label.price = Price
 inventor.toolkit.form.label.title = Title
 inventor.toolkit.form.label.code = Code
 inventor.toolkit.form.label.price = Price
+inventor.toolkit.form.label.convertedPrice = Converted Price
 inventor.toolkit.form.label.description = Description
 inventor.toolkit.form.label.assemblyNotes = Assembly Notes
 inventor.toolkit.form.label.link = Link
@@ -17,3 +18,5 @@ inventor.toolkit.form.button.publish = Publish
 inventor.toolkit.form.button.create = Create new toolkit
 
 inventor.toolkit.form.error.duplicated = This code is already being used
+
+inventor.toolkit.spam = Spam has been detected. Please, review your text

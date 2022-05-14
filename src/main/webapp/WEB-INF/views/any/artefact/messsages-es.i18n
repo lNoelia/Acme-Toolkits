@@ -20,5 +20,6 @@ any.artefact.form.label.description = Descripción
 any.artefact.form.label.retailPrice = Precio al por menor
 any.artefact.form.label.link = Link
 any.artefact.form.label.type = Tipo
+any.artefact.form.label.convertedPrice = Precio convertido
 TOOL = Herramienta
 COMPONENT = Componente

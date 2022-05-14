@@ -13,5 +13,7 @@
 		<acme:input-checkbox code="any.chirp.form.label.confirmation" path="confirmation"/>
 		<acme:submit code="any.chirp.form.button.create" action="/any/chirp/create"/>
 	</jstl:if>
+	
+	<acme:show-errors path="spam"/>
 </acme:form>
 
