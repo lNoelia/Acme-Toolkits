@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.artefact.Artefact;
 import acme.entities.artefact.ArtefactType;
+import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -65,7 +66,9 @@ public class InventorArtefactUpdateService implements AbstractUpdateService<Inve
 			}
 			
 			boolean spam;
-			SpamDetector.readData();
+			final SystemConfiguration sc = this.repository.findSystemConfiguration();
+			SpamDetector.readData(sc.getStrongSpamWords(), sc.getWeakSpamWords(), 
+								  sc.getStrongSpamThreshold(), sc.getWeakSpamThreshold());
 			spam = SpamDetector.check(entity.getName())
 				|| SpamDetector.check(entity.getDescription())
 				|| SpamDetector.check(entity.getTechnology());

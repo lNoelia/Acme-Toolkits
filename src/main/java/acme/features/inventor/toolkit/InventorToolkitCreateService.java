@@ -3,6 +3,7 @@ package acme.features.inventor.toolkit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -67,7 +68,9 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 		}
 		
 		boolean spam;
-		SpamDetector.readData();
+		final SystemConfiguration sc = this.repository.findSystemConfiguration();
+		SpamDetector.readData(sc.getStrongSpamWords(), sc.getWeakSpamWords(), 
+							  sc.getStrongSpamThreshold(), sc.getWeakSpamThreshold());
 		spam = SpamDetector.check(entity.getTitle())
 			|| SpamDetector.check(entity.getDescription())
 			|| SpamDetector.check(entity.getAssemblyNotes());
