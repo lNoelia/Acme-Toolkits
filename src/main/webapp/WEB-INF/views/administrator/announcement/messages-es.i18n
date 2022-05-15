@@ -10,3 +10,5 @@ administrator.announcement.list.label.critical = Critico
 administrator.announcement.list.label.title = Titulo
 administrator.announcement.list.label.creationDate = Fecha de creacion
 administrator.announcement.list.button.create = Crear
+
+administrator.announcement.spam = Se ha detectado spam. Por favor, revise su texto

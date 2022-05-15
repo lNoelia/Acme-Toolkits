@@ -13,4 +13,6 @@
 		<acme:input-checkbox code="administrator.announcement.form.label.confirmation" path="confirmation"/>
 		<acme:submit code="administrator.announcement.form.button.create" action="/administrator/announcement/create"/>
 	</jstl:if>
+	
+	<acme:show-errors path="spam"/>
 </acme:form>

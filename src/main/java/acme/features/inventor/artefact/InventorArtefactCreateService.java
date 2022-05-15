@@ -5,12 +5,14 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.artefact.Artefact;
 import acme.entities.artefact.ArtefactType;
+import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
+import acme.utils.SpamDetector;
 
 @Service
 public class InventorArtefactCreateService implements AbstractCreateService<Inventor , Artefact>{
@@ -69,13 +71,29 @@ public class InventorArtefactCreateService implements AbstractCreateService<Inve
 			if (!errors.hasErrors("retailPrice")) {
 				Money price;
 				price = entity.getRetailPrice();
+				final String currencyPattern = "^[A-Z]{3}$";
 				if(price!=null) {
+					final String currency = price.getCurrency();
+					// Error for currency not accepted
+					final String acceptedCurrencies = this.repository.findSystemConfiguration().getAcceptedCurrencies();
+					errors.state(request, currency.matches(currencyPattern)&&acceptedCurrencies.contains(currency), "retailPrice", "inventor.artefact.form.invalid-system-currency");
+
+					
 					final Double amount = price.getAmount();
 					errors.state(request, (amount>0 && entity.getType()==ArtefactType.COMPONENT)||(amount>=0 && entity.getType()==ArtefactType.TOOL), "retailPrice", "inventor.artefact.form.error.negative-price");	
-				}else {
+				}else{
 					errors.state(request, (price!=null), "retailPrice", "inventor.artefact.form.error.no-price");
 				}
 			}
+			
+			boolean spam;
+			final SystemConfiguration sc = this.repository.findSystemConfiguration();
+			SpamDetector.readData(sc.getStrongSpamWords(), sc.getWeakSpamWords(), 
+								  sc.getStrongSpamThreshold(), sc.getWeakSpamThreshold());
+			spam = SpamDetector.check(entity.getName())
+				|| SpamDetector.check(entity.getDescription())
+				|| SpamDetector.check(entity.getTechnology());
+			errors.state(request, !spam, "spam", "inventor.artefact.spam");
 		}
 
 		@Override

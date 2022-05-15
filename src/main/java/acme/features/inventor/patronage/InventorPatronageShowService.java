@@ -5,10 +5,12 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.moneyExchange.MoneyExchangeService;
 import acme.entities.patronages.Patronage;
 import acme.entities.patronages.PatronageStatus;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
@@ -19,6 +21,9 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 
 	@Autowired
 	protected InventorPatronageRepository repository;
+	
+	@Autowired
+	protected MoneyExchangeService moneyExchangeService;
 
 	@Override
 	public boolean authorise(final Request<Patronage> request) {
@@ -35,7 +40,7 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 		result = patronage.getEndDate().after(currentMoment);
 		
 		final Principal principal = request.getPrincipal();	
-		return result && 
+		return result && !patronage.getDraftMode() &&
 				principal.hasRole(Inventor.class) && 
 				principal.getActiveRoleId()==patronage.getInventor().getId();
 	}
@@ -59,11 +64,19 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 		assert entity != null;
 		assert model != null;
 
+		Money convertedPrice;
+		Money budget;
+		
+		budget = entity.getBudget();
+		convertedPrice = this.moneyExchangeService.convertToSystemCurrency(budget);
+		
 		final Integer patronId = entity.getPatron().getId();
 		final Patron patron = this.repository.findPatronByPatronId(patronId);
+		
 		request.unbind(entity, model, "code", "status", "budget", "legalStuff", "link", "creationDate", "startDate", "endDate");
 		model.setAttribute("patron", patron.getCompany());
 		model.setAttribute("readonly", true);
 		model.setAttribute("canBeUpdated", entity.getStatus()==PatronageStatus.PROPOSED);
+		model.setAttribute("convertedPrice", convertedPrice);
 	}
 }

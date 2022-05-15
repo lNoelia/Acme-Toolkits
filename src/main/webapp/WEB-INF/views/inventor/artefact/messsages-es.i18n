@@ -18,6 +18,7 @@ inventor.artefact.form.label.code = Código
 inventor.artefact.form.label.technology = Tecnología
 inventor.artefact.form.label.description = Descripción
 inventor.artefact.form.label.retail-price = Precio al por menor
+inventor.artefact.form.label.convertedPrice = Precio convertido
 inventor.artefact.form.label.link = Link
 inventor.artefact.form.label.type = Tipo
 
@@ -32,6 +33,11 @@ inventor.artefact.form.button.create = Crear nuevo artefacto
 inventor.artefact.form.error.duplicated = Este código ya está siendo usado
 inventor.artefact.form.error.negative-price = El precio al por menor debe ser positivo para Componentes y cero o positivo para Herramientas
 inventor.artefact.form.error.no-price = El precio al por menor no debe esta vacio y debe cumplir el patrón 0,00 EUR
+inventor.artefact.form.invalid-system-currency = Esta divisa no está aceptada por el sistema
+
+inventor.artefact.spam = Se ha detectado spam. Por favor, revise su texto
 
 TOOL = Herramienta
 COMPONENT = Componente
+
+

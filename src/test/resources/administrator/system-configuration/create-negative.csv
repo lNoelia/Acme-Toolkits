@@ -1,0 +1,9 @@
+recordIndex, acceptedCurrencies,systemCurrency,strongSpamWords,strongSpamThreshold,weakSpamWords,weakSpamThreshold
+0, "EUR,USD","","sex,sexo,hard core,viagra,cialis,croquetas",11.00,"sexy,nigeria,you've won,has ganado,one million,un millón,chocolate",26.00
+1, "","ABC","sex,sexo,hard core,viagra,cialis,croquetas,jamon",12.00,"sexy,nigeria,you've won,has ganado,one million,chocolate",27.00
+2, "ABC,A","ABC","sex,sexo,hard core,viagra,cialis,croquetas,jamon",12.00,"sexy,nigeria,you've won,has ganado,one million,chocolate",27.00
+3, "ABC","ABD","sex,sexo,hard core,viagra,cialis,croquetas,jamon",12.00,"sexy,nigeria,you've won,has ganado,one million,chocolate",27.00
+4, "ABC","ABC","",12.00,"sexy,nigeria,you've won,has ganado,one million,chocolate",27.00
+5, "ABC","ABC","sex,sexo,hard core,viagra,cialis,croquetas,jamon","","sexy,nigeria,you've won,has ganado,one million,chocolate",27.00
+6, "ABC","ABC","sex,sexo,hard core,viagra,cialis,croquetas,jamon",12.00,"",27.00
+7, "ABC","ABC","sex,sexo,hard core,viagra,cialis,croquetas,jamon",12.00,"sexy,nigeria,you've won,has ganado,one million,chocolate",""

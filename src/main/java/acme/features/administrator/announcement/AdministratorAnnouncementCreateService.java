@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.announcements.Announcement;
+import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Administrator;
 import acme.framework.services.AbstractCreateService;
+import acme.utils.SpamDetector;
 
 @Service
 public class AdministratorAnnouncementCreateService implements AbstractCreateService<Administrator, Announcement> {
@@ -71,9 +73,17 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		assert errors != null;
 
 		boolean confirmation;
+		boolean spam;
 
 		confirmation = request.getModel().getBoolean("confirmation");
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+		
+		final SystemConfiguration sc = this.repository.findSystemConfiguration();
+		SpamDetector.readData(sc.getStrongSpamWords(), sc.getWeakSpamWords(), 
+							  sc.getStrongSpamThreshold(), sc.getWeakSpamThreshold());
+		spam = SpamDetector.check(entity.getTitle())
+			|| SpamDetector.check(entity.getBody());
+		errors.state(request, !spam, "spam", "administrator.announcement.spam");
 	}
 
 	@Override
