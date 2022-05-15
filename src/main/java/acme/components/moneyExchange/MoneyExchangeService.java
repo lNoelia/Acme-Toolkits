@@ -18,6 +18,10 @@ public class MoneyExchangeService {
 	@Autowired
 	protected MoneyExchangeRepository repository;
 	
+	public String systemCurrency() {
+		return this.repository.findSystemCurrency();
+	}
+	
 	public Money convertToSystemCurrency(final Money money) {
 		assert money != null;
 		

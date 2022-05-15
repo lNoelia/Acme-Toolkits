@@ -1,8 +1,11 @@
 package acme.entities.toolkits;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -11,6 +14,8 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.components.moneyExchange.MoneyExchangeService;
+import acme.entities.artefact.Artefact;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import acme.roles.Inventor;
@@ -52,6 +57,7 @@ public class Toolkit extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 	
+	@Transient
 	protected Money price;
 
 	// Relationships ----------------------------------------------------------
@@ -60,6 +66,33 @@ public class Toolkit extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	protected Inventor inventor;
+	
+	// Methods ----------------------------------------------------------------
+	public void calculatePrice(final Collection<Artefact> artefacts, final MoneyExchangeService moneyExchangeService) {
+		assert artefacts != null;
+		
+		Money result;
+		String systemCurrency;
+		Double amount;
+		
+		systemCurrency = moneyExchangeService.systemCurrency();
+		amount = 0.0;
+		
+		if(!artefacts.isEmpty()) {
+			Money artefactPrice;
+			
+			for(final Artefact artefact: artefacts) {
+				artefactPrice = artefact.getRetailPrice();
+				amount += moneyExchangeService.computeMoneyExchangeAmount(artefactPrice, systemCurrency);
+			}
+		}
+		
+		result = new Money();
+		result.setCurrency(systemCurrency);
+		result.setAmount(amount);
+		
+		this.price = result;
+	}
 
 	
 }

@@ -1,9 +1,12 @@
 package acme.features.inventor.toolkit;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.moneyExchange.MoneyExchangeService;
+import acme.entities.artefact.Artefact;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -46,10 +49,13 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 
 		Toolkit result;
 		int id;
+		Collection<Artefact> artefacts;
 		
 		id = request.getModel().getInteger("id");
-		
 		result = this.repository.findOneToolkitById(id);
+		
+		artefacts = this.repository.findArtefactsByToolkitId(id);
+		result.calculatePrice(artefacts, this.moneyExchangeService);
 
 		return result;
 	}
@@ -59,14 +65,7 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		//Money convertedPrice;
-		//Money price;
-		
-		//price = entity.getPrice();
-		//convertedPrice = this.moneyExchangeService.convertToSystemCurrency(price);
 
 		request.unbind(entity, model, "title", "code", "price", "description", "assemblyNotes", "link", "published");
-		//model.setAttribute("convertedPrice", convertedPrice);
 	}
 }
