@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.moneyExchange.MoneyExchangeService;
-import acme.entities.artefact.Artefact;
 import acme.entities.toolkits.Toolkit;
+import acme.entities.worksIn.WorksIn;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
@@ -42,13 +42,13 @@ public class AnyToolkitShowService implements AbstractShowService<Any,Toolkit>{
 		
 		Toolkit result;
 		int toolkitId;
-		Collection<Artefact> artefacts;
+		Collection<WorksIn> worksIns;
 		
 		toolkitId = request.getModel().getInteger("id");
 		result = this.repository.findToolkitById(toolkitId);
 		
-		artefacts = this.repository.findArtefactsByToolkitId(toolkitId);
-		result.calculatePrice(artefacts, this.moneyExchangeService);
+		worksIns = this.repository.findWorksInsByToolkitId(toolkitId);
+		result.calculatePrice(worksIns, this.moneyExchangeService);
 		
 		return result;
 	}

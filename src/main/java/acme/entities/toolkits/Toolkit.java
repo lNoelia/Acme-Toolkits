@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.components.moneyExchange.MoneyExchangeService;
-import acme.entities.artefact.Artefact;
+import acme.entities.worksIn.WorksIn;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import acme.roles.Inventor;
@@ -68,28 +68,30 @@ public class Toolkit extends AbstractEntity {
 	protected Inventor inventor;
 	
 	// Methods ----------------------------------------------------------------
-	public void calculatePrice(final Collection<Artefact> artefacts, final MoneyExchangeService moneyExchangeService) {
-		assert artefacts != null;
+	public void calculatePrice(final Collection<WorksIn> worksIns, final MoneyExchangeService moneyExchangeService) {
+		assert worksIns != null;
 		
 		Money result;
 		String systemCurrency;
-		Double amount;
+		Double price;
+		int artefactAmount;
 		
 		systemCurrency = moneyExchangeService.systemCurrency();
-		amount = 0.0;
+		price = 0.0;
 		
-		if(!artefacts.isEmpty()) {
+		if(!worksIns.isEmpty()) {
 			Money artefactPrice;
 			
-			for(final Artefact artefact: artefacts) {
-				artefactPrice = artefact.getRetailPrice();
-				amount += moneyExchangeService.computeMoneyExchangeAmount(artefactPrice, systemCurrency);
+			for(final WorksIn worksIn: worksIns) {
+				artefactPrice = worksIn.getArtefact().getRetailPrice();
+				artefactAmount = worksIn.getAmount();
+				price += ( moneyExchangeService.computeMoneyExchangeAmount(artefactPrice, systemCurrency)*artefactAmount );
 			}
 		}
 		
 		result = new Money();
 		result.setCurrency(systemCurrency);
-		result.setAmount(amount);
+		result.setAmount(price);
 		
 		this.price = result;
 	}

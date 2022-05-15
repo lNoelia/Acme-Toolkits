@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.moneyExchange.MoneyExchangeService;
-import acme.entities.artefact.Artefact;
 import acme.entities.toolkits.Toolkit;
+import acme.entities.worksIn.WorksIn;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractShowService;
@@ -48,15 +48,15 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 		assert request != null;
 
 		Toolkit result;
-		int id;
-		Collection<Artefact> artefacts;
+		int toolkitId;
+		Collection<WorksIn> worksIns;
 		
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneToolkitById(id);
+		toolkitId = request.getModel().getInteger("id");
+		result = this.repository.findOneToolkitById(toolkitId);
 		
-		artefacts = this.repository.findArtefactsByToolkitId(id);
-		result.calculatePrice(artefacts, this.moneyExchangeService);
-
+		worksIns = this.repository.findWorksInsByToolkitId(toolkitId);
+		result.calculatePrice(worksIns, this.moneyExchangeService);
+		
 		return result;
 	}
 	
