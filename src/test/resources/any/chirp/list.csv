@@ -1,5 +1,6 @@
-key,title,author,body,email
-0,TEST Example of a Chirp,User2,This is an example of a chirp,email@example.com
-1,TEST Example of a Chirp,User1,This is an example of a chirp,
-2,TEST Example of a Chirp,User2,This is an example of a chirp,email@example.com
-3,TEST Example of a Chirp,User1,This is an example of a chirp,email@example.com
+key,title,author,body,email, delta-days
+0,Example of a Chirp,User2,This is an example of a chirp,"",-1
+1,Example of a Chirp,User1,This is an example of a chirp,email@example.com,-1
+2,Another example of a Chirp,User1,This is an example of a chirp for the fourth time!,"",-2
+3,Another example of a Chirp,User2,This is an example of a chirp for the third time,email2@example.com,-2
+4,Example of a Chirp,User2,This is an example of a chirp,email@example.com,-3
