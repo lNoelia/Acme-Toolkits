@@ -1,11 +1,14 @@
 key,enabled,identity,password,username
 user-account-anonymous-01,false,"UserIdentity{name: 'John', surname: 'Doe', email: 'john.doe@acme.com'}",HIDDEN-PASSWORD,anonymous
 user-account-administrator-01,true,"UserIdentity{name: 'Administrator', surname: 'Acme', email: 'administrator@acme.com'}",administrator,administrator
-user-account-authenticated-01,true,"UserIdentity{name: 'Ricardo', surname: 'Nadal', email: 'ricnadgar@alum.us.es'}",patron1,patron1
-user-account-authenticated-02,true,"UserIdentity{name: 'Sara', surname: 'Cruz', email: 'sarcrudua@alum.us.es'}",inventor1,inventor1
-user-account-authenticated-03,true,"UserIdentity{name: 'Carlos', surname: 'Varela', email: 'carvarsou@alum.us.es'}",patron2,patron2
-user-account-authenticated-04,true,"UserIdentity{name: 'Noelia', surname: 'Lopez', email: 'noelopdur@alum.us.es'}",inventor2,inventor2
 user-account-administrator-02,true,"UserIdentity{name: 'Administrator2', surname: 'Administrator2', email: 'administrator2@acme.com'}",administrator2,administrator2
+user-account-authenticated-01,true,"UserIdentity{name: 'Ricardo', surname: 'Nadal', email: 'ricnadgar@alum.us.es'}",patron1,patron1
+user-account-authenticated-02,true,"UserIdentity{name: 'Carlos', surname: 'Varela', email: 'carvarsou@alum.us.es'}",patron2,patron2
+user-account-authenticated-03,true,"UserIdentity{name: 'Jose', surname: 'Delgado', email: 'josdelsan9@alum.us.es'}",patron3,patron3
+user-account-authenticated-04,true,"UserIdentity{name: 'Sara', surname: 'Cruz', email: 'sarcrudua@alum.us.es'}",inventor1,inventor1
+user-account-authenticated-05,true,"UserIdentity{name: 'Noelia', surname: 'Lopez', email: 'noelopdur@alum.us.es'}",inventor2,inventor2
+user-account-authenticated-06,true,"UserIdentity{name: 'Rosa', surname: 'Molina', email: 'rosmolarr@alum.us.es'}",inventor3,inventor3
+user-account-authenticated-07,true,"UserIdentity{name: 'PatronInv', surname: 'Patron', email: 'patron@alum.us.es'}",patron4,patron4
 user-account-user-01,true,"UserIdentity{name: 'user1', surname: 'user1', email: 'user1@acme.com'}",user1,user1
 user-account-user-02,true,"UserIdentity{name: 'user2', surname: 'user2', email: 'user2@acme.com'}",user2,user2
 user-account-user-03,true,"UserIdentity{name: 'user3', surname: 'user3', email: 'user3@acme.com'}",user3,user3

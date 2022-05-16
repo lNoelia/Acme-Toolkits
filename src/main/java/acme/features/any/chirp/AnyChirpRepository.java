@@ -18,4 +18,8 @@ public interface AnyChirpRepository extends AbstractRepository{
 	
 	@Query("select sc from SystemConfiguration sc")
 	SystemConfiguration findSystemConfiguration();
+	
+	@Query("select c from Chirp c where c.creationDate between '1900/01/01' and '1900/01/31'")
+	Collection<Chirp> findChirpsToPatch();
+	
 }

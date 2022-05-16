@@ -1,3 +1,6 @@
-key,creationDate,title,body,critical,link
-0,"2022/04/03 12:44","Example of a recent announcement","This is an example of an announcement",false,http://example.com/
-1,"2022/04/03 12:44","Example of a recent announcement","This is an example of an announcement",true,http://example.com/
+key,delta-days,title,body,critical,link
+0,-1,"Example of an announcement","This is an example of an announcement",false,""
+1,-1,"Example of an announcement","This is an example of an announcement",false,http://example.com/
+2,-2,"Example of an announcement","This is an example of an announcement for the third time",true,http://example.com/
+3,-2,"Example of an announcement","This is an example of an announcement for the fourth time!",true,""
+4,-3,"Example of an announcement","This is an example of an announcement!",true,""
