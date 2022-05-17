@@ -19,7 +19,7 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 		super.signIn("inventor1", "inventor1");
 
 		super.clickOnMenu("Inventor", "List of patronages");
-		super.clickOnListingRecord(recordIndex);
+		super.clickOnListingRecord(0);
 		
 		super.clickOnButton("Create a patronage report");
 		super.fillInputBoxIn("memorandum", memorandum);
@@ -39,7 +39,7 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 		super.signIn("inventor1", "inventor1");
 
 		super.clickOnMenu("Inventor", "List of patronages");
-		super.clickOnListingRecord(recordIndex);
+		super.clickOnListingRecord(0);
 		
 		super.clickOnButton("Create a patronage report");
 		super.fillInputBoxIn("memorandum", memorandum);
