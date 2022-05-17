@@ -17,7 +17,7 @@ public class InventorPatronageStatusTest extends TestHarness {
 	@CsvFileSource(resources = "/inventor/patronage/status-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String reference, final String status) {
-		super.signIn("inventor1", "inventor1");
+		super.signIn("inventor2", "inventor2");
 
 		super.clickOnMenu("Inventor", "List of patronages");
 		super.checkListingExists();
@@ -39,7 +39,7 @@ public class InventorPatronageStatusTest extends TestHarness {
 	@CsvFileSource(resources = "/inventor/patronage/status-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
 	public void negativeTest(final int recordIndex, final String reference, final String status) {
-		super.signIn("inventor1", "inventor1");
+		super.signIn("inventor3", "inventor3");
 
 		super.clickOnMenu("Inventor", "List of patronages");
 		super.checkListingExists();
