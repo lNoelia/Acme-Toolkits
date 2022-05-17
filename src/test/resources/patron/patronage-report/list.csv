@@ -1,3 +1,7 @@
 recordIndex,sequenceNumber,creationDate,patronageCode,memorandum,link
-0,ABC-123-C:0001,2020/03/11 11:00,ABC-123-C,Example text,http://example.com/
-1,ZZZ-999-Z:0001,2020/03/12 11:00,ABC-123-C,Example text,""
+0,AAA-000-A:0001,2020/03/12 10:00,AAA-000-A,"Hello I am jose maria ¿Are you interested in my patronage?","http://example.com/"
+1,AAA-000-A:0002,2020/03/12 11:00,AAA-000-A,"Good morning; yes i am; i will accept it",""
+2,ABC-123-B:0001,2020/03/12 11:00,ABC-123-B,"Hello I am jose maria ¿Are you interested in my patronage?","http://example.com/"
+3,ABC-123-B:0002,2020/03/11 14:00,ABC-123-B,"Good day; I don't know; I have to think about it but thanks",""
+4,ABC-123-C:0001,2020/03/12 11:00,ABC-123-C,"Hello I am jose maria ¿Are you interested in my patronage?","http://example.com/"
+5,ABC-123-C:0002,2020/03/12 11:00,ABC-123-C,"I am not interested sorry",""
