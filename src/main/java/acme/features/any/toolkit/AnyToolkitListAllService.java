@@ -5,8 +5,10 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.moneyExchange.MoneyExchangeService;
 import acme.entities.artefact.Artefact;
 import acme.entities.toolkits.Toolkit;
+import acme.entities.worksIn.WorksIn;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
@@ -17,6 +19,9 @@ public class AnyToolkitListAllService implements AbstractListService<Any, Toolki
 
 	@Autowired
 	protected AnyToolkitRepository repository;
+	
+	@Autowired
+	protected MoneyExchangeService moneyExchangeService;
 	
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
@@ -43,8 +48,11 @@ public class AnyToolkitListAllService implements AbstractListService<Any, Toolki
 		final StringBuilder builder = new StringBuilder();
 		final int toolkitId = entity.getId();
 		final Collection<Artefact> toolkitArtefacts = this.repository.findArtefactsByToolkitId(toolkitId);
+		final Collection<WorksIn> toolkitWorksIns = this.repository.findWorksInsByToolkitId(toolkitId);
 		
-		request.unbind(entity, model, "code", "title", "description");
+		entity.calculatePrice(toolkitWorksIns, this.moneyExchangeService);
+		
+		request.unbind(entity, model, "code", "title", "price");
 		
 		for (final Artefact a:toolkitArtefacts) {
 			builder.append(String.format("%s; %s; %s; %s; ", 
