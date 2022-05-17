@@ -62,7 +62,7 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		assert entity != null;
 		assert errors != null;
 		
-		request.bind(entity, errors,"creationDate","status","code", "legalStuff", "budget", "link","startDate","endDate");
+		request.bind(entity, errors,"creationDate","code", "legalStuff", "budget", "link","startDate","endDate","status");
 		entity.setDraftMode(true);
 	}
 
@@ -138,6 +138,7 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		entity.setCreationDate(creationDate);
 		request.unbind(entity, model,"creationDate","code", "legalStuff", "budget", "link","startDate","endDate","status");
 		model.setAttribute("create",true);
+		model.setAttribute("readonly", false);
 		model.setAttribute("inventors", inventors);
 	}
 

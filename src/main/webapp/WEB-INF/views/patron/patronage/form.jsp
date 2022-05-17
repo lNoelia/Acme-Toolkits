@@ -19,11 +19,26 @@
 <acme:form readonly="${readonly}">
 	<acme:input-textbox code="patron.patronage.list.label.code" path="code"/>
 	
-	<acme:input-textbox code="patron.patronage.list.label.status" path="status" readonly="true"/>
+	<jstl:if test="${!create}">
+		<acme:input-moment code="patron.patronage.list.label.creationDate" path="creationDate" readonly="true"/>
+	</jstl:if>
+	<jstl:if test="${create}">
+		<acme:hidden-data path="creationDate"/>
+	</jstl:if>
+
 	
-	<acme:input-moment code="patron.patronage.list.label.creationDate" path="creationDate" readonly="true"/>
 	
-	<jstl:if test="${create || update}">
+	<jstl:if test="${readonly}">
+		<acme:input-textbox code="patron.patronage.list.label.status" path="status" />
+		
+		
+		<acme:input-textbox code="patron.patronage.list.label.inventorFullName" path="inventorFullName"/>
+		<acme:input-textbox code="patron.patronage.list.label.inventorCompany" path="inventorCompany"/>
+	</jstl:if>
+	
+	<jstl:if test="${!readonly}">
+		<acme:hidden-data path="status"/>
+		<acme:hidden-data path="creationDate"/>
         <acme:input-select code="patron.patronage.list.label.inventor" path="inventorId">
         	<c:forEach var="inventorOption" items="${inventors}">
             	<acme:input-option selected="${inventorOption.id==inventor.id}" code="${inventorOption.userAccount.identity.name} ${inventorOption.userAccount.identity.surname}" value="${inventorOption.id}"/>
@@ -39,20 +54,14 @@
 	<acme:input-textarea code="patron.patronage.list.label.legalStuff" path="legalStuff"/>
 	<acme:input-url code="patron.patronage.list.label.link" path="link"/>
 
-	<jstl:if test="${!create && !update}">
-		<acme:input-textbox code="patron.patronage.list.label.inventorFullName" path="inventorFullName"  readonly="true"/>
-		<acme:input-textbox code="patron.patronage.list.label.inventorCompany" path="inventorCompany"  readonly="true"/>
-	</jstl:if>
-	<jstl:if test="${update}">
-		<acme:submit code="patron.patronage.form.button.update.save" action="/patron/patronage/update"/>
-	</jstl:if>
+	
 	
 	<jstl:if test="${create}">
 		<acme:submit code="patron.patronage.form.button.create" action="/patron/patronage/create"/>
 	</jstl:if>
 	
 	<jstl:if test="${draftMode}">
-		<acme:button code="patron.patronage.form.button.update" action="/patron/patronage/update?id=${id}"/>
+		<acme:submit code="patron.patronage.form.button.update" action="/patron/patronage/update"/>´
 		<acme:submit code="patron.patronage.form.button.delete" action="/patron/patronage/delete"/>
 		<acme:submit code="patron.patronage.form.button.publish" action="/patron/patronage/publish"/>
 	</jstl:if>
