@@ -3,6 +3,7 @@ package acme.features.inventor.worksIn;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.artefact.ArtefactType;
 import acme.entities.worksIn.WorksIn;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -25,13 +26,13 @@ public class InventorWorksInShowService implements AbstractShowService<Inventor,
 	public boolean authorise(final Request<WorksIn> request) {
 		assert request != null;
 
-		int worksInId;
+		final int masterId;
 		int activeRolId;
 		WorksIn worksIn;
 		
-		worksInId = request.getModel().getInteger("id");
+		masterId = request.getModel().getInteger("id");
 		activeRolId = request.getPrincipal().getActiveRoleId();
-		worksIn = this.repository.findOneWorksInById(worksInId);
+		worksIn = this.repository.findOneWorksInById(masterId);
 		
 		return activeRolId == worksIn.getToolkit().getInventor().getId();
 	}
@@ -55,7 +56,13 @@ public class InventorWorksInShowService implements AbstractShowService<Inventor,
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		final boolean isPublished = entity.getToolkit().isPublished();
+		final boolean isATool = ArtefactType.TOOL.equals(entity.getArtefact().getType());
+		final boolean readonly = isPublished||isATool;
 
-		request.unbind(entity, model, "amount", "artefact.name", "artefact.type","artefact.code", "artefact.retailPrice","artefact.technology", "artefact.description", "artefact.link");				
+		request.unbind(entity, model, "amount", "artefact.name", "artefact.type","artefact.code", "artefact.retailPrice","artefact.technology", "artefact.description", "artefact.link");
+		model.setAttribute("readonly", readonly);
+		model.setAttribute("published", entity.getToolkit().isPublished());
 	}
 }

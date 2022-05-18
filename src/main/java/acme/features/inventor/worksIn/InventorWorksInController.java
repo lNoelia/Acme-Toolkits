@@ -21,13 +21,15 @@ public class InventorWorksInController extends AbstractController<Inventor, Work
 	  @Autowired
 	  protected InventorWorksInShowService showService;
 	  
-//	  @Autowired
-//	  protected InventorWorksInCreateService createService;
-//	  
-//	  @Autowired
-//	  protected InventorWorksInUpdateService updateService;
-//	 
-
+	  @Autowired
+	  protected InventorWorksInCreateService createService;
+	  
+	  @Autowired
+	  protected InventorWorksInUpdateService updateService;
+	 
+	  @Autowired
+	  protected InventorWorksInDeleteService deleteService;
+	  
 
 	// Constructors -----------------------------------------------------------
  
@@ -38,9 +40,8 @@ public class InventorWorksInController extends AbstractController<Inventor, Work
 		
 		super.addCommand("show", this.showService);
 		
-//		super.addCommand("create", this.createService);
-//		super.addCommand("update", this.updateService);
-//		super.addCommand("delete", this.deleteService);
-//		super.addCommand("publish", "update", this.publishService);
+		super.addCommand("create", this.createService);
+		super.addCommand("update", this.updateService);
+		super.addCommand("delete", this.deleteService);
 	}
 }

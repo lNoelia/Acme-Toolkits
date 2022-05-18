@@ -16,9 +16,11 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form>
+	<acme:show-errors path="no-artefacts"/>
+	
 	<acme:input-textbox code="inventor.toolkit.form.label.title" path="title"/>
 	<acme:input-textbox code="inventor.toolkit.form.label.code" path="code"/>
-	<acme:input-money code="inventor.toolkit.form.label.price" path="price"/>
+	<acme:input-money code="inventor.toolkit.form.label.price" path="price" readonly="true"/>
 	<acme:input-textarea code="inventor.toolkit.form.label.description" path="description"/>
 	<acme:input-textarea code="inventor.toolkit.form.label.assemblyNotes" path="assemblyNotes"/>	
 	<acme:input-url code="inventor.toolkit.form.label.link" path="link"/>
@@ -34,7 +36,7 @@
 		</jstl:when>		
 	</jstl:choose>
 		
-	<acme:button test="${command != 'create'}" code="inventor.toolkit.form.button.artefacts" action="/inventor/works-in/list?toolkitId=${id}"/>
+	<acme:button test="${command != 'create'}" code="inventor.toolkit.form.button.artefacts" action="/inventor/works-in/list?masterId=${id}"/>
 	
 	<acme:show-errors path="spam"/>
 </acme:form>

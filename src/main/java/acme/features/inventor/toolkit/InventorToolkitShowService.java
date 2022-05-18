@@ -32,13 +32,13 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 	public boolean authorise(final Request<Toolkit> request) {
 		assert request != null;
 
-		int toolkitId;
+		int masterId;
 		int activeRolId;
 		Toolkit toolkit;
 		
-		toolkitId = request.getModel().getInteger("id");
+		masterId = request.getModel().getInteger("id");
 		activeRolId = request.getPrincipal().getActiveRoleId();
-		toolkit = this.repository.findOneToolkitById(toolkitId);
+		toolkit = this.repository.findOneToolkitById(masterId);
 		
 		return activeRolId == toolkit.getInventor().getId();
 	}
@@ -48,13 +48,13 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 		assert request != null;
 
 		Toolkit result;
-		int toolkitId;
+		int masterId;
 		Collection<WorksIn> worksIns;
 		
-		toolkitId = request.getModel().getInteger("id");
-		result = this.repository.findOneToolkitById(toolkitId);
+		masterId = request.getModel().getInteger("id");
+		result = this.repository.findOneToolkitById(masterId);
 		
-		worksIns = this.repository.findWorksInsByToolkitId(toolkitId);
+		worksIns = this.repository.findWorksInsByToolkitId(masterId);
 		result.calculatePrice(worksIns, this.moneyExchangeService);
 		
 		return result;

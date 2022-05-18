@@ -30,6 +30,11 @@ public class Artefact extends AbstractEntity {
     
 	// Serialisation identifier -----------------------------------------------
 	
+	@Override
+	public String toString() {
+		return "" + this.name + ", " + this.code + ", " + this.technology + ", " + this.retailPrice + ", " + this.type + "";
+	}
+
 	private static final long serialVersionUID = 1L;
     
     // Attributes
