@@ -16,8 +16,8 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="inventor.toolkit.list.label.title" path="title" width="20%"/>
 	<acme:list-column code="inventor.toolkit.list.label.code" path="code" width="20%"/>
+	<acme:list-column code="inventor.toolkit.list.label.title" path="title" width="20%"/>
 	<acme:list-column code="inventor.toolkit.list.label.price" path="price" width="20%"/>
 </acme:list>
 <acme:button code="inventor.toolkit.form.button.create" action="/inventor/toolkit/create"/>

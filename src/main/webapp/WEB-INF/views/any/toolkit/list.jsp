@@ -6,6 +6,6 @@
 <acme:list>
 	<acme:list-column code="any.toolkit.list.label.code" path="code" width="33%"/>
 	<acme:list-column code="any.toolkit.list.label.title" path="title" width="33%"/>
-	<acme:list-column code="any.toolkit.list.label.description" path="description" width="33%"/>
+	<acme:list-column code="any.toolkit.list.label.price" path="price" width="33%"/>
 	<acme:list-payload path="payload"/>
 </acme:list>

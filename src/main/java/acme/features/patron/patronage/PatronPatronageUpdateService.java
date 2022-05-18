@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.patronages.Patronage;
+import acme.entities.patronages.PatronageStatus;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.HttpMethod;
@@ -52,7 +53,7 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors,"code","status","creationDate","startDate","endDate", "budget", "legalStuff", "link");
+		request.bind(entity, errors,"code","creationDate","startDate","endDate", "budget", "legalStuff", "link");
 	}
 
 	@Override
@@ -64,7 +65,7 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		Collection<Inventor> inventors;
 		inventors=this.repository.findAllInventors();
 
-		request.unbind(entity, model,"code","status","creationDate","startDate","endDate", "budget", "legalStuff", "link","inventor");
+		request.unbind(entity, model,"code","creationDate","startDate","endDate", "budget", "legalStuff", "link","inventor");
 		model.setAttribute("inventors", inventors);
 		model.setAttribute("update", true);
 	}
@@ -145,6 +146,7 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		inventor = this.repository.findInventorById(request.getModel().getInteger("inventorId"));
 		
 		entity.setInventor(inventor);
+		entity.setStatus(PatronageStatus.PROPOSED);
 		this.repository.save(entity);
 	}
 

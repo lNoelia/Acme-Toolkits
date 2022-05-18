@@ -41,7 +41,9 @@ public class WorksIn extends AbstractEntity{
 		@Valid
 		@ManyToOne(optional = false)
 		protected Toolkit toolkit;
+
 		
 		// Methods ----------------------------------------------------------------
+		
 		
 }
