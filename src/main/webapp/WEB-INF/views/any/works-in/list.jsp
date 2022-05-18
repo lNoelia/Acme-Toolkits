@@ -20,4 +20,5 @@
 	<acme:list-column code="any.worksIn.list.label.artefact.type" path="artefact.type" width="20%"/>
 	<acme:list-column code="any.worksIn.list.label.artefact.name" path="artefact.name" width="20%"/>	
 	<acme:list-column code="any.worksIn.list.label.artefact.code" path="artefact.code" width="20%"/>
+	<acme:list-column code="any.worksIn.list.label.artefact.retailPrice" path="artefact.retailPrice" width="20%"/>
 </acme:list>
