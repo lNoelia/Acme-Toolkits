@@ -51,7 +51,7 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "title", "code", "price", "description", "assemblyNotes", "link");
+		request.bind(entity, errors, "title", "code", "description", "assemblyNotes", "link");
 	}
 
 	@Override

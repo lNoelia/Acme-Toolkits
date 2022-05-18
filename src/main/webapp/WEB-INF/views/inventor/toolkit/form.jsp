@@ -20,7 +20,9 @@
 	
 	<acme:input-textbox code="inventor.toolkit.form.label.title" path="title"/>
 	<acme:input-textbox code="inventor.toolkit.form.label.code" path="code"/>
-	<acme:input-money code="inventor.toolkit.form.label.price" path="price" readonly="true"/>
+	<jstl:if test="${command != 'create'}">
+		<acme:input-money code="inventor.toolkit.form.label.price" path="price" readonly="true"/>
+	</jstl:if>
 	<acme:input-textarea code="inventor.toolkit.form.label.description" path="description"/>
 	<acme:input-textarea code="inventor.toolkit.form.label.assemblyNotes" path="assemblyNotes"/>	
 	<acme:input-url code="inventor.toolkit.form.label.link" path="link"/>

@@ -22,7 +22,7 @@ inventor.artefact.form.label.retail-price = Retail Price
 inventor.artefact.form.label.link = Link
 inventor.artefact.form.label.type = Type
 
-inventor.artefact.form.placeholder.retail-price= 0.00 EUR
+inventor.artefact.form.placeholder.retail-price= EUR 0.00
 inventor.artefact.form.placeholder.code= AAA-000-A
 
 inventor.artefact.form.button.update = Update
