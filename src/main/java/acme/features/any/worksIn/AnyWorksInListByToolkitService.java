@@ -52,7 +52,7 @@ public class AnyWorksInListByToolkitService implements AbstractListService<Any, 
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "amount", "artefact.type", "artefact.name", "artefact.code");	
+		request.unbind(entity, model, "amount", "artefact.type", "artefact.name", "artefact.code", "artefact.retailPrice");	
 	}
 
 

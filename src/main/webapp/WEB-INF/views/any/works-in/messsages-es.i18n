@@ -11,10 +11,11 @@
 any.worksIn.list.label.artefact.name = Nombre
 any.worksIn.list.label.artefact.code = Código
 any.worksIn.list.label.artefact.type = Tipo
+any.worksIn.list.label.artefact.retailPrice = Precio
 any.worksIn.list.label.amount = Cantidad
 
 any.worksIn.form.label.artefact.amount = Cantidad
-any.worksIn.list.label.artefact.name = Nombre
+any.worksIn.form.label.artefact.name = Nombre
 any.worksIn.form.label.artefact.code = Código
 any.worksIn.form.label.artefact.type = Tipo
 any.worksIn.form.label.artefact.technology = Tecnología
