@@ -1,6 +1,7 @@
 key,code,title,description,assemblyNotes,link,published,key:inventor
-toolkit-01,"AAA-000-A","Example title","Example description","Example assembly notes","",false,inventor-02
-toolkit-02,"AAC-012-B","Example title","Example description","Example assembly notes","http://example.com/",true,inventor-02
-toolkit-03,"AAC-012-C","Example title","Example description","Example assembly notes","http://example.com/",true,inventor-01
-toolkit-04,"AAC-012-D","Example title","Example description","Example assembly notes","http://example.com/",true,inventor-01
-toolkit-05,"ZZZ-999-Z","Example title","Example description","Example assembly notes","http://example.com/",false,inventor-01
+toolkit-01,"AAC-012-C","A toolkit published","Example description","Example assembly notes","http://example.com/",true,inventor-03
+toolkit-02,"AAC-012-D","A toolkit published","Example description","Example assembly notes","http://example.com/",true,inventor-03
+toolkit-03,"AAA-000-A","A toolkit not published","Example description","Example assembly notes","",false,inventor-02
+toolkit-04,"AAC-012-B","A toolkit not published","Example description","Example assembly notes","http://example.com/",false,inventor-02
+toolkit-05,"ZZZ-999-Z","A toolkit not published","Example description","Example assembly notes","http://example.com/",false,inventor-04
+toolkit-06,"ZZX-999-X","A toolkit published","Example description","Example assembly notes","http://example.com/",true,inventor-04

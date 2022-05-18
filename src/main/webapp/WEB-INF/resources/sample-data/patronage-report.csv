@@ -1,6 +1,7 @@
 key,sequenceNumber,creationDate,memorandum,link,key:patronage,key:patron,key:inventor
-patronage-report-01,"AAA-000-A:0001","2020/03/12 10:00","Example text","http://example.com/",patronage-01,patron-01,inventor-01
-patronage-report-02,"ABC-123-B:0001","2020/03/12 11:00","Example text","http://example.com/",patronage-02,patron-01,inventor-02
-patronage-report-03,"ABC-123-B:0002","2020/03/12 11:00","Example text","http://example.com/",patronage-02,patron-01,inventor-02
-patronage-report-04,"ABC-123-C:0001","2020/03/11 11:00","Example text","http://example.com/",patronage-03,patron-02,inventor-01
-patronage-report-05,"ZZZ-999-Z:0001","2020/03/12 11:00","Example text","",patronage-03,patron-02,inventor-01
+patronage-report-01,"AAA-000-A:0001","2020/03/12 10:00","Hello I am jose maria ¿Are you interested in my patronage?","http://example.com/",patronage-01,patron-03,inventor-01
+patronage-report-02,"AAA-000-A:0002","2020/03/12 11:00","Good morning; yes i am; i will accept it","",patronage-01,patron-03,inventor-01
+patronage-report-03,"ABC-123-B:0001","2020/03/12 11:00","Hello I am jose maria ¿Are you interested in my patronage?","http://example.com/",patronage-02,patron-03,inventor-02
+patronage-report-04,"ABC-123-B:0002","2020/03/11 14:00","Good day; I don't know; I have to think about it but thanks","",patronage-02,patron-03,inventor-02
+patronage-report-05,"ABC-123-C:0001","2020/03/12 11:00","Hello I am jose maria ¿Are you interested in my patronage?","http://example.com/",patronage-03,patron-03,inventor-03
+patronage-report-06,"ABC-123-C:0002","2020/03/12 11:00","I am not interested sorry","",patronage-03,patron-03,inventor-03

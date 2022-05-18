@@ -1,4 +1,2 @@
-key,code,status,budget,legalStuff,patron,link,creationDate,startDate,endDate
-0,"ABC-123-B",ACCEPTED,"USD 100.00","Example text","DP2Company","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00"
-1,"ABC-123-E",PROPOSED,"EUR 0.00","Example text","Rickpany","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00"
-2,"ABC-123-F",DENIED,"USD 0.20","Example text","DP2Company","","2020/03/12 10:00","2023/05/12 12:00","2023/09/12 10:00"
+key,code,status,budget,convertedPrice,legalStuff,patron,link,creationDate,startDate,endDate
+0,"AAA-000-A",ACCEPTED,"EUR 100.00","EUR 100.00","Example text","Firefoxes Inc","http://example.com/","2020/03/12 10:00","2023/05/12 10:00","2023/09/12 10:00"

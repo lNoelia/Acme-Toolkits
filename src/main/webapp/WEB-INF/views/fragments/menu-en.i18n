@@ -72,10 +72,6 @@ master.menu.patron.patronage-create = Create patronage
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.inventor = Inventor data
 master.menu.user-account.become-inventor = Become an inventor
 master.menu.user-account.patron = Patron data

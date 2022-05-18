@@ -1,5 +1,7 @@
 package acme.features.patron.patronage;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +11,7 @@ import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractShowService;
+import acme.roles.Inventor;
 import acme.roles.Patron;
 
 @Service
@@ -56,14 +59,17 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 		
 		Money convertedPrice;
 		Money budget;
+		Collection<Inventor> inventors;
+		inventors=this.repository.findAllInventors();
 				
 		budget = entity.getBudget();
 		convertedPrice = this.moneyExchangeService.convertToSystemCurrency(budget);
 		
-		request.unbind(entity, model, "draftMode","code", "status", "budget", "startDate", "endDate", "legalStuff", "link", "creationDate");
+		request.unbind(entity, model, "draftMode","code", "status", "budget", "startDate", "endDate", "legalStuff", "link", "creationDate","inventor");
 		model.setAttribute("inventorFullName", entity.getInventor().getIdentity().getFullName());
 		model.setAttribute("inventorCompany", entity.getInventor().getCompany());
-		model.setAttribute("readonly", true);
+		model.setAttribute("readonly", !entity.getDraftMode());
+		model.setAttribute("inventors", inventors);
 		model.setAttribute("convertedPrice", convertedPrice);
 	}
 

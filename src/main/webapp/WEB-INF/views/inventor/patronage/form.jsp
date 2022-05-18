@@ -25,9 +25,6 @@
 	<acme:input-textbox readonly="true" code="inventor.patronage.form.label.startDate" path="startDate"/>
 	<acme:input-textbox readonly="true" code="inventor.patronage.form.label.endDate" path="endDate"/>
 	
-	<jstl:if test="${canBeUpdated}">
-		<acme:button code="inventor.patronage.form.button.update" action="/inventor/patronage/update?id=${id}"/>
-	</jstl:if>
 	<jstl:if test="${!readonly}">
 		<acme:submit code="inventor.patronage.form.button.update.save" action="/inventor/patronage/update"/>
 	</jstl:if>
