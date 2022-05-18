@@ -1,9 +1,12 @@
 package acme.features.inventor.toolkit;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.toolkits.Toolkit;
+import acme.entities.worksIn.WorksIn;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -81,6 +84,12 @@ public class InventorToolkitDeleteService implements AbstractDeleteService<Inven
 		assert request != null;
 		assert entity != null;
 
+		Collection<WorksIn> worksIn;
+
+		worksIn = this.repository.findWorksInsByToolkitId(entity.getId());
+		for (final WorksIn workIn : worksIn) {
+			this.repository.delete(workIn);
+		}
 		this.repository.delete(entity);
 	}
 

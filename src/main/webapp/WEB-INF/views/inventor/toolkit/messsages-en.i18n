@@ -17,5 +17,5 @@ inventor.toolkit.form.button.publish = Publish
 inventor.toolkit.form.button.create = Create new toolkit
 
 inventor.toolkit.form.error.duplicated = This code is already being used
-
+inventor.toolkit.form.error.no-artefacts = A toolkit cannot be published without any artefact
 inventor.toolkit.spam = Spam has been detected. Please, review your text

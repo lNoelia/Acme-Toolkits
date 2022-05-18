@@ -34,6 +34,9 @@ public interface InventorToolkitRepository extends AbstractRepository{
 		+ " where w.toolkit.id = :id and w.toolkit.published = true")
 	Collection<Artefact> findArtefactsByToolkitId(int id);
 	
+	@Query("select wk.artefact from WorksIn wk where wk.toolkit.id =:id")
+	Collection<Artefact> findOneToolkitArtefacts(int id);
+	
 	@Query("select w from WorksIn w where w.toolkit.id = :id and amount>0")
 	Collection<WorksIn> findWorksInsByToolkitId(int id);
 }

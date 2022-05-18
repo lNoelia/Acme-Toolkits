@@ -1,8 +1,11 @@
 package acme.features.inventor.toolkit;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.artefact.Artefact;
 import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
@@ -28,12 +31,12 @@ public class InventorToolkitPublishService implements AbstractUpdateService<Inve
 		assert request != null;
 
 		boolean result;
-		int toolkitId;
+		int masterId;
 		Toolkit toolkit;
 		Inventor inventor;
 
-		toolkitId = request.getModel().getInteger("id");
-		toolkit = this.repository.findOneToolkitById(toolkitId);
+		masterId = request.getModel().getInteger("id");
+		toolkit = this.repository.findOneToolkitById(masterId);
 		inventor = toolkit.getInventor();
 		result = !toolkit.isPublished() && request.isPrincipal(inventor);
 
@@ -74,6 +77,12 @@ public class InventorToolkitPublishService implements AbstractUpdateService<Inve
 			existing = this.repository.findOneToolkitByCode(entity.getCode());
 			errors.state(request, existing == null || existing.getId() == entity.getId() , "code", "inventor.toolkit.form.error.duplicated");
 		}
+		
+		int masterId;
+		masterId = request.getModel().getInteger("id");
+		Collection<Artefact> artefacts;
+		artefacts = this.repository.findOneToolkitArtefacts(masterId);
+		errors.state(request, !artefacts.isEmpty(), "no-artefacts", "inventor.toolkit.form.error.no-artefacts");
 		
 		boolean spam;
 		final SystemConfiguration sc = this.repository.findSystemConfiguration();

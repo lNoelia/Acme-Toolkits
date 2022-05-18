@@ -16,9 +16,6 @@ public class InventorArtefactController extends AbstractController<Inventor, Art
 
 	@Autowired
 	protected InventorArtefactListMineService		listMineService;
-	
-	@Autowired
-	protected InventorArtefactListByToolkitService listByToolkitService;
 
 	@Autowired
 	protected InventorArtefactShowService		showService;
@@ -41,7 +38,6 @@ public class InventorArtefactController extends AbstractController<Inventor, Art
 	protected void initialise() {
 		
 		super.addCommand("list-mine","list", this.listMineService);
-		super.addCommand("list-by-toolkit","list", this.listByToolkitService);
 		super.addCommand("show", this.showService);
 		
 		super.addCommand("create", this.createService);

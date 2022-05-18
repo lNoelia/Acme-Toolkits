@@ -15,10 +15,14 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
+
 <acme:list>
-	<acme:list-column code="inventor.artefact.list.label.name" path="name" width="20%"/>
-	<acme:list-column code="inventor.artefact.list.label.technology" path="technology" width="20%"/>
-	<acme:list-column code="inventor.artefact.list.label.retailPrice" path="retailPrice" width="20%"/>	
-	<acme:list-column code="inventor.artefact.list.label.type" path="type" width="20%"/>
+	<acme:list-column code="inventor.worksin.list.label.amount" path="amount" width="20%"/>
+	<acme:list-column code="inventor.worksin.list.label.type" path="artefact.type" width="20%"/>
+	<acme:list-column code="inventor.worksin.list.label.name" path="artefact.name" width="20%"/>
+	<acme:list-column code="inventor.worksin.list.label.code" path="artefact.code" width="20%"/>
+	<acme:list-column code="inventor.worksin.list.label.price" path="artefact.retailPrice" width="20%"/>
+
 </acme:list>
-<acme:button code="inventor.artefact.form.button.create" action="/inventor/artefact/create"/>
+
+<acme:button test="${showCreate}" code="inventor.worksin.form.button.create" action="/inventor/works-in/create?masterId=${masterId}"/>

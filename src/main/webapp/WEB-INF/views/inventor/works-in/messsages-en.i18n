@@ -1,0 +1,26 @@
+inventor.worksin.list.label.amount = Quantity
+inventor.worksin.list.label.type = Artefact type 
+inventor.worksin.list.label.name = Name
+inventor.worksin.list.label.code = Code
+inventor.worksin.list.label.price = Price
+
+inventor.worksin.form.label.amount = Quantity
+inventor.worksin.form.label.name = Name
+inventor.worksin.form.label.type = Artefact type
+inventor.worksin.form.label.code = Code
+inventor.worksin.form.label.price = Price
+inventor.worksin.form.label.technology = Technology
+inventor.worksin.form.label.description = Description
+inventor.worksin.form.label.link = Link
+
+inventor.worksin.form.label.artefact = Artefact
+inventor.worksin.form.label.amount = Amount
+
+inventor.worksin.form.button.update = Update
+inventor.worksin.form.button.delete = Delete
+inventor.worksin.form.button.add = Add
+
+inventor.worksin.form.button.create = Add artefact
+
+inventor.worksin.form.error.one-tool = The amount of one tool can only be 1
+inventor.worksin.form.error.not-available = Artefact not available
