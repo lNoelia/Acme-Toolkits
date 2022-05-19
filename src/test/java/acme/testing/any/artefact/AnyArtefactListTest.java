@@ -14,7 +14,7 @@ public class AnyArtefactListTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/artefact/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex,final String key, final String name, final String code, final String technology, final String description, final String retailPrice, final String link, final String type) {
+	public void positiveTest(final int recordIndex, final String name, final String code, final String technology, final String description, final String retailPrice, final String link, final String type) {
 
 		super.clickOnMenu("Anonymous", "List of Artefacts");
 		super.checkListingExists();

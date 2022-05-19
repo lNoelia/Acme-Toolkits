@@ -3,10 +3,12 @@ package acme.features.inventor.worksIn;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.moneyExchange.MoneyExchangeService;
 import acme.entities.artefact.ArtefactType;
 import acme.entities.worksIn.WorksIn;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
 
@@ -18,6 +20,9 @@ public class InventorWorksInShowService implements AbstractShowService<Inventor,
 
 	@Autowired
 	protected InventorWorksInRepository repository;
+	
+	@Autowired
+	protected MoneyExchangeService moneyExchangeService;
 
 	// AbstractListService<Inventor, WorksIn> interface --------------
 
@@ -57,12 +62,19 @@ public class InventorWorksInShowService implements AbstractShowService<Inventor,
 		assert entity != null;
 		assert model != null;
 		
+		Money convertedPrice;
+		Money retailPrice;
+		
+		retailPrice = entity.getArtefact().getRetailPrice();
+		convertedPrice = this.moneyExchangeService.convertToSystemCurrency(retailPrice);
+		
 		final boolean isPublished = entity.getToolkit().isPublished();
 		final boolean isATool = ArtefactType.TOOL.equals(entity.getArtefact().getType());
 		final boolean readonly = isPublished||isATool;
 
 		request.unbind(entity, model, "amount", "artefact.name", "artefact.type","artefact.code", "artefact.retailPrice","artefact.technology", "artefact.description", "artefact.link");
 		model.setAttribute("readonly", readonly);
+		model.setAttribute("convertedPrice", convertedPrice);
 		model.setAttribute("published", entity.getToolkit().isPublished());
 	}
 }
