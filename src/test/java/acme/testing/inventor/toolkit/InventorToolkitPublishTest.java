@@ -15,7 +15,7 @@ public class InventorToolkitPublishTest extends TestHarness {
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String reference) {
 		
-		super.signIn("inventor1", "inventor1");
+		super.signIn("inventor2", "inventor2");
 		super.clickOnMenu("Inventor", "List of Toolkits");
 		super.checkListingExists();
 		
@@ -35,11 +35,11 @@ public class InventorToolkitPublishTest extends TestHarness {
 	@Order(20)
 	public void negativeTest(final int recordIndex, final String reference) {
 		
-		super.signIn("inventor1", "inventor1");
+		super.signIn("inventor2", "inventor2");
 		super.clickOnMenu("Inventor", "List of Toolkits");
 		super.checkListingExists();
 		
-		super.sortListing(0,"desc");
+		super.sortListing(0,"asc");
 		super.checkColumnHasValue(recordIndex, 0, reference);
 		super.clickOnListingRecord(recordIndex);
 		

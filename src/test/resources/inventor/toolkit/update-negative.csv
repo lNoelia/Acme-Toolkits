@@ -1,2 +1,3 @@
-recordIndex,reference,title,code,price,description,assemblyNotes,link,published
-0,"Big toolkit","","","","","","",false
+recordIndex,reference,title,code,description,assemblyNotes,link,published
+0,"AAA-001-A","","","","","","",false
+1,"AAD-012-D","Spam toolkit","Definitely not a code","EUR 0.00","A bit sexy","Will give you cialis","",false

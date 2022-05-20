@@ -15,7 +15,7 @@ public class InventorToolkitUpdateTest extends TestHarness {
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String reference, final String title, final String code, final String price, final String description, final String assemblyNotes, final String link) {
 		
-		super.signIn("inventor1", "inventor1");
+		super.signIn("inventor2", "inventor2");
 		super.clickOnMenu("Inventor", "List of Toolkits");
 		super.checkListingExists();
 		
@@ -26,7 +26,6 @@ public class InventorToolkitUpdateTest extends TestHarness {
 		super.checkFormExists();
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("code", code);
-		super.fillInputBoxIn("price", price);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("assemblyNotes", assemblyNotes);
 		super.fillInputBoxIn("link", link);
@@ -34,8 +33,8 @@ public class InventorToolkitUpdateTest extends TestHarness {
 		
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 0, title);
-		super.checkColumnHasValue(recordIndex, 1, code);
+		super.checkColumnHasValue(recordIndex, 0, code);
+		super.checkColumnHasValue(recordIndex, 1, title);
 		super.checkColumnHasValue(recordIndex, 2, price);
 		
 		super.clickOnListingRecord(recordIndex);
@@ -55,7 +54,7 @@ public class InventorToolkitUpdateTest extends TestHarness {
 	@Order(20)
 	public void negativeTest(final int recordIndex, final String reference, final String title, final String code, final String price, final String description, final String assemblyNotes, final String link) {
 		
-		super.signIn("inventor1", "inventor1");
+		super.signIn("inventor2", "inventor2");
 		super.clickOnMenu("Inventor", "List of Toolkits");
 		super.checkListingExists();
 		
@@ -66,7 +65,6 @@ public class InventorToolkitUpdateTest extends TestHarness {
 		super.checkFormExists();
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("code", code);
-		super.fillInputBoxIn("price", price);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("assemblyNotes", assemblyNotes);
 		super.fillInputBoxIn("link", link);
