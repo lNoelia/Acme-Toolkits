@@ -36,7 +36,7 @@ public class InventorArtefactPublishTest extends TestHarness {
 	@CsvFileSource(resources = "/inventor/artefact/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
 	public void negativeTest(final int recordIndex, final String reference) {
-		super.signIn("inventor2", "inventor2");
+		super.signIn("inventor3", "inventor3");
 
 		super.clickOnMenu("Inventor", "List of Artefacts");
 		super.checkListingExists();
