@@ -14,7 +14,7 @@ public class InventorPatronageListTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/patronage/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String code, final String status, final String budget, final String legalStuff, final String patron,final String link,final String creationDate,final String startDate,final String endDate) {
+	public void positiveTest(final int recordIndex, final String code, final String status, final String budget,final String convertedPrice, final String legalStuff, final String patron,final String link,final String creationDate,final String startDate,final String endDate) {
 		super.signIn("inventor1", "inventor1");
 
 		super.clickOnMenu("Inventor", "List of patronages");
@@ -31,6 +31,7 @@ public class InventorPatronageListTest extends TestHarness{
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("status", status);
 		super.checkInputBoxHasValue("budget",budget);
+		super.checkInputBoxHasValue("convertedPrice", convertedPrice);
 		super.checkInputBoxHasValue("patron", patron);
 		super.checkInputBoxHasValue("legalStuff",legalStuff);
 		super.checkInputBoxHasValue("link",link);
@@ -45,7 +46,7 @@ public class InventorPatronageListTest extends TestHarness{
 	@CsvFileSource(resources = "/inventor/patronage/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void negativeTest(final int recordIndex, final String sequenceNumber, final String creationDate, final String patronageCode, final String memorandum, final String link) {
-		super.signIn("inventor2", "inventor2");
+		super.signIn("patron4", "patron4");
 
 		super.clickOnMenu("Inventor", "List of patronages");
 		super.checkListingEmpty();

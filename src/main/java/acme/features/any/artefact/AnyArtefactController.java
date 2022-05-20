@@ -19,9 +19,6 @@ public class AnyArtefactController extends AbstractController<Any, Artefact>{
 
 	@Autowired
 	protected AnyArtefactShowService		showService;
-	
-	@Autowired
-	protected AnyArtefactListByToolkitService listByToolkitService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -29,6 +26,5 @@ public class AnyArtefactController extends AbstractController<Any, Artefact>{
 	protected void initialise() {
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
-		super.addCommand("list-by-toolkit", "list", this.listByToolkitService);
 	}
 }

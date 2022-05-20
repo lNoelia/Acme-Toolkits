@@ -5,7 +5,6 @@ inventor.toolkit.list.label.price = Precio
 inventor.toolkit.form.label.title = Título
 inventor.toolkit.form.label.code = Código
 inventor.toolkit.form.label.price = Precio
-inventor.toolkit.form.label.convertedPrice = Precio convertido
 inventor.toolkit.form.label.description = Descripción
 inventor.toolkit.form.label.assemblyNotes = Instrucciones
 inventor.toolkit.form.label.link = Link
@@ -18,5 +17,5 @@ inventor.toolkit.form.button.publish = Publicar
 inventor.toolkit.form.button.create = Crear nuevo conjunto de herramientas
 
 inventor.toolkit.form.error.duplicated = Este código ya está en uso
-
+inventor.toolkit.form.error.no-artefacts = Una toolkit no puede ser publicada sin ningún artefacto
 inventor.toolkit.spam = Se ha detectado spam. Por favor, revise su texto

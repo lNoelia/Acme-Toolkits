@@ -1,0 +1,26 @@
+inventor.worksin.list.label.amount = Cantidad
+inventor.worksin.list.label.type = Tipo de artefacto 
+inventor.worksin.list.label.name = Nombre
+inventor.worksin.list.label.code = Código
+inventor.worksin.list.label.price = Precio
+
+inventor.worksin.form.label.amount = Cantidad
+inventor.worksin.form.label.name = Nombre
+inventor.worksin.form.label.type = Tipo de artefacto
+inventor.worksin.form.label.code = Código
+inventor.worksin.form.label.price = Precio
+inventor.worksin.form.label.technology = Tecnología
+inventor.worksin.form.label.description = Descripción
+inventor.worksin.form.label.link = Enlace
+
+inventor.worksin.form.label.artefact = Artefacto
+inventor.worksin.form.label.amount = Cantidad
+
+inventor.worksin.form.button.update = Editar
+inventor.worksin.form.button.delete = Eliminar
+inventor.worksin.form.button.add = Añadir
+
+inventor.worksin.form.button.create = Añadir artefacto
+
+inventor.worksin.form.error.one-tool = La cantidad a añadir de una herramienta solo puede ser 1
+inventor.worksin.form.error.not-available = Artefact not available

@@ -1,0 +1,30 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+any.worksIn.list.label.artefact.name = Name
+any.worksIn.list.label.artefact.code = Code
+any.worksIn.list.label.artefact.type = Type
+any.worksIn.list.label.artefact.retailPrice = Price
+any.worksIn.list.label.amount = Amount
+
+any.worksIn.form.label.amount = Amount
+any.worksIn.form.label.artefact.name = Name
+any.worksIn.form.label.artefact.code = Code
+any.worksIn.form.label.artefact.type = Type
+any.worksIn.form.label.artefact.technology = Technology
+any.worksIn.form.label.artefact.description = Description
+any.worksIn.form.label.artefact.retailPrice = Retail Price
+any.worksIn.form.label.artefact.link = Link
+
+any.worksIn.form.label.convertedPrice = Converted Price
+TOOL = Tool
+COMPONENT = Component
+
+

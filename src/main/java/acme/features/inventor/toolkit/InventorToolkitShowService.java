@@ -1,10 +1,13 @@
 package acme.features.inventor.toolkit;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.moneyExchange.MoneyExchangeService;
 import acme.entities.toolkits.Toolkit;
+import acme.entities.worksIn.WorksIn;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractShowService;
@@ -29,13 +32,13 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 	public boolean authorise(final Request<Toolkit> request) {
 		assert request != null;
 
-		int toolkitId;
+		int masterId;
 		int activeRolId;
 		Toolkit toolkit;
 		
-		toolkitId = request.getModel().getInteger("id");
+		masterId = request.getModel().getInteger("id");
 		activeRolId = request.getPrincipal().getActiveRoleId();
-		toolkit = this.repository.findOneToolkitById(toolkitId);
+		toolkit = this.repository.findOneToolkitById(masterId);
 		
 		return activeRolId == toolkit.getInventor().getId();
 	}
@@ -45,12 +48,15 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 		assert request != null;
 
 		Toolkit result;
-		int id;
+		int masterId;
+		Collection<WorksIn> worksIns;
 		
-		id = request.getModel().getInteger("id");
+		masterId = request.getModel().getInteger("id");
+		result = this.repository.findOneToolkitById(masterId);
 		
-		result = this.repository.findOneToolkitById(id);
-
+		worksIns = this.repository.findWorksInsByToolkitId(masterId);
+		result.calculatePrice(worksIns, this.moneyExchangeService);
+		
 		return result;
 	}
 	
@@ -59,14 +65,7 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		//Money convertedPrice;
-		//Money price;
-		
-		//price = entity.getPrice();
-		//convertedPrice = this.moneyExchangeService.convertToSystemCurrency(price);
 
 		request.unbind(entity, model, "title", "code", "price", "description", "assemblyNotes", "link", "published");
-		//model.setAttribute("convertedPrice", convertedPrice);
 	}
 }

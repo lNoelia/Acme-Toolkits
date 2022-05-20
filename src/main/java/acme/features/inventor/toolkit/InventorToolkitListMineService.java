@@ -5,7 +5,9 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.moneyExchange.MoneyExchangeService;
 import acme.entities.toolkits.Toolkit;
+import acme.entities.worksIn.WorksIn;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
@@ -19,6 +21,9 @@ public class InventorToolkitListMineService implements AbstractListService<Inven
 	@Autowired
 	protected InventorToolkitRepository repository;
 
+	@Autowired
+	protected MoneyExchangeService moneyExchangeService;
+	
 	// AbstractListService<Inventor, Toolkit> interface --------------
 
 
@@ -49,7 +54,12 @@ public class InventorToolkitListMineService implements AbstractListService<Inven
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "code", "price");
+		final int toolkitId = entity.getId();
+		final Collection<WorksIn> toolkitWorksIns = this.repository.findWorksInsByToolkitId(toolkitId);
+		
+		entity.calculatePrice(toolkitWorksIns, this.moneyExchangeService);
+		
+		request.unbind(entity, model, "code", "title", "price");
 	}
 
 }

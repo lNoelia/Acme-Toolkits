@@ -1,7 +1,15 @@
 key,name,code,technology,description,retailPrice,link,type,key:inventor,published
-artefact-01,Screwdriver,AAA-000-A,"Flat Head","A tool for screws",EUR 2.00,"",TOOL,inventor-01,true
-artefact-02,Hammer,AAA-012-B,"Iron head","A tool for nails",EUR 3.00,"http://example.com/",TOOL,inventor-01,true
-artefact-03,Saw,AAA-012-C,"For wood","A tool of high quality",EUR 4.50,"http://example.com/",TOOL,inventor-03,false
+artefact-01,Screwdriver,AAA-000-A,"Flat Head","A tool for screws",EUR 2.00,"",TOOL,inventor-03,true
+artefact-02,Hammer,AAA-012-B,"Iron head","A tool for nails",EUR 3.00,"http://example.com/",TOOL,inventor-03,true
+artefact-03,Saw,AAA-012-C,"For wood","A tool of high quality",EUR 4.50,"http://example.com/",TOOL,inventor-03,true
 artefact-04,Screw,ABA-012-A,"Flat Head","Screw made of iron",EUR 0.05,"",COMPONENT,inventor-03,true
-artefact-05,Nail,ABA-012-B,"Iron","Example text",EUR 0.05,"http://example.com/",COMPONENT,inventor-03,false
-artefact-06,Screw,ZZZ-999-Z,"Steel","Screw made of steel",EUR 0.06,"http://example.com/",COMPONENT,inventor-01,true
+artefact-05,Nail,ABA-012-B,"Iron","Example text",EUR 0.25,"http://example.com/",COMPONENT,inventor-03,true
+artefact-06,Screw,ZZZ-998-Z,"Steel","Screw not published",EUR 0.16,"http://example.com/",COMPONENT,inventor-02,false
+artefact-07,Screwdriver,AAA-100-A,"Flat Head","Screwdriver not published",EUR 2.10,"",TOOL,inventor-02,false
+artefact-08,Hammer,AHF-012-B,"Iron head","Hammer not published",EUR 3.10,"http://example.com/",TOOL,inventor-02,false
+artefact-09,Saw,MNO-012-C,"For wood","Saw not published",EUR 4.20,"http://example.com/",TOOL,inventor-02,false
+artefact-10,Screw,JKI-012-A,"Flat Head","Screw not published",EUR 0.55,"",COMPONENT,inventor-02,false
+artefact-11,Screwdriver,AXO-100-A,"Flat Head","Screwdriver not published",EUR 0.99,"",TOOL,inventor-04,true
+artefact-12,Hammer,ZER-012-B,"Iron head","Hammer not published",EUR 2.99,"http://example.com/",TOOL,inventor-04,true
+artefact-13,Saw,MLO-912-C,"For wood","Saw not published",EUR 1.55,"http://example.com/",TOOL,inventor-04,false
+artefact-14,Screw,JLO-012-A,"Flat Head","Screw not published",EUR 1.35,"",COMPONENT,inventor-04,false

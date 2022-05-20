@@ -1,5 +1,5 @@
 <%--
-- form.jsp
+- list.jsp
 -
 - Copyright (C) 2012-2022 Rafael Corchuelo.
 -
@@ -15,10 +15,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:form>
-	<acme:input-textbox code="authenticated.consumer.consumer.form.label.company" path="company"/>
-	<acme:input-textbox code="authenticated.consumer.consumer.form.label.sector" path="sector"/>
-	
-	<acme:submit test="${command == 'create'}" code="authenticated.consumer.consumer.form.button.create" action="/authenticated/consumer/create"/>
-	<acme:submit test="${command == 'update'}" code="authenticated.consumer.consumer.form.button.update" action="/authenticated/consumer/update"/>
-</acme:form>
+<acme:list>
+	<acme:list-column code="any.worksIn.list.label.amount" path="amount" width="20%"/>
+	<acme:list-column code="any.worksIn.list.label.artefact.type" path="artefact.type" width="20%"/>
+	<acme:list-column code="any.worksIn.list.label.artefact.name" path="artefact.name" width="20%"/>	
+	<acme:list-column code="any.worksIn.list.label.artefact.code" path="artefact.code" width="20%"/>
+	<acme:list-column code="any.worksIn.list.label.artefact.retailPrice" path="artefact.retailPrice" width="20%"/>
+</acme:list>

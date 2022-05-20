@@ -1,15 +1,3 @@
-/*
- * EmployerApplicationLIstTest.java
- *
- * Copyright (C) 2012-2022 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
-
 package acme.testing.patron.patronageReport;
 
 import org.junit.jupiter.api.Order;
@@ -28,7 +16,7 @@ public class PatronPatronageReportListTest extends TestHarness {
 	@CsvFileSource(resources = "/patron/patronage-report/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String sequenceNumber, final String creationDate, final String patronageCode, final String memorandum, final String link) {
-		super.signIn("patron1", "patron1");
+		super.signIn("patron3", "patron3");
 
 		super.clickOnMenu("Patron", "List of patronage reports");
 		super.checkListingExists();
