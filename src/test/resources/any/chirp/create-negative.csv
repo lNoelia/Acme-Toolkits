@@ -6,3 +6,9 @@ key,title,author,body,email,confirmation
 4,This is a way too long title to be put in the title section so this title should not be correct to create this chirp,Student2,and this is the description,,true
 5,Chirp test too-long author, This is a way too long author input text to be put in the title section so this title should not be correct to create this chirp, and this is the description,email@alum.us.es, true
 6,Description too long, ILikeToWrite,Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis vulputate tellus mi in sodales justo imperdiet non. Vestibulum bibendum facilisis est sed molestie. Quisque id mi vitae mauris commodo pharetra hendrerit vel nunc. Nulla fermentum rhoncus neque ut efficitur. Quisque quis sem mi,,true
+7,sex sexo,Student2,this is a body,,true
+8,Titulo,sex sexo,this is a body,,true
+9,Titulo,TheBestAuthor,sex sex sexo sex con palabras normales sex,,true
+10,sexy nigeria ,TheBestAuthor,Body con palabras normales sexy,,true
+11,Titulo,sexy nigeria,This is a body,,true
+12,Titulo,TheBestAuthor,sexy sexy sexy has ganado  normal ,,true

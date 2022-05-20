@@ -1,3 +1,5 @@
 key,title,author,body,email,confirmation
 0,Chirp 1,User2,This is an example of a chirp,email@example.com,true
-1,No more chirps,Hack3r,This is an example of a chirp without email,,true
+1,Chirps for everyone,Hack3r,This is an example of a sexy chirp without email,,true
+2,No more chirps,Hack3r,This is an example of a chirp without email,,true
+3,No more sexy chirps on Acme,Hack3r,Example of a sex chirp with strong words but not considered spam,email@example,true

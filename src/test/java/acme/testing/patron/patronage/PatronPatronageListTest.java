@@ -16,7 +16,7 @@ public class PatronPatronageListTest extends TestHarness{
 	@CsvFileSource(resources = "/patron/patronage/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String code, final String status, final String legalStuff, final String budget,  final String link, final String creationDate,final String startDate,final String endDate) {
-		super.signIn("patron1", "patron1");
+		super.signIn("patron3", "patron3");
 		super.clickOnMenu("Patron", "List of patronage");
 		super.checkListingExists();
 		super.sortListing(0, "asc");

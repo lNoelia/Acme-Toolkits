@@ -17,7 +17,7 @@
 
 	
 <acme:form>
-	<acme:input-textbox code="authenticated.consumer.consumer.form.label.company" path="company"/>
+	<acme:input-textbox code="authenticated.inventor.inventor.form.label.company" path="company"/>
 	<acme:input-textbox code="authenticated.inventor.inventor.form.label.statement" path="statement"/>
 	<acme:input-textbox code="authenticated.inventor.inventor.form.label.link" path="link"/>
 	
