@@ -15,10 +15,8 @@ public class AdministratorAnnouncementCreateTest extends TestHarness{
 	public void positiveTest(final int recordIndex, final String title, final String body, final String critical, final String link) {
 		super.signIn("administrator", "administrator");
 		
-		super.clickOnMenu("Administrator", "Announcement list");
-		super.checkListingExists();
+		super.clickOnMenu("Administrator", "Create announcement");
 		
-		super.clickOnButton("Create");
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("critical", critical);
 		super.fillInputBoxIn("body", body);
@@ -27,7 +25,7 @@ public class AdministratorAnnouncementCreateTest extends TestHarness{
 		
 		super.clickOnSubmit("Create");
 		
-		super.clickOnMenu("Administrator", "Announcement list");
+		super.clickOnMenu("Authenticated", "Announcement list");
 		super.checkListingExists();
 		super.sortListing(2, "asc");
 		
@@ -50,10 +48,8 @@ public class AdministratorAnnouncementCreateTest extends TestHarness{
 	public void negativeTest(final int recordIndex, final String title, final String body, final String critical, final String link) {
 		super.signIn("administrator", "administrator");
 		
-		super.clickOnMenu("Administrator", "Announcement list");
-		super.checkListingExists();
+		super.clickOnMenu("Administrator", "Create announcement");
 		
-		super.clickOnButton("Create");
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("critical", critical);
 		super.fillInputBoxIn("body", body);
@@ -61,7 +57,6 @@ public class AdministratorAnnouncementCreateTest extends TestHarness{
 		super.fillInputBoxIn("confirmation", "true");
 		
 		super.clickOnSubmit("Create");
-		
 		super.checkErrorsExist();
 		
 		super.signOut();
