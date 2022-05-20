@@ -12,7 +12,7 @@ public class AnyUserAccountCreateTest extends TestHarness {
 		@ParameterizedTest
 		@CsvFileSource(resources = "/any/user-account/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
-		public void positiveTest(final String username, final String password, final String confirmation, final String name, final String surname, final String email, final String phone) {
+		public void positiveTest(final String username, final String password, final String confirmation, final String name, final String surname, final String email) {
 			
 			super.signUp(username, password, name, surname, email);
 			super.signIn(username, password);
@@ -23,7 +23,7 @@ public class AnyUserAccountCreateTest extends TestHarness {
 		@ParameterizedTest
 		@CsvFileSource(resources = "/any/user-account/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(20)
-		public void negativeTest(final String username, final String password, final String confirmation, final String name, final String surname, final String email, final String phone) {
+		public void negativeTest(final String username, final String password, final String confirmation, final String name, final String surname, final String email) {
 			super.clickOnMenu("Sign up");	
 			super.fillInputBoxIn("username", username);
 			super.fillInputBoxIn("password", password);
