@@ -1,6 +1,7 @@
 package acme.testing.inventor.toolkit;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -37,6 +38,41 @@ public class InventorToolkitListMineTest extends TestHarness {
 		super.clickOnButton("Artefacts");
 		super.checkListingExists();
 		
+		super.signOut();
+	}
+	
+	
+	@Test
+	@Order(20)
+	public void negativeTest() {
+		// HINT: there's no negative test case for this listing, since it doesn't
+		// HINT+ involve filling in any forms.
+	}
+	
+	@Test
+	@Order(30)
+	public void hackingTest() {
+		super.checkNotLinkExists("Account");
+		super.checkNotLinkExists("Inventor");
+		super.navigate("/inventor/toolkit/list");
+		super.checkPanicExists();
+		
+		super.signIn("user1", "user1");
+		super.checkNotLinkExists("Inventor");
+		super.navigate("/inventor/toolkit/list");
+		super.checkPanicExists();
+		super.signOut();
+		
+		super.signIn("patron2", "patron2");
+		super.checkNotLinkExists("Inventor");
+		super.navigate("/inventor/toolkit/list");
+		super.checkPanicExists();
+		super.signOut();
+		
+		super.signIn("administrator2", "administrator2");
+		super.checkNotLinkExists("Inventor");
+		super.navigate("/inventor/toolkit/list");
+		super.checkPanicExists();
 		super.signOut();
 	}
 }

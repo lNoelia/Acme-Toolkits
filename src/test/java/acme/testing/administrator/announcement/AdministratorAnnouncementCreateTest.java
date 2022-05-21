@@ -69,6 +69,11 @@ public class AdministratorAnnouncementCreateTest extends TestHarness{
 		super.navigate("/administrator/announcement/create");
 		super.checkPanicExists();
 		
+		super.signIn("user1", "user1");
+		super.navigate("/administrator/announcement/create");
+		super.checkPanicExists();
+		super.signOut();
+		
 		super.signIn("inventor2", "inventor2");
 		super.navigate("/administrator/announcement/create");
 		super.checkPanicExists();

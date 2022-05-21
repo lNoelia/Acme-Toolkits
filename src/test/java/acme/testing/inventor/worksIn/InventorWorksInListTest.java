@@ -1,6 +1,7 @@
 package acme.testing.inventor.worksIn;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -38,6 +39,35 @@ public class InventorWorksInListTest extends TestHarness {
 			super.checkInputBoxHasValue("artefact.technology", technology);
 			super.checkInputBoxHasValue("artefact.description", description);
 			super.checkInputBoxHasValue("artefact.link", link);
+		}
+		
+		@Test
+		@Order(20)
+		public void negativeTest() {
+			// HINT: there's no negative test case for this listing, since it doesn't
+			// HINT+ involve filling in any forms.
+		}
+		
+		@Test
+		@Order(30)
+		public void hackingTest() {
+			// HINT: the framework doesn't currently provide enough support to hack
+			// HINT+ this feature, so the hacking tests must be performed manually.
+			
+			// HINT+ a) list artefacts(worksIn) of a toolkit as an anonymous principal.
+			// HINT+ b) show an artefact(worksIn) of a toolkit as an anonymous principal.
+			
+			// HINT+ c) list artefacts(worksIn) of a toolkit as an authenticated principal that is not an inventor.
+			// HINT+ d) show an artefact(worksIn) of a toolkit as an authenticated principal that is not an inventor.
+			
+			// HINT+ e) list artefacts(worksIn) of a toolkit as a patron that is not an inventor.
+			// HINT+ f) show an artefact(worksIn) of a toolkit as a patron that is not an inventor.
+			
+			// HINT+ g) list artefacts(worksIn) of a toolkit as an administrator that is not an inventor.
+			// HINT+ h) show an artefact(worksIn) of a toolkit as an administrator that is not an inventor.
+			
+			// HINT+ i) list artefacts(worksIn) of a toolkit as an inventor that does not own that toolkit.
+			// HINT+ j) show an artefact(worksIn) of a toolkit as an inventor that does not own that toolkit.
 		}
 		
 }

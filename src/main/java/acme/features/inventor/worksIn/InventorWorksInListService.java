@@ -40,7 +40,15 @@ public class InventorWorksInListService implements AbstractListService<Inventor,
 	public boolean authorise(final Request<WorksIn> request) {
 		assert request != null;
 
-		return true;
+		final int masterId;
+		int activeRolId;
+		Toolkit toolkit;
+		
+		masterId = request.getModel().getInteger("masterId");
+		activeRolId = request.getPrincipal().getActiveRoleId();
+		toolkit = this.repository.findOneToolkitById(masterId);
+		
+		return activeRolId == toolkit.getInventor().getId();
 	}
 
 	@Override
