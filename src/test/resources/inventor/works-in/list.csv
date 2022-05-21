@@ -1,0 +1,5 @@
+recordIndex,toolkitIndex,quantity,artefactType,name,code,price,technology,description,link
+0,0,"5","COMPONENT","Nail","ABA-012-B","EUR 0.25","Iron","Example text","http://example.com/"
+1,0,"1","TOOL","Saw","AAA-012-C","EUR 4.50","For wood","A tool of high quality","http://example.com/"
+0,1,"25","COMPONENT","Screw","ABA-012-A","EUR 0.05","Flat Head","Screw made of iron",""
+1,1,"1","TOOL","Screwdriver","AAA-000-A","EUR 2.00","Flat Head","A tool for screws",""
