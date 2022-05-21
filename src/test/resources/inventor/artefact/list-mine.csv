@@ -1,4 +1,7 @@
 recordIndex,name,code,technology,description,retailPrice,link,type
-0,"Screwdriver","AAA-000-A","Flat Head","A tool for screws","EUR 2.00","","Tool"
-1,"Hammer","AAA-012-B","Iron head","A tool for nails","EUR 3.00","http://example.com/","Tool"
-2,"Screw","ZZZ-999-Z","Steel","Screw made of steel","EUR 0.06","http://example.com/","Component"
+0,"Screw","ZZZ-998-Z","Steel","Screw not published","EUR 0.16","http://example.com/","Component"
+1,"Screw","JKI-012-A","Flat Head","Screw not published","EUR 0.55","","Component"
+2,"Screwdriver","AAA-100-A","Flat Head","Screwdriver not published","EUR 2.10","","Tool"
+3,"Hammer","AHF-012-B","Iron head","Hammer not published","EUR 3.10","http://example.com/","Tool"
+4,"Saw","MNO-012-C","For wood","Saw not published","EUR 4.20","http://example.com/","Tool"
+
