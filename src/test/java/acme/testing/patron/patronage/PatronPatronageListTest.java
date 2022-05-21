@@ -42,8 +42,8 @@ public class PatronPatronageListTest extends TestHarness{
 	@Test
 	@Order(20)
 	public void negativeTest() {
-		super.navigate("/patron/patronage/list");
-		super.checkErrorsExist();
+			// HINT: There is no negative test case for this list, this list is the same 
+			// HINT+ for all authenticated
 	}
 	
 	@Test

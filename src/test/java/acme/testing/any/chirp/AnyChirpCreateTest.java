@@ -1,6 +1,7 @@
 package acme.testing.any.chirp;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -58,5 +59,12 @@ public class AnyChirpCreateTest extends TestHarness{
 		super.clickOnSubmit("Create");
 		super.checkErrorsExist();
 		super.signOut();
+	}
+	
+	@Test
+	@Order(30)
+	public void hackingTest() {
+		// HINT: there's no hacking test case for this create, this feature
+		// HINT+ is available for all principals.
 	}
 }
