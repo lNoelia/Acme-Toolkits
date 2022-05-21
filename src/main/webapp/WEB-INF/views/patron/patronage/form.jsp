@@ -39,9 +39,9 @@
 	<jstl:if test="${!readonly}">
 		<acme:hidden-data path="status"/>
 		<acme:hidden-data path="creationDate"/>
-        <acme:input-select code="patron.patronage.list.label.inventor" path="inventorId">
+        <acme:input-select code="patron.patronage.list.label.inventor" path="inventorUsername">
         	<c:forEach var="inventorOption" items="${inventors}">
-            	<acme:input-option selected="${inventorOption.id==inventor.id}" code="${inventorOption.userAccount.identity.name} ${inventorOption.userAccount.identity.surname}" value="${inventorOption.id}"/>
+            	<acme:input-option selected="${inventorOption.id==inventor.id}" code="${inventorOption.userAccount.identity.name} ${inventorOption.userAccount.identity.surname}" value="${inventorOption.userAccount.username}"/>
         	</c:forEach>
     	</acme:input-select>
     </jstl:if>

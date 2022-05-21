@@ -1,5 +1,8 @@
 recordIndex,name,surname,email,roles
-0,Carlos,Varela,carvarsou@alum.us.es,"Inventor, Patron"
-1,Noelia,Lopez,noelopdur@alum.us.es,"Inventor"
-2,Ricardo,Nadal,ricnadgar@alum.us.es,"Patron"
-3,Sara,Cruz,sarcrudua@alum.us.es,"Inventor, Patron"
+0,Carlos,Varela,carvarsou@alum.us.es,"Patron"
+1,Jose,Delgado,josdelsan9@alum.us.es,"Patron"
+2,Noelia,Lopez,noelopdur@alum.us.es,"Inventor"
+3,PatronInv,Patron,patron@alum.us.es,"Inventor, Patron"
+4,Ricardo,Nadal,ricnadgar@alum.us.es,"Patron"
+5,Rosa,Molina,rosmolarr@alum.us.es,"Inventor"
+6,Sara,Cruz,sarcrudua@alum.us.es,"Inventor"

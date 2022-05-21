@@ -26,6 +26,9 @@ public interface InventorWorksInRepository extends AbstractRepository {
 	@Query("select a from Artefact a where a.id= :id")
 	Artefact findOneArtefactById(int id);
 
+	@Query("select a from Artefact a where a.code= :code")
+	Artefact findOneArtefactByCode(String code);
+	
 	@Query("select a from Artefact a where a.published is true and a.id not in(select wk.artefact.id from WorksIn wk where wk.toolkit.id =:id)")
 	Collection<Artefact> findArtefactsForToolkit(int id);
 	

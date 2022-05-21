@@ -1,0 +1,13 @@
+recordIndex,code,inventorUsername,startDate,endDate,budget,legalStuff,link
+0,ABC-123-E,patron4,2022/12/01 00:00,2023/02/01 00:00,EUR 20.00,legal,""
+1,AAA-000-1,inventor2,2023/01/01 00:00,2023/03/01 00:00,EUR 20.00,legal,""
+2,111-000-X,inventor3,2023/02/01 00:00,2023/04/01 00:00,EUR 20.00,legal,""
+3,AAA-AAA-W,administrator,2023/03/01 00:00,2023/05/01 00:00,EUR 20.00,legal,""
+4,AAA-000-RR,inventor1,2023/04/01 00:00,2023/06/01 00:00,EUR 20.00,legal,""
+5,AAA-000-R,"inventor1",2023/04/01 00:00,2023/06/01 00:00,YEN 20.00,legal,""
+6,AAA-000-R,inventor1,2022/05/24 00:00,2023/06/01 00:00,EUR 20.00,legal,""
+7,AAA-000-R,inventor1,2023/04/01 00:00,2023/05/01 00:00,EUR 20.00,legal,""
+8,AAA-000-R,inventor1,2023/04/01 00:00,2023/04/21 00:00,EUR 20.00,legal,""
+9,AAA-000-R,inventor1,2023/04/01 00:00,2023/06/01 00:00,EUR -20.00,legal,""
+10,AAA-000-R,inventor1,2023/04/01 00:00,2023/05/01 00:00,EUR 20.00,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,""
+11,AAA-000-R,inventor1,2023/04/01 00:00,2023/06/01 00:00,EUR -20.00,"",""

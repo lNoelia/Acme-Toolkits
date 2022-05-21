@@ -1,4 +1,4 @@
-package acme.entities.exanchageRate;
+package acme.entities.exchangeRate;
 
 import java.time.Instant;
 import java.util.Date;

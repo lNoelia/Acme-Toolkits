@@ -1,0 +1,5 @@
+recordIndex,oldCode,code,inventorUsername,creationDate,startDate,endDate,budget,legalStuff,link,nameSurname
+0,ABC-123-E,AAA-111-A,inventor2,2020/03/12 10:00,2020/04/12 10:01,2021/06/12 10:01,EUR 200.00,Example update,http://update.com/,Noelia Lopez
+0,AAA-111-A,AAA-111-A,inventor2,2020/03/12 10:00,2020/04/12 10:01,2021/06/12 10:01,GBP 34.00,E,http://update.com/,Noelia Lopez
+1,ZZZ-999-Z,AAA-111-B,inventor1,2020/03/12 10:00,2021/05/15 09:00,2021/06/15 09:01,USD 1.00,Example update,,Sara Cruz
+1,AAA-111-B,ZZZ-999-Z,inventor3,2020/03/12 10:00,2021/05/15 09:00,2021/06/15 09:01,USD 1.00,Example updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample,http://update.com/,Rosa Molina

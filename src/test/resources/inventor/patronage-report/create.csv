@@ -2,3 +2,4 @@ recordIndex,sequenceNumber,creationDate,patronageCode,memorandum,link,confirmati
 0,"AAA-000-A:0003","2020/03/12 11:00",AAA-000-A,"Example text","http://example.com/",true
 1,"AAA-000-A:0004","2020/03/12 11:00",AAA-000-A,"Example text 2","",true
 2,"AAA-000-A:0005","2020/03/12 11:00",AAA-000-A,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolorrrr","http://example.com/",true
+3,"AAA-000-A:0006","2020/03/12 11:00",AAA-000-A,"A","",true

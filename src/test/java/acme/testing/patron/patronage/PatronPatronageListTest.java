@@ -45,5 +45,23 @@ public class PatronPatronageListTest extends TestHarness{
 		super.navigate("/patron/patronage/list");
 		super.checkErrorsExist();
 	}
+	
+	@Test
+	@Order(30)
+	public void hackingTest() {
+		super.checkNotLinkExists("Account");
+		super.navigate("/patron/patronage/list");
+		super.checkPanicExists();
+
+		super.signIn("user1", "user1");
+		super.navigate("/patron/patronage/list");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("inventor1", "inventor1");
+		super.navigate("/patron/patronage/list");
+		super.checkPanicExists();
+		super.signOut();
+	}
 
 }

@@ -1,0 +1,3 @@
+recordIndex,toolkitIndex,quantity,artefactType,name,code,price,technology,description,link
+0,0,"1","TOOL","Hammer","AAA-012-B","EUR 3.00","Iron head","A tool for nails","http://example.com/"
+1,0,"10","COMPONENT","Screw","ABA-012-A","EUR 0.05","Flat Head","Screw made of iron",""
