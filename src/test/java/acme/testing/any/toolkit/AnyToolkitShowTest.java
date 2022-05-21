@@ -51,7 +51,7 @@ public class AnyToolkitShowTest extends TestHarness {
 		super.checkInputBoxHasValue("artefact.description", descriptionA);
 		super.checkInputBoxHasValue("artefact.retailPrice", retailPrice);
 		super.checkInputBoxHasValue("artefact.link", linkA);
-//		super.checkInputBoxHasValue("artefact.type", type);
+		super.checkInputBoxHasValue("artefact.type", type);
 
 		super.signOut();
 	}
@@ -94,7 +94,7 @@ public class AnyToolkitShowTest extends TestHarness {
 		super.checkInputBoxHasValue("artefact.description", descriptionA);
 		super.checkInputBoxHasValue("artefact.retailPrice", retailPrice);
 		super.checkInputBoxHasValue("artefact.link", linkA);
-//		super.checkInputBoxHasValue("artefact.type", type);
+		super.checkInputBoxHasValue("artefact.type", type);
 
 	}
 
