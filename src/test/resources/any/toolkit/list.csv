@@ -1,4 +1,4 @@
-recordIndex,code,title,description
-0,"AAC-012-C","A toolkit published","Example description"
-1,"AAC-012-D","A toolkit published","Example description"
-2,"ZZX-999-X","A toolkit published","Example description"
+recordIndex,code,title,price
+0,"AAC-012-C","A toolkit published","EUR 6.50"
+1,"AAC-012-D","A toolkit published","EUR 8.25"
+2,"ZZX-999-X","A toolkit published","EUR 3.98"

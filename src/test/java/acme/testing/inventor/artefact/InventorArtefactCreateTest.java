@@ -85,6 +85,21 @@ public class InventorArtefactCreateTest extends TestHarness {
 		super.navigate("/inventor/artefact/create");
 		super.checkPanicExists();
 		
+		super.signIn("patron1", "patron1");
+		super.navigate("/inventor/artefact/create");
+		super.checkPanicExists();
+		super.signOut();
+		
+		super.signIn("user1", "user1");
+		super.navigate("/inventor/artefact/create");
+		super.checkPanicExists();
+		super.signOut();
+		
+		super.signIn("administrator2", "administrator2");
+		super.navigate("/inventor/artefact/create");
+		super.checkPanicExists();
+		super.signOut();
+		
 	}
 
 	// Ancillary methods ------------------------------------------------------
