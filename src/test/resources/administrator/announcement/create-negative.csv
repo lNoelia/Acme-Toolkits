@@ -4,4 +4,9 @@ recordIndex,title,body,critical,link
 2,"","This is an example of an announcement with title too short",false,http://example.com/
 3,"Lorem ipsum dolor sit amet consectetur adipiscing elit duis. torquent consequat imperdiet varius po.1","This is an example of an announcement with title too long (101)",false,http://example.com/
 5,"Example of an announcement with body too short","",true,http://example.com/
-6,"7Example of an announcement with too long body (256)","Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim pretium ante. augue turpis molestie est himenaeos non vulputate fringilla. Tellus facilisi suspendisse nibh nisl etiam interdum aenean venenatis odio curabitur. conubia montes lobortis ulla.1",true,http://example.com/
+6,"Example of an announcement with too long body (256)","Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim pretium ante. augue turpis molestie est himenaeos non vulputate fringilla. Tellus facilisi suspendisse nibh nisl etiam interdum aenean venenatis odio curabitur. conubia montes lobortis ulla.1",true,http://example.com/
+7,Example sexy sexy announcement,This is an example of an announcement,false,http://example.com/
+8,Example sex sex four five six seven eight nine ten,This is an example of an announcement,false,http://example.com/
+9,Example of an announcement,sexy sexy an example,false,http://example.com/
+10,Example of an announcement,sex sex three four five six seven eight nine ten,false,http://example.com/
+11,Example sex one million four five six seven eight nine,This is an example of an announcement,false,http://example.com/

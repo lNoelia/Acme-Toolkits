@@ -14,6 +14,7 @@
 			<acme:input-textbox code="inventor.worksin.form.label.type" path="artefact.type" readonly="true"/>
 			<acme:input-textbox code="inventor.worksin.form.label.code" path="artefact.code" readonly="true"/>
 			<acme:input-money code="inventor.worksin.form.label.price" path="artefact.retailPrice" readonly="true"/>
+			<acme:input-money code="any.worksIn.form.label.convertedPrice" path="convertedPrice" readonly="true"/>
 			<acme:input-textbox code="inventor.worksin.form.label.technology" path="artefact.technology" readonly="true"/>
 			<acme:input-textarea code="inventor.worksin.form.label.description" path="artefact.description" readonly="true"/>
 			<acme:input-url code="inventor.worksin.form.label.link" path="artefact.link" readonly="true"/>
