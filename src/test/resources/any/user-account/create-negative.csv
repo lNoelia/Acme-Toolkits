@@ -1,8 +1,16 @@
-username,password,confirmation,name,surname,email
-administrator,password,password,John,Doe,john@doe.com
-johnnnn2,password,passwor,John,Doe,john@doe.com
-joh2,password,password,John,Doe,john@doe.com
-john2,password,password,John,Doe,johndoe.com
-61car ipsum dolor sit amet consectetur adipiscing elit odio..,password,password,John,Doe,john@doe.com
-johnnnn4,passwo,passwo,John,Doe,john@doe.com
-johnnnn5,61car ipsum dolor sit amet consectetur adipiscing elit odio..,61car ipsum dolor sit amet consectetur adipiscing elit odio..,John,Doe,john@doe.com
+username,password,confirmation,name,surname,email,checkbox
+administrator,password,password,John,Doe,john@doe.com,true
+johnnnn2,password,passwor,John,Doe,john@doe.com,true
+joh2,password,password,John,Doe,john@doe.com,true
+john2,password,password,John,Doe,johndoe.com,true
+61car ipsum dolor sit amet consectetur adipiscing elit odio..,password,password,John,Doe,john@doe.com,true
+johnnnn4,pass,pass,John,Doe,john@doe.com,true
+johnnnn4,61rem ipsum dolor sit amet consectetur adipiscing elit netus.,61rem ipsum dolor sit amet consectetur adipiscing elit netus.,John,Doe,john@doe.com,true
+johnnnn5,61car ipsum dolor sit amet consectetur adipiscing elit odio..,61car ipsum dolor sit amet consectetur adipiscing elit odio..,John,Doe,john@doe.com,true
+userTest1,password,password,John,Doe,,true
+userTest1,password,password,John,,john@doe.com,true
+userTest1,password,password,,Doe,john@doe.com,true
+userTest1,password,,John,Doe,john@doe.com,true
+userTest1,,password,John,Doe,john@doe.com,true
+,password,password,John,Doe,john@doe.com,true
+userTest1,password,password,John,Doe,john@doe.com,false
