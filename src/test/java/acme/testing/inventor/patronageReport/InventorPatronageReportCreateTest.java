@@ -55,10 +55,18 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 	@Test
 	@Order(30)
 	public void hackingTest() {
-		super.checkNotLinkExists("Account");
-		super.navigate("/inventor/patronage-report/create");
-		super.checkPanicExists();
+		// HINT: the framework doesn't currently provide enough support to hack
+        // HINT+ this feature, so the hacking tests must be performed manually.\
 		
+		//HINT+ a) try to create a patronage report of a patronage as an anonymous principal
+		
+		//HINT+ b) try to create a patronage report of a patronage as a patron 
+		
+		//HINT+ c) try to create a patronage report of a patronage as an administrator
+		
+		//HINT+ d) try to create a patronage report of a patronage as an inventor that is not associated with the patronage
 	}
+	
+	
 	
 }

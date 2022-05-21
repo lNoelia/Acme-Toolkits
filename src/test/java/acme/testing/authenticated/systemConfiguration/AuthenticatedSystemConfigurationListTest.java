@@ -27,8 +27,16 @@ public class AuthenticatedSystemConfigurationListTest extends TestHarness {
 	}
 	
 	@Test
-	@Order(10)
 	public void negativeTest() {
+		// HINT: There is no negative test case for this list, this list is the same 
+		// HINT+ for all authenticated
+	}
+	
+	
+	@Test
+	@Order(10)
+	public void hackingTest() {
+		super.checkNotLinkExists("Account");
 		super.navigate("/authenticated/system-configuration/list");
 		super.checkErrorsExist();
 	}
