@@ -73,11 +73,11 @@ public class Toolkit extends AbstractEntity {
 		
 		Money result;
 		String systemCurrency;
-		Double price;
+		Double value;
 		int artefactAmount;
 		
 		systemCurrency = moneyExchangeService.systemCurrency();
-		price = 0.0;
+		value = 0.0;
 		
 		if(!worksIns.isEmpty()) {
 			Money artefactPrice;
@@ -85,13 +85,13 @@ public class Toolkit extends AbstractEntity {
 			for(final WorksIn worksIn: worksIns) {
 				artefactPrice = worksIn.getArtefact().getRetailPrice();
 				artefactAmount = worksIn.getAmount();
-				price += ( moneyExchangeService.computeMoneyExchangeAmount(artefactPrice, systemCurrency)*artefactAmount );
+				value += ( moneyExchangeService.computeMoneyExchangeAmount(artefactPrice, systemCurrency)*artefactAmount );
 			}
 		}
 		
 		result = new Money();
 		result.setCurrency(systemCurrency);
-		result.setAmount(price);
+		result.setAmount(value);
 		
 		this.price = result;
 	}

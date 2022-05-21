@@ -11,7 +11,7 @@
 authenticated.inventor.inventor.form.title.create = Hazte inventor
 authenticated.inventor.inventor.form.title.update = Datos de inventor
 
-authenticated.inventor.inventor.form.label.company = Compania
+authenticated.inventor.inventor.form.label.company = Compañia
 authenticated.inventor.inventor.form.label.statement = Declaracion
 authenticated.inventor.inventor.form.label.enlace = Enlace
 

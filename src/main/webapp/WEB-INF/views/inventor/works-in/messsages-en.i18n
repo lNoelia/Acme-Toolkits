@@ -9,6 +9,7 @@ inventor.worksin.form.label.name = Name
 inventor.worksin.form.label.type = Artefact type
 inventor.worksin.form.label.code = Code
 inventor.worksin.form.label.price = Price
+inventor.worksin.form.label.convertedPrice = Converted price
 inventor.worksin.form.label.technology = Technology
 inventor.worksin.form.label.description = Description
 inventor.worksin.form.label.link = Link

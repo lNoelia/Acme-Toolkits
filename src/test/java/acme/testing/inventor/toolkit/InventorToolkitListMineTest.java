@@ -14,20 +14,22 @@ public class InventorToolkitListMineTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String key, final String code, final String title, final String description, final String assemblyNotes, final String link, final String published,final String artefactName,final String artefactCode,final String artefactTechnology,final String artefactDescription,final String artefactRetailPrice,final String artefactLink,final String artefactType) {
-		super.signIn("inventor1", "inventor1");
+	public void positiveTest(final int recordIndex, final String code, final String title, final String description, final String assemblyNotes, final String link, final String price) {
+		super.signIn("inventor2", "inventor2");
 
 		super.clickOnMenu("Inventor", "List of Toolkits");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
 		
-		super.checkColumnHasValue(recordIndex, 0, title);
-		super.checkColumnHasValue(recordIndex, 1, code);
+		super.checkColumnHasValue(recordIndex, 0, code);
+		super.checkColumnHasValue(recordIndex, 1, title);
+		super.checkColumnHasValue(recordIndex, 2, price);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("code", code);
+		super.checkInputBoxHasValue("price", price);
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("assemblyNotes", assemblyNotes);
 		super.checkInputBoxHasValue("link", link);

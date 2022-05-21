@@ -1,8 +1,8 @@
-username,password,confirmation,name,surname,email,phone
-administrator,password,password,John,Doe,john@doe.com,+34 675 675675
-johnnnn2,password,passwor,John,Doe,john@doe.com,
-joh2,password,password,John,Doe,john@doe.com,
-john2,password,password,John,Doe,johndoe.com,
-61car ipsum dolor sit amet consectetur adipiscing elit odio..,password,password,John,Doe,john@doe.com,+34 675 675675
-johnnnn4,passwo,passwo,John,Doe,john@doe.com,+34 675 675675
-johnnnn5,61car ipsum dolor sit amet consectetur adipiscing elit odio..,61car ipsum dolor sit amet consectetur adipiscing elit odio..,John,Doe,john@doe.com,+34 675 675675
+username,password,confirmation,name,surname,email
+administrator,password,password,John,Doe,john@doe.com
+johnnnn2,password,passwor,John,Doe,john@doe.com
+joh2,password,password,John,Doe,john@doe.com
+john2,password,password,John,Doe,johndoe.com
+61car ipsum dolor sit amet consectetur adipiscing elit odio..,password,password,John,Doe,john@doe.com
+johnnnn4,passwo,passwo,John,Doe,john@doe.com
+johnnnn5,61car ipsum dolor sit amet consectetur adipiscing elit odio..,61car ipsum dolor sit amet consectetur adipiscing elit odio..,John,Doe,john@doe.com
