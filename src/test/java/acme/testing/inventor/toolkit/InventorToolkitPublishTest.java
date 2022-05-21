@@ -52,6 +52,12 @@ public class InventorToolkitPublishTest extends TestHarness {
 	@Test
 	@Order(30)
 	public void hackingTest() {	
-		// the framework doesn't provide enough support to implement this test case
+		
+		// HINT: the framework doesn't provide enough support to implement this test case,
+		// HINT+ so it must be performed manually:
+		// HINT+ a) publish a toolkit with a role other than "Inventor".
+		// HINT+ b) publish an unpublished toolkit as an inventor that does not own that toolkit.
+		// HINT+ c) publish a published toolkit as an inventor that owns that toolkit.
+		// HINT+ d) publish a published toolkit as an inventor that does not own that toolkit.
 	}
 }

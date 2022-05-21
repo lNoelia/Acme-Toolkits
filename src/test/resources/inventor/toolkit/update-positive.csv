@@ -1,3 +1,3 @@
-recordIndex,reference,title,code,price,description,assemblyNotes,link,published
-0,"AAA-000-A","Big toolkit","AAA-001-A","EUR 5.75","It has plenty of space","The best","https://www.example.com",false
-1,"AAC-012-B","Another toolkit","AAD-012-D","EUR 3.25","A bit expensive","Certainly not worth it","https://www.example.com",false
+recordIndex,reference,title,code,price,description,assemblyNotes,link
+0,"AAA-000-A","Big toolkit","AAA-001-A","EUR 5.75","It has plenty of space","The best","https://www.example.com"
+1,"AAC-012-B","Another toolkit","AAD-012-D","EUR 3.25","A bit expensive","Certainly not worth it","https://www.example.com"

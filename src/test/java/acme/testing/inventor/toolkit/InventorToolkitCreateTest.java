@@ -77,7 +77,7 @@ public class InventorToolkitCreateTest extends TestHarness {
 		super.checkPanicExists();
 		
 		super.signIn("patron1", "patron1");
-		super.navigate("/inventor/artefact/create");
+		super.navigate("/inventor/toolkit/create");
 		super.checkPanicExists();
 		super.signOut();
 	}

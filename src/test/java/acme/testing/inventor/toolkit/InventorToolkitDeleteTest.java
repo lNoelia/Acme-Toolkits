@@ -51,6 +51,12 @@ public class InventorToolkitDeleteTest extends TestHarness {
 	@Test
 	@Order(30)
 	public void hackingTest() {	
-		// the framework doesn't provide enough support to implement this test case
+		
+		// HINT: the framework doesn't provide enough support to implement this test case,
+		// HINT+ so it must be performed manually:
+		// HINT+ a) delete a toolkit with a role other than "Inventor".
+		// HINT+ b) delete an unpublished toolkit as an inventor that does not own that toolkit.
+		// HINT+ c) delete a published toolkit as an inventor that owns that toolkit.
+		// HINT+ d) delete a published toolkit as an inventor that does not own that toolkit.
 	}
 }

@@ -78,13 +78,11 @@ public class InventorToolkitUpdateTest extends TestHarness {
 	@Order(30)
 	public void hackingTest() {
 		
-		super.checkNotLinkExists("Account");
-		super.navigate("/inventor/toolkit/create");
-		super.checkPanicExists();
-		
-		super.signIn("patron1", "patron1");
-		super.navigate("/inventor/artefact/create");
-		super.checkPanicExists();
-		super.signOut();
+		// HINT: the framework doesn't provide enough support to implement this test case,
+		// HINT+ so it must be performed manually:
+		// HINT+ a) update a toolkit with a role other than "Inventor".
+		// HINT+ b) update an unpublished toolkit as an inventor that does not own that toolkit.
+		// HINT+ c) update a published toolkit as an inventor that owns that toolkit.
+		// HINT+ d) update a published toolkit as an inventor that does not own that toolkit.
 	}
 }
