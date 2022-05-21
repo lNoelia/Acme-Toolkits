@@ -16,60 +16,65 @@ public class PatronPatronageUpdateTest extends TestHarness {
 	// Test cases -------------------------------------------------------------
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/inventor/artefact/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/patron/patronage/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String oldname, final String name, final String code, final String technology, final String description, final String retailPrice, final String link, final String type) {
-		super.signIn("inventor2", "inventor2");
+	public void positiveTest(final int recordIndex, final String oldCode, final String code, final String inventorUsername,final String creationDate, final String startDate, final String endDate, final String budget, final String legalStuff, final String link, final String nameSurname) {
+		super.signIn("patron2", "patron2");
 
-		super.clickOnMenu("Inventor", "List of Artefacts");
+		super.clickOnMenu("Patron", "List of patronage");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		
-		super.checkColumnHasValue(recordIndex, 0, oldname);
+		super.checkColumnHasValue(recordIndex, 0, oldCode);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.fillInputBoxIn("name", name);
 		super.fillInputBoxIn("code", code);
-		super.fillInputBoxIn("technology", technology);
-		super.fillInputBoxIn("retailPrice", retailPrice);
+		super.fillInputBoxIn("inventorUsername", inventorUsername);
+		super.fillInputBoxIn("startDate", startDate);
+		super.fillInputBoxIn("endDate", endDate);
+		super.fillInputBoxIn("budget", budget);
+		super.fillInputBoxIn("legalStuff", legalStuff);
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Update");
 		
+		super.clickOnMenu("Patron", "List of patronage");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		
-		super.checkColumnHasValue(recordIndex, 0, name);
+
+		super.checkColumnHasValue(recordIndex, 0, code);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.checkInputBoxHasValue("name", name);
 		super.checkInputBoxHasValue("code", code);
-		super.checkInputBoxHasValue("technology", technology);
-		super.checkInputBoxHasValue("description", description);
-		super.checkInputBoxHasValue("retailPrice", retailPrice);
+		super.checkInputBoxHasValue("inventorUsername", nameSurname);
+		super.checkInputBoxHasValue("startDate", startDate);
+		super.checkInputBoxHasValue("endDate", endDate);
+		super.checkInputBoxHasValue("budget", budget);
+		super.checkInputBoxHasValue("legalStuff", legalStuff);
 		super.checkInputBoxHasValue("link", link);
 
 		super.signOut();
 	}
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/inventor/artefact/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/patron/patronage/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void negativeTest(final int recordIndex, final String name, final String code, final String technology, final String description, final String retailPrice, final String link, final String type) {
-		super.signIn("inventor2", "inventor2");
+	public void negativeTest(final int recordIndex, final String code, final String inventorUsername,final String creationDate, final String startDate, final String endDate, final String budget, final String legalStuff, final String link) {
+		super.signIn("patron2", "patron2");
 
-		super.clickOnMenu("Inventor", "List of Artefacts");
+		super.clickOnMenu("Patron", "List of patronage");
+		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 		
-		super.fillInputBoxIn("name", name);
 		super.fillInputBoxIn("code", code);
-		super.fillInputBoxIn("technology", technology);
-		super.fillInputBoxIn("description", description);
-		super.fillInputBoxIn("retailPrice", retailPrice);
+		super.fillInputBoxIn("inventorUsername", inventorUsername);
+		super.fillInputBoxIn("startDate", startDate);
+		super.fillInputBoxIn("endDate", endDate);
+		super.fillInputBoxIn("budget", budget);
+		super.fillInputBoxIn("legalStuff", legalStuff);
 		super.fillInputBoxIn("link", link);
-		super.fillInputBoxIn("type", type);
 		super.clickOnSubmit("Update");
 
 		super.checkErrorsExist();
@@ -81,7 +86,7 @@ public class PatronPatronageUpdateTest extends TestHarness {
 	@Order(30)
 	public void hackingTest() {
 		super.checkNotLinkExists("Account");
-		super.navigate("/inventor/artefact/create");
+		super.navigate("/patron/patronage/create");
 		super.checkPanicExists();
 		
 	}

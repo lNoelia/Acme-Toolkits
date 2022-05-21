@@ -1,8 +1,7 @@
 package acme.testing.patron.patronage;
 
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.api.Test;
 
 import acme.testing.TestHarness;
 
@@ -13,18 +12,15 @@ public class PatronPatronageDeleteTest extends TestHarness {
 
 	// Test cases -------------------------------------------------------------
 
-	@ParameterizedTest
-	@CsvFileSource(resources = "/inventor/artefact/delete.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Test
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String reference) {
-		super.signIn("inventor2", "inventor2");
+	public void positiveTest() {
+		super.signIn("patron2", "patron2");
 
-		super.clickOnMenu("Inventor", "List of Artefacts");
-		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 0, reference);
-
-		super.clickOnListingRecord(recordIndex);
+		super.clickOnMenu("Patron", "List of patronage");
+		super.checkNotListingEmpty();
+		
+		super.clickOnListingRecord(0);
 		super.checkFormExists();
 		super.clickOnSubmit("Delete");
 		super.checkNotErrorsExist();
