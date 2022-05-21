@@ -21,7 +21,7 @@ public class PatronPatronageCreateTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/patron/patronage/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String code, final String inventorUsername, final String startDate, final String endDate, final String budget, final String convertedPrice, final String legalStuff, final String link, final String nameSurname) {
+	public void positiveTest(final int recordIndex, final String code, final String inventorUsername, final String startDate, final String endDate, final String budget, final String legalStuff, final String link, final String nameSurname) {
 		super.signIn("patron1", "patron1");
 
 		super.clickOnMenu("Patron", "Create patronage");
@@ -53,7 +53,6 @@ public class PatronPatronageCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("startDate", startDate);
 		super.checkInputBoxHasValue("endDate", endDate);
 		super.checkInputBoxHasValue("budget", budget);
-		super.checkInputBoxHasValue("convertedPrice", convertedPrice);
 		super.checkInputBoxHasValue("legalStuff", legalStuff);
 		super.checkInputBoxHasValue("link", link);
 
@@ -87,7 +86,7 @@ public class PatronPatronageCreateTest extends TestHarness {
 	@Order(30)
 	public void hackingTest() {
 		super.checkNotLinkExists("Account");
-		super.navigate("/patron/patronage/createreate");
+		super.navigate("/patron/patronage/create");
 		super.checkPanicExists();
 		
 	}
