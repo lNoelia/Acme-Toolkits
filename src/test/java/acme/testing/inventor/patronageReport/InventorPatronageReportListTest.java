@@ -39,8 +39,8 @@ public class InventorPatronageReportListTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/patronage-report/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativeTest(final int recordIndex, final String sequenceNumber, final String creationDate, final String patronageCode, final String memorandum, final String link) {
-		super.signIn("inventor2", "inventor2");
+	public void noDataTest(final int recordIndex, final String sequenceNumber, final String creationDate, final String patronageCode, final String memorandum, final String link) {
+		super.signIn("patron4", "patron4");
 
 		super.clickOnMenu("Inventor", "List of patronage reports");
 		super.checkListingEmpty();

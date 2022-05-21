@@ -63,5 +63,19 @@ public class AdministratorSystemConfigurationUpdateTest extends TestHarness{
 		super.navigate("/administrator/system-configuration/update");
 		super.checkPanicExists();
 		
+		super.signIn("patron1","patron1");
+		super.navigate("/administrator/system-configuration/update");
+		super.checkErrorsExist();
+		super.signOut();
+		
+		super.signIn("user1","user1");
+		super.navigate("/administrator/system-configuration/update");
+		super.checkErrorsExist();
+		super.signOut();
+		
+		super.signIn("inventor1","inventor1");
+		super.navigate("/administrator/system-configuration/update");
+		super.checkErrorsExist();
+		super.signOut();
 	}
 }

@@ -7,6 +7,7 @@ import java.util.Date;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,10 +66,17 @@ public class AuthenticatedAnnouncementListTest extends TestHarness{
 			super.signOut();
 		}
 
-		@ParameterizedTest
-		@CsvFileSource(resources = "/authenticated/announcement/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@Test
 		@Order(20)
-		public void negativeTest(final int recordIndex, final String creationDate, final String title,  final String body,final String critical, final String link) {
+		public void negativeTest() {
+			// HINT: There is no negative test case for this list, this list is the same 
+			// HINT+ for all authenticated
+		}
+		
+		@Test
+		@Order(30)
+		public void hackingTest() {
+			super.checkNotLinkExists("Account");
 			super.navigate("/authenticated/announcement/list");
 			super.checkErrorsExist();
 		}

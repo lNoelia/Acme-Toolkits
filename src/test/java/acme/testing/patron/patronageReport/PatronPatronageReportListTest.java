@@ -1,6 +1,7 @@
 package acme.testing.patron.patronageReport;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -36,10 +37,9 @@ public class PatronPatronageReportListTest extends TestHarness {
 		super.signOut();
 	}
 	
-	@ParameterizedTest
-	@CsvFileSource(resources = "/patron/patronage-report/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Test
 	@Order(10)
-	public void negativeTest(final int recordIndex,  final String sequenceNumber, final String creationDate, final String patronageCode, final String memorandum, final String link) {
+	public void negativeTest() {
 		super.signIn("patron2", "patron2");
 		
 		super.clickOnMenu("Patron", "List of patronage reports");
@@ -48,6 +48,27 @@ public class PatronPatronageReportListTest extends TestHarness {
 		super.signOut();
 	}
 
-	// Ancillary methods ------------------------------------------------------
+	@Test
+	@Order(10)
+	public void hackingTest() {
+		super.checkNotLinkExists("Account");
+		super.navigate("/patron/patronage-report/list");
+		super.checkErrorsExist();
+		
+		super.signIn("inventor1","inventor1");
+		super.navigate("/patron/patronage-report/list");
+		super.checkErrorsExist();
+		super.signOut();
+		
+		super.signIn("user1","user1");
+		super.navigate("/patron/patronage-report/list");
+		super.checkErrorsExist();
+		super.signOut();
+		
+		super.signIn("administrator2","administrator2");
+		super.navigate("/patron/patronage-report/list");
+		super.checkErrorsExist();
+		super.signOut();
+	}
 
 }
