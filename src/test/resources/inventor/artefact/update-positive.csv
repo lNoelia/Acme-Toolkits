@@ -1,2 +1,12 @@
-recordIndex,oldname,name,code,technology,description,retailPrice,link,type
-0,Nail,Nail2,ABA-013-B,"Iron2","Example text",EUR 1.05,"",COMPONENT
+recordIndex,name,code,technology,description,retailPrice,link,type
+0,1Example of an artefact tool,AAA-011-B,"Example","Example",EUR 3.00,"http://example.com/",TOOL
+0,2Example of an artefact tool without url,AVX-789-B,"Example","Example",EUR 3.00,"",TOOL
+0,3Example of an artefact component,AXX-011-B,"Example","Example",EUR 3.00,"http://example.com/",COMPONENT
+0,4Example of an artefact component without url,AXA-789-B,"Example","Example",EUR 3.00,"",COMPONENT
+0,5Example of an artefact with little prince,ZAZ-998-Z,"Steel","Screw made of steel",EUR 0.01,"http://example.com/",COMPONENT
+0,6Example of an artefact with long description,JAA-234-C,"a","Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim pretium ante. augue turpis molestie est himenaeos non vulputate fringilla. Tellus facilisi suspendisse nibh nisl etiam interdum aenean venenatis odio curabitur. conubia montes lobortis ulla.",EUR 4.50,"http://example.com/",TOOL
+0,7Ejemplo de artefact con 100 carácteres lorem ipsum dolor sit amet consectetur adipiscing elit duis.,ABA-015-A,"Example","Example",EUR 0.05,"",COMPONENT
+0,8Example of an artefact with short tecnology,ANA-016-B,"a","Example",EUR 0.05,"http://example.com/",COMPONENT
+0,91Example of an artefact with long tecnology,ABA-234-C,"Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim pretium ante. augue turpis moles...","A tool of high quality",EUR 4.50,"http://example.com/",TOOL
+0,92Example of an artefact with short description,ABJ-016-B,"Example","a",EUR 0.05,"http://example.com/",COMPONENT
+0,93Example of an artefact with very big price,AAA-111-A,"Flat Head","A tool for screws","EUR 1,000,000.00","",TOOL

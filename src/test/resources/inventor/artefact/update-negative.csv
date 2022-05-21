@@ -1,3 +1,11 @@
 recordIndex,name,code,technology,description,retailPrice,link,type
-0,"",AAA-011-B,"Electric","A tool for screws but electric",EUR 3.00,"example@#/",TOOL
-1,Hammer,"","","",EUR 3.00,"",TOOL
+0,"",AAA-011-B,"Nombre vacio","A tool for screws but electric",EUR 3.00,"",TOOL
+0,"Artefact with no code","","Electric","A tool for screws but electric",EUR 3.00,"",TOOL
+0,"Artefact with not-well-form code","1234","Electric","A tool for screws but electric",EUR 3.00,"",TOOL
+0,"Artefact with used code","AAA-000-A","Electric","A tool for screws but electric",EUR 3.00,"",TOOL
+0,"Artefact with no tecnology","AAA-101-A","","A tool for screws but electric",EUR 3.00,"",TOOL
+0,"Artefact with long tecnology","AAA-070-A","Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim pretium ante. augue turpis moles....","A tool for screws but electric",EUR 3.00,"",TOOL
+0,"Artefact with no desciption","AAA-777-A","Electric","",EUR 3.00,"",TOOL
+0,"Artefact with long desciption","AAA-987-A","Electric","Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim pretium ante. augue turpis molestie est himenaeos non vulputate fringilla. Tellus facilisi suspendisse nibh nisl etiam interdum aenean venenatis odio curabitur. conubia montes lobortis ulla..",EUR 3.00,"",TOOL
+0,"Artefact with wrong price",AAA-789-B,"example","example",DOL 3.00,"",TOOL
+0,"Artefact with no price",AAA-789-B,"example","example",,"",TOOL
