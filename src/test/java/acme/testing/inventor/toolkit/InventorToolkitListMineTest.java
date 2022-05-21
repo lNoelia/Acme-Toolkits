@@ -25,7 +25,6 @@ public class InventorToolkitListMineTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 1, title);
 		super.checkColumnHasValue(recordIndex, 2, price);
 		
-		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("title", title);
