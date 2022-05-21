@@ -1,6 +1,7 @@
 package acme.testing.any.toolkit;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -14,7 +15,7 @@ public class AnyToolkitListTest extends TestHarness{
 		@ParameterizedTest
 		@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
-		public void positiveTestWithLog(final int recordIndex, final String code, final String title, final String description) {
+		public void positiveTestWithLog(final int recordIndex, final String code, final String title, final String description, final String assemblyNotes, final String link, final String price) {
 			super.signIn("patron3", "patron3");
 
 			super.clickOnMenu("Authenticated", "List of Toolkits");
@@ -23,24 +24,34 @@ public class AnyToolkitListTest extends TestHarness{
 			
 			super.checkColumnHasValue(recordIndex, 0, code);
 			super.checkColumnHasValue(recordIndex, 1, title);
-			super.checkColumnHasValue(recordIndex, 2, description);
+			super.checkColumnHasValue(recordIndex, 2, price);
+
+			super.clickOnListingRecord(recordIndex);
+			super.checkFormExists();
+			super.checkInputBoxHasValue("code", code);
+			super.checkInputBoxHasValue("title", title);
+			super.checkInputBoxHasValue("description", description);
+			super.checkInputBoxHasValue("assemblyNotes", assemblyNotes);
+			super.checkInputBoxHasValue("link", link);
+			super.checkInputBoxHasValue("price", price);
 
 			super.signOut();
 		}
 		
-		@ParameterizedTest
-		@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-		@Order(10)
-		public void positiveTestAnonymous(final int recordIndex, final String code, final String title, final String description) {
-			
-			super.clickOnMenu("Anonymous", "List of Toolkits");
-			super.checkListingExists();
-			super.sortListing(0, "asc");
-			
-			super.checkColumnHasValue(recordIndex, 0, code);
-			super.checkColumnHasValue(recordIndex, 1, title);
-			super.checkColumnHasValue(recordIndex, 2, description);
+		@Test
+		@Order(20)
+		public void negativeTest() {
+			// HINT: there's no negative test case for this listing, since it doesn't
+			// HINT+ involve filling in any forms.
 		}
+		
+		@Test
+		@Order(30)
+		public void hackingTest() {
+			// HINT: there's no hacking test case for this listing, this feature
+			// HINT+ is available for all principals.
+		}
+		
 		/*
 		@ParameterizedTest
 		@CsvFileSource(resources = "/any/toolkit/searchList.csv", encoding = "utf-8", numLinesToSkip = 1)

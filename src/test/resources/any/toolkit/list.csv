@@ -1,4 +1,4 @@
-recordIndex,code,title,price
-0,"AAC-012-C","A toolkit published","EUR 6.50"
-1,"AAC-012-D","A toolkit published","EUR 8.25"
-2,"ZZX-999-X","A toolkit published","EUR 3.98"
+recordIndex,code,title,description,assemblyNotes,link,price
+0,"AAC-012-C","A toolkit published","Example description","Example assembly notes","http://example.com/",EUR 6.50
+1,"AAC-012-D","A toolkit published","Example description","Example assembly notes","http://example.com/",EUR 8.25
+2,"ZZX-999-X","A toolkit published","Example description","Example assembly notes","http://example.com/",EUR 3.98
