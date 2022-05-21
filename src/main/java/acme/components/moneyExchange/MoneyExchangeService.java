@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import acme.entities.exanchageRate.ExchangeRate;
+import acme.entities.exchangeRate.ExchangeRate;
 import acme.framework.datatypes.Money;
 import acme.framework.helpers.StringHelper;
 

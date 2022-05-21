@@ -32,8 +32,15 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 	@Override
 	public boolean authorise(final Request<PatronageReport> request) {
 		assert request != null;
+		final boolean result;
+		Patronage patronage;
+		int id;
+		
+		id = request.getModel().getInteger("masterId");
+		patronage = this.repository.findPatronageReportById(id);
+		result = request.isPrincipal(patronage.getInventor());
 
-		return true;
+		return result;
 	}
 	
 	@Override

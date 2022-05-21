@@ -66,7 +66,7 @@ public class InventorWorksInCreateService implements AbstractCreateService<Inven
 
 		Artefact artefact;
 
-		artefact = this.repository.findOneArtefactById(request.getModel().getInteger("artefactId"));
+		artefact = this.repository.findOneArtefactByCode(request.getModel().getString("artefactId"));
 		entity.setArtefact(artefact);
 
 		request.bind(entity, errors, "amount");

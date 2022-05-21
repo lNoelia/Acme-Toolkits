@@ -27,7 +27,7 @@
 		
 			<acme:input-select code="inventor.worksin.form.label.artefact" path="artefactId" readonly="false">
 	        	<c:forEach var="artefact" items="${artefacts}">
-	            	<acme:input-option selected="null" code="${artefact.toString()}" value="${artefact.id}"/>
+	            	<acme:input-option selected="null" code="${artefact.toString()}" value="${artefact.code}"/>
 	        	</c:forEach>
 			</acme:input-select>
 			<acme:input-integer code="inventor.worksin.form.label.amount" path="amount" readonly="false"/>
