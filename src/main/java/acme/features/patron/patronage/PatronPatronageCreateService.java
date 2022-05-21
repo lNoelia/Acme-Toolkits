@@ -150,7 +150,7 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		Date creationDate;
 		Inventor inventor;
 		
-		inventor = this.repository.findInventorById(request.getModel().getInteger("inventorId"));
+		inventor = this.repository.findOneInventorByUsername(request.getModel().getString("inventorUsername"));
 		creationDate = new Date(System.currentTimeMillis() - 1);
 		
 		entity.setInventor(inventor);

@@ -1,0 +1,11 @@
+recordIndex,code,inventorUsername,creationDate,startDate,endDate,budgetlegalStuff,link
+0,ZZZ-999-Z,inventor2,2020/03/12 10:00,2020/04/12 10:01,2021/06/12 10:01,EUR 200.00,Example update,http://update.com/
+0,AAA-111-1,inventor2,2020/03/12 10:00,2020/04/12 10:01,2021/06/12 10:01,GBP 34.00,E,http://update.com/
+0,AAA-111-Z,inventor2,2020/03/12 10:00,2020/04/12 10:00,2021/06/12 10:01,GBP 34.00,E,http://update.com/
+0,AAA-111-Z,inventor2,2020/03/12 10:00,2020/04/12 10:01,2021/06/12 10:01,YEN 34.00,E,http://update.com/
+1,AAA-111-B,inventor1,2020/03/12 10:00,2021/05/15 09:00,2021/06/15 09:00,USD 1.00,"Example update",""
+1,AAA-111-B,inventor1,2020/03/12 10:00,2021/05/15 09:00,2021/06/15 09:01,USD 1.00,"",""
+1,AAA-111-B,inventor1,2020/03/12 10:00,2021/05/15 09:00,2021/06/15 09:01,USD 1.00,"Example update","update"
+1,AAA-111-B,inventor1,2020/03/12 10:00,2021/05/15 09:00,2021/06/15 09:01,USD -1.00,"Example update",""
+1,"",inventor1,2020/03/12 10:00,2021/05/15 09:00,2021/06/15 09:01,USD 1.00,"Example update",""
+1,AAA-111-B,inventor3,2020/03/12 10:00,2021/05/15 09:00,2021/06/15 09:01,USD 1.00,"Example updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample updateExample update",http://update.com/
