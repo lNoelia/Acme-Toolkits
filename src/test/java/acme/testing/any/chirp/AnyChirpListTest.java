@@ -7,6 +7,7 @@ import java.util.Date;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,6 +77,20 @@ public class AnyChirpListTest extends TestHarness{
 		super.checkColumnHasValue(recordIndex, 3, body);
 		super.checkColumnHasValue(recordIndex, 4, email);
 
+	}
+	
+	@Test
+	@Order(20)
+	public void negativeTest() {
+		// HINT: there's no negative test case for this listing, since it doesn't
+		// HINT+ involve filling in any forms.
+	}
+	
+	@Test
+	@Order(30)
+	public void hackingTest() {
+		// HINT: there's no hacking test case for this listing, this feature
+		// HINT+ is available for all principals.
 	}
 	
 	protected void patchChirps() {

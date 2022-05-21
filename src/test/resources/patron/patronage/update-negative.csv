@@ -1,4 +1,4 @@
-recordIndex,code,inventorUsername,creationDate,startDate,endDate,budgetlegalStuff,link
+recordIndex,code,inventorUsername,creationDate,startDate,endDate,budget,legalStuff,link
 0,ZZZ-999-Z,inventor2,2020/03/12 10:00,2020/04/12 10:01,2021/06/12 10:01,EUR 200.00,Example update,http://update.com/
 0,AAA-111-1,inventor2,2020/03/12 10:00,2020/04/12 10:01,2021/06/12 10:01,GBP 34.00,E,http://update.com/
 0,AAA-111-Z,inventor2,2020/03/12 10:00,2020/04/12 10:00,2021/06/12 10:01,GBP 34.00,E,http://update.com/
