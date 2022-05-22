@@ -44,12 +44,8 @@ public class InventorPatronageListTest extends TestHarness{
 	@Test
 	@Order(10)
 	public void negativeTest() {
-		super.signIn("patron4", "patron4");
-
-		super.clickOnMenu("Inventor", "List of patronages");
-		super.checkListingEmpty();
-
-		super.signOut();
+		// HINT: there's no negative test case for this listing, since it doesn't
+		// HINT+ involve filling in any forms.
 	}
 	
 	@Test
