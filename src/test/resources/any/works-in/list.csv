@@ -1,0 +1,5 @@
+recordIndex,toolkitIndex,amount,name,type,code,price,technology,description,link
+0,0,1,Hammer,TOOL,AAA-012-B,EUR 3.00,Iron head,A tool for nails,http://example.com/
+1,0,1,Screwdriver,TOOL,AAA-000-A,EUR 2.00,Flat Head,A tool for screws,
+0,1,1,Saw,TOOL,AAA-012-C,EUR 4.50,For wood,A tool of high quality,http://example.com/
+1,1,15,Nail,COMPONENT,ABA-012-B,EUR 0.25,Iron,Example text,http://example.com/

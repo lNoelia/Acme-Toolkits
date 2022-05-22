@@ -1,5 +1,5 @@
-recordIndex,toolkitIndex,amount,name,type,code,price,convertedPrice,technology,description,link
-0,0,1,Saw,TOOL,AAA-012-C,EUR 4.50,EUR 4.50,For wood,A tool of high quality,http://example.com/
-1,0,5,Nail,COMPONENT,ABA-012-B,EUR 0.25,EUR 0.25,Iron,Example text,http://example.com/
-0,1,1,Screwdriver,TOOL,AAA-000-A,EUR 2.00,EUR 2.00,Flat Head,A tool for screws,
-1,1,25,Screw,COMPONENT,ABA-012-A,EUR 0.05,EUR 0.05,Flat Head,Screw made of iron,
+recordIndex,toolkitIndex,amount,name,type,code,price,technology,description,link
+0,0,1,Saw,TOOL,AAA-012-C,EUR 4.50,For wood,A tool of high quality,http://example.com/
+1,0,5,Nail,COMPONENT,ABA-012-B,EUR 0.25,Iron,Example text,http://example.com/
+0,1,1,Screwdriver,TOOL,AAA-000-A,EUR 2.00,Flat Head,A tool for screws,
+1,1,25,Screw,COMPONENT,ABA-012-A,EUR 0.05,Flat Head,Screw made of iron,

@@ -3,4 +3,4 @@ recordIndex,code,inventorUsername, startDate,endDate,budget,legalStuff,link,name
 1,"AAA-000-Y","inventor2","2023/01/01 00:00","2023/03/01 00:00","EUR 0.01","legal","","Noelia Lopez"
 2,"AAA-000-X","inventor3","2023/02/01 00:00","2023/04/01 00:00","USD 20.00","legal","","Rosa Molina"
 3,"AAA-000-W","administrator","2023/03/01 00:00","2023/05/01 00:00","EUR 20.00","legallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegallegal","","Administrator Acme"
-4,"AAA-000-V","inventor1","2022/06/30 00:00","2022/08/01 00:00","USD 20.00","legal","","Sara Cruz"
+4,"AAA-000-V","inventor1","2022/06/30 00:00","2022/08/01 00:00","GBP 20.00","l","","Sara Cruz"

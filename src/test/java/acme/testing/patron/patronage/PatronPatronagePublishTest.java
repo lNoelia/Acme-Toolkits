@@ -54,10 +54,13 @@ public class PatronPatronagePublishTest extends TestHarness {
 	@Test
 	@Order(30)
 	public void hackingTest() {
-		// 1. publish a patronage with a role other than "Patron";
-		// 2. publish an published patronage that was registered by the principal;
-		// 3. publish an published patronage that wasn't registered by the principal;
-		// 4. publish an unpublished patronage that wasn't registered by the principal.
+		// HINT: the framework doesn't currently provide enough support to hack
+		// HINT+ this feature, so the hacking tests must be performed manually.
+		
+		// HINT+ a) publish a patronage with a role other than "Patron";
+		// HINT+ b) publish an published patronage that was registered by the principal;
+		// HINT+ c) publish an published patronage that wasn't registered by the principal;
+		// HINT+ d) publish an unpublished patronage that wasn't registered by the principal.
 	}
 
 	// Ancillary methods ------------------------------------------------------
