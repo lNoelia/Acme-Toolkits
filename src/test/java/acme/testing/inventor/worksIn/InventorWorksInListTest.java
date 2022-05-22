@@ -13,7 +13,7 @@ public class InventorWorksInListTest extends TestHarness {
 		@ParameterizedTest
 		@CsvFileSource(resources = "/inventor/works-in/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
-		public void positiveTest(final int recordIndex,final int toolkitIndex,final String amount,final String name,final String type,final String code,final String price,final String convertedPrice,final String technology,final String description,final String link) {
+		public void positiveTest(final int recordIndex,final int toolkitIndex,final String amount,final String name,final String type,final String code,final String price,final String technology,final String description,final String link) {
 			super.signIn("inventor2", "inventor2");
 			
 			super.clickOnMenu("Inventor", "List of Toolkits");
@@ -35,7 +35,6 @@ public class InventorWorksInListTest extends TestHarness {
 			super.checkInputBoxHasValue("artefact.type", type);
 			super.checkInputBoxHasValue("artefact.code", code);
 			super.checkInputBoxHasValue("artefact.retailPrice", price);
-			super.checkInputBoxHasValue("convertedPrice", convertedPrice);
 			super.checkInputBoxHasValue("artefact.technology", technology);
 			super.checkInputBoxHasValue("artefact.description", description);
 			super.checkInputBoxHasValue("artefact.link", link);
