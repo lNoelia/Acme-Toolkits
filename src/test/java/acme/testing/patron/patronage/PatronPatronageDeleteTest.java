@@ -27,5 +27,21 @@ public class PatronPatronageDeleteTest extends TestHarness {
 
 		super.signOut();
 	}
+	
+	@Test
+	@Order(20)
+	public void negativeTest() {
+		// HINT: there's no negative test case for this listing, since it doesn't
+		// HINT+ involve filling in any forms.
+	}
+	
+	@Test
+	@Order(30)
+	public void hackingTest() {	
+		
+		// HINT: the framework doesn't provide enough support to implement this test case,
+		// HINT+ so it must be performed manually:
+		// HINT+ a) delete a patronage of a patron with a logged patron that does not own that patronage.
+	}
 
 }

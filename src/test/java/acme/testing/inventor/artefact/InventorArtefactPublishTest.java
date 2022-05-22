@@ -70,7 +70,7 @@ public class InventorArtefactPublishTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/artefact/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(30)
-	public void negativeTestUpdatingData(final int recordIndex, final String name, final String code, final String technology, final String description, final String retailPrice, final String link, final String type) {
+	public void negativeTest(final int recordIndex, final String name, final String code, final String technology, final String description, final String retailPrice, final String link, final String type) {
 		super.signIn("inventor2", "inventor2");
 
 		super.clickOnMenu("Inventor", "List of Artefacts");
@@ -93,22 +93,6 @@ public class InventorArtefactPublishTest extends TestHarness {
 	
 	@Test
 	@Order(40)
-	public void negativeTest() {
-		super.signIn("inventor3", "inventor3");
-
-		super.clickOnMenu("Inventor", "List of Artefacts");
-		super.checkListingExists();
-		super.sortListing(0, "desc");
-
-		super.clickOnListingRecord(0);
-		super.checkFormExists();
-		super.checkNotSubmitExists("Publish");
-
-		super.signOut();
-	}
-	
-	@Test
-	@Order(30)
 	public void hackingTest() {
 		// HINT: the framework doesn't currently provide enough support ot hack
 		// HINT+ this feature, so the hacking tests must be performed manually.\

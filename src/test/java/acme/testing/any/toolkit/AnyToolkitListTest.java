@@ -15,7 +15,7 @@ public class AnyToolkitListTest extends TestHarness{
 		@ParameterizedTest
 		@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
-		public void positiveTestWithLog(final int recordIndex, final String code, final String title, final String description, final String assemblyNotes, final String link, final String price) {
+		public void positiveTest(final int recordIndex, final String code, final String title, final String description, final String assemblyNotes, final String link, final String price) {
 			super.signIn("patron3", "patron3");
 
 			super.clickOnMenu("Authenticated", "List of Toolkits");
