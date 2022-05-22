@@ -9,3 +9,7 @@ recordIndex,name,code,technology,description,retailPrice,link,type
 7,"Artefact with long desciption","AAA-987-A","Electric","Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim pretium ante. augue turpis molestie est himenaeos non vulputate fringilla. Tellus facilisi suspendisse nibh nisl etiam interdum aenean venenatis odio curabitur. conubia montes lobortis ulla..",EUR 3.00,"",TOOL
 8,"Artefact with wrong price",AAA-789-B,"example","example",DOL 3.00,"",TOOL
 9,"Artefact with no price",AAA-789-B,"example","example",,"",TOOL
+10,"Artefact with spam sex sex sex sex sex",AAA-789-B,"example","example",DOL 3.00,"",TOOL
+11,"Artefact with spam sexy sexy sexy sexy sexy sexy sexy sexy sexy",AAA-789-B,"example","example",,"",TOOL
+12,"Artefact with spam",AAA-789-B,"example","example sex sex sex sex sex",DOL 3.00,"",TOOL
+13,"Artefact with spam",AAA-789-B,"example","example sexy sexy sexy sexy sexy sexy sexy sexy sexy",,"",TOOL

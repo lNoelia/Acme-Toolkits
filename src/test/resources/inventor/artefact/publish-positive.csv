@@ -1,3 +1,3 @@
 recordIndex,name,code,technology,description,retailPrice,link,type
 0,1Example of an artefact tool,AAA-011-B,"Example","Example",EUR 3.00,"http://example.com/",TOOL
-1,2Example of an artefact tool without url,AVX-789-B,"Example","Example",EUR 3.00,"",TOOL
+1,2Example of an artefact tool with a little of spam sex and no url,AVX-789-B,"Example","Example",EUR 3.00,"",TOOL
