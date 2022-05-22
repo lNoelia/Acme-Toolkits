@@ -69,8 +69,8 @@ public class AuthenticatedAnnouncementListTest extends TestHarness{
 		@Test
 		@Order(20)
 		public void negativeTest() {
-			// HINT: There is no negative test case for this list, this list is the same 
-			// HINT+ for all authenticated
+			// HINT: there's no negative test case for this listing, since it doesn't
+			// HINT+ involve filling in any forms.
 		}
 		
 		@Test
