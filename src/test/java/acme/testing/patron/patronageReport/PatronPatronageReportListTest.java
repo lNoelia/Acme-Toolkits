@@ -38,16 +38,12 @@ public class PatronPatronageReportListTest extends TestHarness {
 	}
 	
 	@Test
-	@Order(10)
+	@Order(20)
 	public void negativeTest() {
-		super.signIn("patron2", "patron2");
-		
-		super.clickOnMenu("Patron", "List of patronage reports");
-		super.checkListingEmpty();
-		
-		super.signOut();
+		// HINT: there's no negative test case for this listing, since it doesn't
+		// HINT+ involve filling in any forms.
 	}
-
+	
 	@Test
 	@Order(10)
 	public void hackingTest() {
