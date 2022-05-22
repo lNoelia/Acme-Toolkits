@@ -34,22 +34,11 @@ public class InventorPatronageStatusTest extends TestHarness {
 		super.signOut();
 	}
 
-	@ParameterizedTest
-	@CsvFileSource(resources = "/inventor/patronage/status-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Test
 	@Order(20)
-	public void negativeTest(final int recordIndex, final String reference, final String status) {
-		super.signIn("inventor3", "inventor3");
-
-		super.clickOnMenu("Inventor", "List of patronages");
-		super.checkListingExists();
-		super.sortListing(1, "asc");
-
-		super.checkColumnHasValue(recordIndex, 0, reference);
-		super.clickOnListingRecord(recordIndex);
-		super.checkFormExists();
-		super.checkNotSubmitExists("Publish");
-
-		super.signOut();
+	public void negativeTest() {
+		// HINT: there's no negative test case for this listing, since it doesn't
+		// HINT+ involve filling in any forms.
 	}
 	
 	@Test

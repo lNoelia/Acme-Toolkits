@@ -36,9 +36,16 @@ public class InventorPatronageReportListTest extends TestHarness{
 
 		super.signOut();
 	}
-
+	
 	@Test
 	@Order(20)
+	public void negativeTest() {
+		// HINT: there's no negative test case for this listing, since it doesn't
+		// HINT+ involve filling in any forms.
+	}
+
+	@Test
+	@Order(30)
 	public void hackingTest() {
 		super.checkNotLinkExists("Account");
 		super.navigate("/inventor/patronage-report/list");
