@@ -1,6 +1,7 @@
 package acme.testing.inventor.patronage;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -49,5 +50,20 @@ public class InventorPatronageStatusTest extends TestHarness {
 		super.checkNotSubmitExists("Publish");
 
 		super.signOut();
+	}
+	
+	@Test
+	@Order(30)
+	public void hackingTest() {
+		// HINT: the framework doesn't currently provide enough support ot hack
+		// HINT+ this feature, so the hacking tests must be performed manually.\
+		
+		//HINT+ a) try to update a patronage status as a patron 
+		
+		//HINT+ b) try to update a patronage status of a patronage from another inventor as an inventor
+		
+		//HINT+ a) try to update a patronage status as an anonymous principal 
+		
+		//HINT+ b) try to update a patronage status of another inventor as an administrator
 	}
 }
