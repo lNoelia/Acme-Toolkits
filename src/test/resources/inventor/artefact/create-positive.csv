@@ -9,4 +9,8 @@ recordIndex,name,code,technology,description,retailPrice,link,type
 7,8Example of an artefact with short tecnology,ANA-016-B,"a","Example",EUR 0.05,"http://example.com/",COMPONENT
 8,91Example of an artefact with long tecnology,ABA-234-C,"Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim pretium ante. augue turpis moles...","A tool of high quality",EUR 4.50,"http://example.com/",TOOL
 9,92Example of an artefact with short description,ABJ-016-B,"Example","a",EUR 0.05,"http://example.com/",COMPONENT
-10,93Example of an artefact with very big price,AAA-111-A,"Flat Head","A tool for screws","EUR 1,000,000.00","",TOOL
+10,93Example of an artefact with very big price,AAA-911-A,"Flat Head","A tool for screws","EUR 1,000,000,000.00","",TOOL
+11,94Example of an artefact tool with hard spam sex that pass,AAA-181-A,"Flat Head","A tool for screws","EUR 1.00","",TOOL
+12,95Example of an artefact tool with low spam sexy sexy that pass,AKL-131-A,"Flat Head","A tool for screws","EUR 1.00","",TOOL
+13,96Example of an artefact with spam,AAA-178-A,"Flat Head","A tool for screws with a spam word sex and pass","EUR 100.00","",TOOL
+14,97Example of an artefact with spam,AAA-315-A,"Flat Head","A tool for screws with a spam word sexy sexy and pass","EUR 10.00","",TOOL
