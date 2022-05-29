@@ -1,3 +1,15 @@
-recordIndex,reference,title,code,price,description,assemblyNotes,link
-0,"AAA-000-A","Big toolkit","AAA-001-A","EUR 5.75","It has plenty of space","The best","https://www.example.com"
-1,"AAC-012-B","Another toolkit","AAD-012-D","EUR 3.25","A bit expensive","Certainly not worth it","https://www.example.com"
+recordIndex,title,code,price,description,assemblyNotes,link
+1,"A great toolkit","AAS-119-K","EUR 3.25","Description","Assembly notes","http://example.com/"
+1,"Proin finibus nunc ut mi pretium vulputate. Sed sollicitudin neque ac laoreet tristique. Donec amet.","BAS-119-K","EUR 3.25","A toolkit with 100-character title","Assembly notes","http://example.com/"
+1,"A toolkit with 255-character description","CAS-119-K","EUR 3.25","Integer ipsum felis, condimentum eu ipsum sed, egestas dapibus lorem. Suspendisse scelerisque lorem vitae convallis volutpat. Etiam rhoncus ex eget nisi commodo placerat. Aenean suscipit viverra tincidunt. Duis semper sapien vitae tempor suscipit posuere.","Assembly notes","http://example.com/"
+1,"A toolkit with 255-character assembly notes","DAS-119-K","EUR 3.25","A toolkit with long assembly notes","Integer ipsum felis, condimentum eu ipsum sed, egestas dapibus lorem. Suspendisse scelerisque lorem vitae convallis volutpat. Etiam rhoncus ex eget nisi commodo placerat. Aenean suscipit viverra tincidunt. Duis semper sapien vitae tempor suscipit posuere.","http://example.com/"
+1,"a","EAS-119-K","EUR 3.25","A toolkit with 1-character title","Assembly notes","http://example.com/"
+1,"A toolkit with 1-character description","FAS-119-K","EUR 3.25","a","Assembly notes","http://example.com/"
+1,"A toolkit with 1-character assembly notes","GAS-119-K","EUR 3.25","A toolkit with 1-character assembly notes","a","http://example.com/"
+1,"A toolkit without link","HAS-119-K","EUR 3.25","Description","Assembly notes",""
+1,"A toolkit with strong spam sex but is correct and pass","IAS-119-K","EUR 3.25","A toolkit with strong spam on title","Assembly notes",""
+1,"A toolkit with weak spam un millón and sexy pass","JAS-119-K","EUR 3.25","A toolkit with weak spam on title","Assembly notes",""
+1,"A toolkit with strong spam on description and pass","KAS-119-K","EUR 3.25","A toolkit with strong spam sex but is correct and pass","Assembly notes",""
+1,"A toolkit with weak spam on description and pass","LAS-119-K","EUR 3.25","A toolkit with weak spam un millón and sexy pass","Assembly notes",""
+1,"A toolkit with strong spam on assembly notes and pass","MAS-119-K","EUR 3.25","Description","A toolkit with strong spam sex but is correct and pass",""
+1,"A toolkit with weak spam on assembly notes and pass","NAS-119-K","EUR 3.25","Description","A toolkit with weak spam un millón and sexy pass",""

@@ -13,14 +13,13 @@ public class InventorToolkitUpdateTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/toolkit/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String reference, final String title, final String code, final String price, final String description, final String assemblyNotes, final String link) {
+	public void positiveTest(final int recordIndex, final String title, final String code, final String price, final String description, final String assemblyNotes, final String link) {
 		
 		super.signIn("inventor2", "inventor2");
 		super.clickOnMenu("Inventor", "List of Toolkits");
 		super.checkListingExists();
 		
 		super.sortListing(0,"asc");
-		super.checkColumnHasValue(recordIndex, 0, reference);
 		super.clickOnListingRecord(recordIndex);
 		
 		super.checkFormExists();
@@ -32,10 +31,6 @@ public class InventorToolkitUpdateTest extends TestHarness {
 		super.clickOnSubmit("Update");
 		
 		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 0, code);
-		super.checkColumnHasValue(recordIndex, 1, title);
-		super.checkColumnHasValue(recordIndex, 2, price);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -52,14 +47,13 @@ public class InventorToolkitUpdateTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/toolkit/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void negativeTest(final int recordIndex, final String reference, final String title, final String code, final String price, final String description, final String assemblyNotes, final String link) {
+	public void negativeTest(final int recordIndex, final String title, final String code, final String description, final String assemblyNotes, final String link) {
 		
 		super.signIn("inventor2", "inventor2");
 		super.clickOnMenu("Inventor", "List of Toolkits");
 		super.checkListingExists();
 		
 		super.sortListing(0,"asc");
-		super.checkColumnHasValue(recordIndex, 0, reference);
 		super.clickOnListingRecord(recordIndex);
 		
 		super.checkFormExists();
