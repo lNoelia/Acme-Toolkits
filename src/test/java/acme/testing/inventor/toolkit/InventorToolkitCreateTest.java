@@ -49,7 +49,7 @@ public class InventorToolkitCreateTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/toolkit/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void negativeTest(final int recordIndex, final String title, final String code, final String price, final String description, final String assemblyNotes, final String link) {
+	public void negativeTest(final int recordIndex, final String title, final String code, final String description, final String assemblyNotes, final String link) {
 		
 		super.signIn("inventor1", "inventor1");
 		super.clickOnMenu("Inventor", "List of Toolkits");
